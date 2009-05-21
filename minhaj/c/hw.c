@@ -1,4 +1,5 @@
 #include <stdio.h>
+/* hello world file */
 main(){
-printf("Hello, CV");
+	printf("Hello, all");
 }

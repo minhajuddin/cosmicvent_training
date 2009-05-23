@@ -34,7 +34,8 @@ postID int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(postID),
 Title varchar(80),
 AuthName varchar(15),
-Comments varchar(200)
+Comments varchar(200),
+TimeStamp varchar(15)
 )";
 
 // Execute query
@@ -46,7 +47,7 @@ mysql_query($sql,$con);
 
 $sql="INSERT INTO Bloginfo (Title, AuthName, Comments)
 VALUES
-('$_POST[Title]','$_POST[AuthName]','$_POST[Comments]')";
+('$_POST[Title]','$_POST[AuthName]','$_POST[Comments]',date("Y/m/d"))";
 
 if (!mysql_query($sql,$con))
   {

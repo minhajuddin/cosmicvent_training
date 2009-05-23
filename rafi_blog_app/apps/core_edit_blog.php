@@ -13,25 +13,31 @@
 
 
 <?php
-$con = mysql_connect("localhost","peter","abc123");
+$con = mysql_connect("localhost","root","");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
 $edi = mysql_select_db("my_blog_db", $con);
-
-mysql_query("UPDATE Bloginfo SET Title = '$_POST['Title']' Comments = '$_POST['Comments']'
-WHERE postID = '$_POST['postID']'");
-
 if (!$edi)
   {
   die('Could not query: ' . mysql_error());
   }
 
+echo "$_POST[postID]";
+$res = mysql_query("UPDATE Bloginfo SET Title = '$_POST[Title]',Comments = '$_POST[Comments]'
+WHERE postID = '$_POST[postID]'");
+if (!$res)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+
+
 mysql_close($con);
 ?> 
-<h1> Delete is successfull </h1>
+<h1> Your post is updated successfully</h1>
 <br/><br/>
 <a href="../index.php"> Go Back to Home Page</a>
 

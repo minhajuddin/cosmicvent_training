@@ -10,16 +10,16 @@
 <body>
 
 <?php
-$con = mysql_connect("localhost","root","abc123");
+$con = mysql_connect("localhost","root","");
 if (!$con)
   {
   die('Could not connect: ' . mysql_error());
   }
 
 // Create database
-if (mysql_query("CREATE DATABASE my_blog_db",$con))
+if (mysql_query("CREATE DATABASE IF NOT EXISTS my_blog_db",$con))
   {
-  echo "Database created";
+  //echo "Database created";
   }
 else
   {
@@ -44,10 +44,9 @@ mysql_query($sql,$con);
 // Adding the new post
 
 
-
-$sql="INSERT INTO Bloginfo (Title, AuthName, Comments)
-VALUES
-('$_POST[Title]','$_POST[AuthName]','$_POST[Comments]',date("Y/m/d"))";
+$TimeStamp=date("Y/m/d");
+$sql="INSERT INTO Bloginfo (Title, AuthName, Comments,TimeStamp)
+VALUES ('$_POST[Title]','$_POST[AuthName]','$_POST[Comments]','$TimeStamp')";
 
 if (!mysql_query($sql,$con))
   {
@@ -58,6 +57,6 @@ echo "<h1>Your Comments are posted successfully</h1>";
 mysql_close($con);
 ?> 
 <br/><br/>
-<a href="../html/blogpost.html"> Go Back to Home Home Page </a>
+<a href="../index.php> Go Back to Home Page </a>
 </body>
 </html>

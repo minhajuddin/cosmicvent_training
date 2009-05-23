@@ -18,17 +18,30 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 
-mysql_select_db("my_blog_db", $con);
+$sel = mysql_select_db("my_blog_db", $con);
 
-$result = mysql_query("SELECT Title FROM Bloginfo ORDER BY postID DESC");
-
-
-while($row = mysql_fetch_array($result))
+if (!$sel)
   {
-  echo "<a href="apps/display_post.php?title=$row> $row </a> &nbsp <a href="apps/edit_post.php?title=$row> Edit </a> &nbsp
-  <a href="apps/delete_post.php?title=$row> Delete </a></br></br>";
-    }
+  echo "<h2> There are no existing posts</h2>";
+  
+  }
+else{
+$result = mysql_query("SELECT * FROM Bloginfo ORDER BY postID DESC");
 
+
+ while($row = mysql_fetch_array($result))
+  {
+   $temp = $row['Title'];
+   $tempid = $row['postID'];
+  echo "Title  $tempid: &nbsp<a href='apps/display_post.php?title=$temp'>$temp</a>
+   &nbsp 
+  <a href='apps/edit_post.php?title=$temp'> Edit </a> 
+  &nbsp
+  <a href='apps/delete_post.php?title=$temp'> Delete </a>
+  <br/><br/>";
+  
+    } 
+}
 mysql_close($con);
 ?> 
 

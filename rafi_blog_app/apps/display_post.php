@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+<?php
 $con = mysql_connect("localhost","root","");
 if (!$con)
   {
@@ -16,26 +16,30 @@ if (!$con)
   }
 
 mysql_select_db("my_blog_db", $con);
-
-$result = mysql_query("SELECT * FROM Bloginfo WHERE Title='$_GET[title]'");
-
- echo "<table border='1'>
-<tr>
-<th>Title:</th>
-<td>$result['Title']</td>
-</tr>";
+echo "$_GET[title]";
+$query = "SELECT * FROM Bloginfo WHERE Title='$_GET[title]'";
+$result = mysql_query($query);
+$rs = mysql_fetch_array($result);
+echo $rs['Title'];
+ 
+ echo " <table border='1'> 
+ 
+  <tr>
+  <td>Title:</td>
+  <td> $rs[Title] </td>
+  </tr>
   
-  echo "<tr>";
-  echo "<td>" ."</td>";
-  echo "<td>" . $result['Comments'] . "</td>";
-  echo "</tr>";
-  echo "<tr>";
+  <tr>
+  <td></td>
+  <td>$rs[Comments]</td>
+  </tr>
   
-  echo "<th>Author Name:</th>";
-  echo "<td>$result['AuthName'] &nbsp $result['TimeStamp']</td>";
-  echo "</tr>";
+  <tr>  
+  <th>Author Name:</th>
+  <td>$rs[AuthName] &nbsp $rs[TimeStamp]</td>;
+  </tr>
   
-echo "</table>";
+ </table> ";
 
 mysql_close($con);
 ?> 

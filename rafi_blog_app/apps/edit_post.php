@@ -9,6 +9,7 @@
 
 <body>
 
+<?php
 $con = mysql_connect("localhost","root","");
 if (!$con)
   {
@@ -16,32 +17,33 @@ if (!$con)
   }
 
 mysql_select_db("my_blog_db", $con);
+$temp=$_GET['title'];
 
-$result = mysql_query("SELECT * FROM Bloginfo WHERE Title='$_GET[title]'");
-
+$result = mysql_query("SELECT * FROM Bloginfo WHERE Title='$temp'");
+$res =  mysql_fetch_array($result);
  
   
-  echo " <form action="core_edit_blog.php" method ="POST">
+  echo " <form action='core_edit_blog.php' method ='POST'>
 
-<table border="1" >
+<table border='1' >
 
 <tr>
 <th>Title</th>
-<td><input type="text" name="Title" value="$result['Title']">
-<input type="hidden" name="postID" value="$result['postID']"></td>
+<td><input type='text' name='Title' value='$res[Title]'>
+<input type='hidden' name='postID' value='$res[postID]'></td>
 </tr>
 <tr>
 <th>Post</th>
 <td><textarea 
- name="Comments" rows="10" cols="48" value="$result['Comments']"></textarea></td>
+ name='Comments' rows='10' cols='48' value='$res[Comments]'></textarea></td>
 </tr>
 <tr>
 <th></th>
-<td><input type="submit" value="Post">&nbsp<input type="reset" value="Reset"></td>
+<td><input type='submit' value='Post'>&nbsp<input type='reset' value='Reset'></td>
  
 </tr>
 </table>
-</form> "
+</form> ";
   
 
 

@@ -27,7 +27,7 @@ if (!$edi)
   die('Could not query: ' . mysql_error());
   }
 
-echo "$_POST[postID]";
+
 $res = mysql_query("UPDATE Bloginfo SET Title = '$_POST[Title]',Comments = '$_POST[Comments]'
 WHERE postID = '$_POST[postID]'");
 if (!$res)

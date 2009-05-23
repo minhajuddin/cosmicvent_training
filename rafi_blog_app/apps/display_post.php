@@ -16,12 +16,11 @@ if (!$con)
   }
 
 mysql_select_db("my_blog_db", $con);
-echo "$_GET[title]";
+
 $query = "SELECT * FROM Bloginfo WHERE Title='$_GET[title]'";
 $result = mysql_query($query);
 $rs = mysql_fetch_array($result);
-echo $rs['Title'];
- 
+
  echo " <table border='1'> 
  
   <tr>
@@ -35,8 +34,9 @@ echo $rs['Title'];
   </tr>
   
   <tr>  
-  <th>Author Name:</th>
-  <td>$rs[AuthName] &nbsp $rs[TimeStamp]</td>;
+  <td>Author Name:</td>
+  <td>$rs[AuthName] &nbsp Date:$rs[TimeStamp]</td>;
+  
   </tr>
   
  </table> ";

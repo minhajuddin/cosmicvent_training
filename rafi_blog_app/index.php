@@ -32,8 +32,8 @@ $result = mysql_query("SELECT * FROM Bloginfo ORDER BY postID DESC");
  while($row = mysql_fetch_array($result))
   {
    $temp = $row['Title'];
-   $tempid = $row['postID'];
-  echo "Title  $tempid: &nbsp<a href='apps/display_post.php?title=$temp'>$temp</a>
+   
+  echo "Title  : &nbsp<a href='apps/display_post.php?title=$temp'>$temp</a>
    &nbsp 
   <a href='apps/edit_post.php?title=$temp'> Edit </a> 
   &nbsp

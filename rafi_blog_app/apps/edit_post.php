@@ -35,7 +35,7 @@ $res =  mysql_fetch_array($result);
 <tr>
 <th>Post</th>
 <td><textarea 
- name='Comments' rows='10' cols='48' value='$res[Comments]'></textarea></td>
+ name='Comments' rows='10' cols='48' >$res[Comments]</textarea></td>
 </tr>
 <tr>
 <th></th>

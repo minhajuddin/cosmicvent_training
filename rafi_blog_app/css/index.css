@@ -1,0 +1,31 @@
+body{
+
+background-color: #EEE8AA;
+font-family: sans-serif;
+font-size: medium;
+color: #228B22;
+
+}
+
+h1 {
+font-size: 150%;
+color: Maroon;
+border-bottom: 1px solid black;
+}
+
+h2{
+font-size: 120%;
+color: #FF4500;
+}
+
+td,th{
+border: #EEE8AA;
+}
+
+table {
+border: none;
+  caption-side: bottom;
+border-collapse: collapse;
+margin-left: 20px;
+margin-right: 20px;
+}

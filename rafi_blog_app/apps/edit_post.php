@@ -25,27 +25,24 @@ $result = mysql_query("SELECT * FROM Bloginfo WHERE Title='$temp'");
 $res =  mysql_fetch_array($result);
  
   
-  echo " <form action='core_edit_blog.php' method ='POST'>
+  echo " <div class='comid'><form action='core_edit_blog.php' method ='POST'>
 
-<table border='1' >
 
-<tr>
-<th>Title</th>
-<td><input type='text' name='Title' value='$res[Title]'>
-<input type='hidden' name='postID' value='$res[postID]'></td>
-</tr>
-<tr>
-<th>Post</th>
-<td><textarea 
- name='Comments' rows='10' cols='48' >$res[Comments]</textarea></td>
-</tr>
-<tr>
-<th></th>
-<td><input type='submit' value='Post'>&nbsp<input type='reset' value='Reset'></td>
+Title <label for='Title'>Title</label><br/>
+<input type='text' name='Title' value='$res[Title]'><br/>
+<input type='hidden' name='postID' value='$res[postID]'> <br/>
+
+
+<label for='Comments'>Post</label><br/>
+<textarea 
+ name='Comments' rows='10' cols='48' >$res[Comments]</textarea></td><br/>
+
+
+
+<input type='submit' value='Post'>&nbsp<input type='reset' value='Reset'>
  
-</tr>
-</table>
-</form> ";
+
+</form> </div>";
   
 
 

@@ -23,7 +23,7 @@ $query = "SELECT * FROM Bloginfo WHERE Title='$_GET[title]'";
 $result = mysql_query($query);
 $rs = mysql_fetch_array($result);
 
- echo " <div id='disp'>
+ echo " <div class='disp'>
  
   
   <span class='hf'>Title:  &nbsp  $rs[Title] </span>
@@ -52,7 +52,7 @@ $rs = mysql_fetch_array($result);
  {
  while($row = mysql_fetch_array($result1))
   {
-  echo " <div id='disp'>
+  echo " <div class='disp'>
  
   
   <span class='hf'>User:  &nbsp  $row[userName] </span>
@@ -74,7 +74,7 @@ $rs = mysql_fetch_array($result);
 mysql_close($con);
 ?> 
 
-<div id="comid">
+<div class="comid">
 
 <form action="comment_post.php" method="post" >
 

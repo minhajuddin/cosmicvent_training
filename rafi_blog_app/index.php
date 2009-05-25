@@ -11,6 +11,8 @@
 
 <body>
 <h1> Welcome to Blog Post</h1><br/><br/>
+<div class="disp">
+
 <h2> Top 30 blog posts </h2>
 
 <?php
@@ -48,6 +50,7 @@ mysql_close($con);
 ?> 
 
 <p> Post a new Comment <a href="html/blogpost.html"> Here </a> </p>
+</div>
 </body>
 
 </html>

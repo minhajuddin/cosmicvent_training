@@ -30,18 +30,22 @@ margin-left: 20px;
 margin-right: 20px;
 }
 
-#comid {
+.comid {
 
 margin: 40px 30px;
-/* background: #F5F5F5 ; */
+background: #F0F8FF; 
+padding: 20px;
+width: 480;
 }
 
-#disp{
+.disp{
 
 border: solid black 1px;
 width: 580px;
 /* background: #D3D3D3;*/
 margin: 40px 30px;
+padding: 10px;
+text-align: top ;
 }
 
 #discom {

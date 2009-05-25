@@ -10,29 +10,24 @@
 </head>
 
 <body>
-
+<div class="comid">
 <form action="../apps/blogpost.php" method ="POST">
 
-<table border="1" >
-<tr>
-<th> Author Name</th>
-<td><input type="text" name="AuthName" value=""></td>
-</tr>
-<tr>
-<th>Title</th>
-<td><input type="text" name="Title" value=""></td>
-</tr>
-<tr>
-<th>Enter Post</th>
-<td><textarea 
- name="Comments" rows="10" cols="48"></textarea></td>
-</tr>
-<tr>
-<th></th>
-<td><input type="submit" value="Post">&nbsp<input type="reset" value="Reset"></td>
+
+ <lable for="AuthName" >Author Name</lable><br/>
+<input type="text" name="AuthName" value=""><br/><br/>
+
+
+ <lable for="Title" >Title</lable><br/>
+<input type="text" name="Title" value=""><br/><br/>
+<lable for="Comments" >Enter Post</lable><br/>
+<textarea 
+ name="Comments" rows="10" cols="48"></textarea><br/>
+
+<input type="submit" value="Post">&nbsp<input type="reset" value="Reset">
  
-</tr>
-</table>
+
+
 </form>
 </body>
 </html>

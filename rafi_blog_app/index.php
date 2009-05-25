@@ -10,6 +10,9 @@
 </head>
 
 <body>
+<div id="header">
+<img height="100" width="346" alt="Blogger" src="images/logo100.png"/>
+</div>
 <h1> Welcome to Blog Post</h1><br/><br/>
 <div class="disp">
 
@@ -49,7 +52,7 @@ $result = mysql_query("SELECT * FROM Bloginfo ORDER BY postID DESC");
 mysql_close($con);
 ?> 
 
-<p> Post a new Comment <a href="html/blogpost.html"> Here </a> </p>
+<p> <a href="html/blogpost.html"> <span class="cr">CREAT A BLOG </span></a> </p>
 </div>
 </body>
 

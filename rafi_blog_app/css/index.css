@@ -59,3 +59,19 @@ margin: 20px;
 font-style: italic ;
 font-size: small;
 }
+
+#header {
+background: #008000;
+padding: 30px;
+border: thick solid black;
+}
+
+.cr{
+color: white;
+font-size: small;
+font-style: solid;
+font-weight: bold;
+border: solid black 3px;
+background: #008000;
+padding: 5px;
+}

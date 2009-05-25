@@ -16,7 +16,7 @@
 <h1> Welcome to Blog Post</h1><br/><br/>
 <div class="disp">
 
-<h2> Top 30 blog posts </h2>
+<h2> Top 30 Blogs </h2>
 
 <?php
 $con = mysql_connect("localhost","root","");
@@ -29,25 +29,35 @@ $sel = mysql_select_db("my_blog_db", $con);
 
 if (!$sel)
   {
-  echo "<h2> There are no existing posts</h2>";
+  echo "<h2> Not able to select a DB</h2>";
   
   }
-else{
+
 $result = mysql_query("SELECT * FROM Bloginfo ORDER BY postID DESC");
 
+if (!mysql_num_rows($result))
+  {
+  echo "<h2> There are no blogs exists</h2>";
+  
+  }
 
+else
+{
  while($row = mysql_fetch_array($result))
   {
    $temp = $row['Title'];
+   $postid = $row['postID'];
    
-  echo "Title  : &nbsp<a href='apps/display_post.php?title=$temp'>$temp</a>
+  echo "Title  : &nbsp<a href='apps/display_post.php?title=$postid'>$temp</a>
    &nbsp 
-  <a href='apps/edit_post.php?title=$temp'> Edit </a> 
+  <a href='apps/edit_post.php?title=$postid'> Edit </a> 
   &nbsp
-  <a href='apps/delete_post.php?title=$temp'> Delete </a>
+  <a href='apps/delete_post.php?title=$postid'> Delete </a>
   <br/><br/>";
   
     } 
+
+    
 }
 mysql_close($con);
 ?> 

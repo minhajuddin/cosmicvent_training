@@ -21,14 +21,14 @@ if (!$con)
 mysql_select_db("my_blog_db", $con);
 $temp=$_GET['title'];
 
-$result = mysql_query("SELECT * FROM Bloginfo WHERE Title='$temp'");
+$result = mysql_query("SELECT * FROM Bloginfo WHERE postID='$temp'");
 $res =  mysql_fetch_array($result);
  
   
   echo " <div class='comid'><form action='core_edit_blog.php' method ='POST'>
 
 
-Title <label for='Title'>Title</label><br/>
+<label for='Title'>Title</label><br/>
 <input type='text' name='Title' value='$res[Title]'><br/>
 <input type='hidden' name='postID' value='$res[postID]'> <br/>
 
@@ -47,9 +47,8 @@ Title <label for='Title'>Title</label><br/>
 
 
 mysql_close($con);
+
 ?> 
-<br/><br/>
-<a href="../index.php"> Go Back to Home Page</a>
 
 </body>
 </html>

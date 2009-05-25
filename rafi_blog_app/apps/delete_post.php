@@ -20,18 +20,19 @@ if (!$con)
 
 mysql_select_db("my_blog_db", $con);
 
-$del = mysql_query("DELETE FROM Bloginfo WHERE Title='$_GET[title]'");
+$del = mysql_query("DELETE FROM Bloginfo WHERE postID='$_GET[title]'");
 
 if (!$del)
   {
-  die('Could not query: ' . mysql_error());
+  
+ echo" <h3>Can not delete the post </h3>";
+  echo "<a href='../index.php'> Go Back to Home Page</a>";
+  die();
   }
 
 mysql_close($con);
+header("location: ../index.php");
 ?> 
-<h1> Delete is successfull </h1>
-<br/><br/>
-<a href="../index.php"> Go Back to Home Page</a>
 
 </body>
 </html>

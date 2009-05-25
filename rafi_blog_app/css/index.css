@@ -33,7 +33,7 @@ margin-right: 20px;
 .comid {
 
 margin: 40px 30px;
-background: #F0F8FF; 
+background: #FAFAD2; 
 padding: 20px;
 width: 480;
 }
@@ -50,9 +50,10 @@ text-align: top ;
 
 #discom {
 
-background : #FFF5EE;
+background : #F5F5F5;
 padding: 5px;
-margin: 20px;
+margin: 10px;
+font-size: small;
 }
 
 .hf{

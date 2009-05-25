@@ -19,7 +19,7 @@ if (!$con)
 
 mysql_select_db("my_blog_db", $con);
 
-$query = "SELECT * FROM Bloginfo WHERE Title='$_GET[title]'";
+$query = "SELECT * FROM Bloginfo WHERE postID='$_GET[title]'";
 $result = mysql_query($query);
 $rs = mysql_fetch_array($result);
 
@@ -82,7 +82,7 @@ mysql_close($con);
 <br/>
 
 <input id="author" name="user" tabindex="1"/>
-<?php echo "<input type='hidden' name='Titeinfo' value='$rs[Title]' />"; ?>
+<?php echo "<input type='hidden' name='Titeinfo' value='$rs[postID]' />"; ?>
 <br/>
 <br/>
 

@@ -13,10 +13,11 @@
 <div id="header">
 <img height="100" width="346" alt="Blogger" src="images/logo100.png"/>
 </div>
+<p><a href="index.php"> Home <a></p>
 <h1> Welcome to Blog Post</h1><br/><br/>
 <div class="disp">
 
-<h2> Top 30 Blogs </h2>
+<h3> Here are the Top 30 Blogs </h3>
 
 <?php
 $con = mysql_connect("localhost","root","");

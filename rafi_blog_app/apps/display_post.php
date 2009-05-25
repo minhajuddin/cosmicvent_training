@@ -10,6 +10,10 @@
 </head>
 
 <body>
+<div id="header">
+<img height="100" width="346" alt="Blogger" src="../images/logo100.png"/>
+</div>
+<p><a href="../index.php"> Home <a></p>
 <?php
 $con = mysql_connect("localhost","root","");
 if (!$con)
@@ -28,7 +32,7 @@ $rs = mysql_fetch_array($result);
   
   <span class='hf'>Title:  &nbsp  $rs[Title] </span>
   
-  <div id='discom'>
+  <div id='dispos'>
   $rs[Comments]
   </div>
   
@@ -98,8 +102,7 @@ mysql_close($con);
 
 
 
-<br/><br/>
-<a href="../index.php"> Go Back to Home Page</a>
+
 
 </body>
 </html>

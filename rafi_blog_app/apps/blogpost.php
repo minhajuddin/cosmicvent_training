@@ -49,7 +49,7 @@ CommTimeStamp varchar(20),
 TitleCommId int, 
 INDEX (TitleCommId),
 FOREIGN KEY (TitleCommId) REFERENCES Bloginfo (postID)
-)ENGINE=INNODB;";
+)ENGINE=INNODB";
 
 // Execute query
 if (!mysql_query($sql,$con))
@@ -61,8 +61,12 @@ if (!mysql_query($sql,$con))
 
 
 $TimeStamp=date("Y/m/d");
+$escp_Title = mysql_escape_string($_POST[Title]);
+$escp_AuthName = mysql_escape_string($_POST[AuthName]);
+$escp_Comments = mysql_escape_string($_POST[AuthName]);
+
 $sql="INSERT INTO Bloginfo (Title, AuthName, Comments,TimeStamp)
-VALUES ('$_POST[Title]','$_POST[AuthName]','$_POST[Comments]','$TimeStamp')";
+VALUES ('$escp_Title','$escp_AuthName','$escp_Comments','$TimeStamp')";
 
 if (!mysql_query($sql,$con))
   {

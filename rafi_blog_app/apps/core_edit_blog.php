@@ -12,7 +12,10 @@ if (!$edi)
   }
 
 
-$res = mysql_query("UPDATE Bloginfo SET Title = '$_POST[Title]',Comments = '$_POST[Comments]'
+$escp_Title = mysql_escape_string($_POST[Title]);
+$escp_Comments = mysql_escape_string($_POST[Comments]);
+
+$res = mysql_query("UPDATE Bloginfo SET Title = '$escp_Title',Comments = '$escp_Comments'
 WHERE postID = '$_POST[postID]'");
 if (!$res)
   {

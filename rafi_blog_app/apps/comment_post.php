@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="../css/index.css"/>
 
 <title>My Blog Post Site</title>
 </head>
@@ -18,17 +18,28 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 
-// Create table
 mysql_select_db("my_blog_db", $con);
-$sql = "CREATE TABLE $_POST[titeinfo]_comments
-(
-FirstName varchar(15),
-LastName varchar(15),
-Age int
-)";
 
-// Execute query
-mysql_query($sql,$con);
+$TimeStamp=date("Y/m/d");
+$sql="INSERT INTO Ucomments (UserName, TitleComm,CommTimeStamp,TitleCommId)
+VALUES ('$_POST[user]','$_POST[text]','$TimeStamp','$_POST[Titeinfo]')";
+
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
+  }
+
+
+
+
+
 
 mysql_close($con);
 ?> 
+
+
+<h1> Your comments are added successfully </h1>
+<br/><br/>
+<a href="../index.php"> Go Back to Home Page</a>
+</body>
+</html>

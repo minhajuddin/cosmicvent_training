@@ -28,9 +28,9 @@ else
   echo "Error creating database: " . mysql_error();
   }
 
-// Create table
+// Create table Bloginfo
 mysql_select_db("my_blog_db", $con);
-$sql = "CREATE TABLE Bloginfo
+$sql = "CREATE TABLE IF NOT EXISTS Bloginfo
 (
 postID int NOT NULL AUTO_INCREMENT,
 PRIMARY KEY(postID),
@@ -41,7 +41,30 @@ TimeStamp varchar(15)
 )";
 
 // Execute query
-mysql_query($sql,$con);
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
+  }
+
+
+  
+  // Create table Ucomments
+  $sql = "CREATE TABLE IF NOT EXISTS Ucomments
+(
+commID int NOT NULL AUTO_INCREMENT,
+PRIMARY KEY(commID),
+userName varchar(40),
+TitleComm varchar(400),
+CommTimeStamp varchar(20),
+TitleCommId varchar(20),
+FOREIGN KEY (TitleCommId) REFERENCES Bloginfo (Title)
+)";
+
+// Execute query
+if (!mysql_query($sql,$con))
+  {
+  die('Error: ' . mysql_error());
+  }
 
 // Adding the new post
 
@@ -54,6 +77,9 @@ if (!mysql_query($sql,$con))
   {
   die('Error: ' . mysql_error());
   }
+  
+  
+  
 echo "<h1>Your Comments are posted successfully</h1>";
 
 mysql_close($con);

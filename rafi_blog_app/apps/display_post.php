@@ -39,19 +39,50 @@ $rs = mysql_fetch_array($result);
   
   
  </div> ";
-
+ 
+ $query = "SELECT * FROM Ucomments WHERE TitleCommId='$_GET[title]'";
+ $result1 = mysql_query($query);
+ 
+ if (!$result1)
+  {
+ /* die('Could not connect: ' . mysql_error());*/
+ echo "<h1> NO comments availabel</h1>";
+  }
+ else
+ {
+ while($row = mysql_fetch_array($result1))
+  {
+  echo " <div id='disp'>
+ 
+  
+  <span class='hf'>User:  &nbsp  $row[userName] </span>
+  
+  <div id='discom'>
+  $row[TitleComm]
+  </div>
+  
+  
+  
+ <span class='hf'> Date:$row[CommTimeStamp] </span>
+  
+  
+  
+ </div> ";
+ }
+  
+}
 mysql_close($con);
 ?> 
 
 <div id="comid">
 
-<form action="post_comment.php" method="post" >
+<form action="comment_post.php" method="post" >
 
 <lable for='author' > Name: </lable>
 <br/>
 
-<input id="author" name="author" tabindex="1"/>
-<input type="hidden" name="titeinfo" value="$rs[Title]" />
+<input id="author" name="user" tabindex="1"/>
+<?php echo "<input type='hidden' name='Titeinfo' value='$rs[Title]' />"; ?>
 <br/>
 <br/>
 

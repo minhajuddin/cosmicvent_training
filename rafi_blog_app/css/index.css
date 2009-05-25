@@ -39,14 +39,14 @@ margin: 40px 30px;
 #disp{
 
 border: solid black 1px;
-width: 400px;
-background: #D3D3D3;
+width: 580px;
+/* background: #D3D3D3;*/
 margin: 40px 30px;
 }
 
 #discom {
 
-background : #BC8F8F;
+background : #FFF5EE;
 padding: 5px;
 margin: 20px;
 }

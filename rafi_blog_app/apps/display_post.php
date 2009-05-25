@@ -23,28 +23,50 @@ $query = "SELECT * FROM Bloginfo WHERE Title='$_GET[title]'";
 $result = mysql_query($query);
 $rs = mysql_fetch_array($result);
 
- echo " <table border='1'> 
+ echo " <div id='disp'>
  
-  <tr>
-  <td>Title:</td>
-  <td> $rs[Title] </td>
-  </tr>
   
-  <tr>
-  <td></td>
-  <td>$rs[Comments]</td>
-  </tr>
+  <span class='hf'>Title:  &nbsp  $rs[Title] </span>
   
-  <tr>  
-  <td>Author Name:</td>
-  <td>$rs[AuthName] &nbsp Date:$rs[TimeStamp]</td>;
+  <div id='discom'>
+  $rs[Comments]
+  </div>
   
-  </tr>
   
- </table> ";
+  
+ <span class='hf'> Author Name:  $rs[AuthName], &nbsp Date:$rs[TimeStamp] </span>
+  
+  
+  
+ </div> ";
 
 mysql_close($con);
 ?> 
+
+<div id="comid">
+
+<form action="post_comment.php" method="post" >
+
+<lable for='author' > Name: </lable>
+<br/>
+
+<input id="author" name="author" tabindex="1"/>
+<input type="hidden" name="titeinfo" value="$rs[Title]" />
+<br/>
+<br/>
+
+<label for="text">Your comments:</label>
+<br/>
+<textarea id="text" cols="70" rows="11" name="text" tabindex="4"/></textarea>
+<br/>
+<input type="submit" value=" Post " name="post" style="font-weight: bold;" tabindex="5"/>
+<br/>
+<br/>
+</form>
+</div>
+
+
+
 <br/><br/>
 <a href="../index.php"> Go Back to Home Page</a>
 

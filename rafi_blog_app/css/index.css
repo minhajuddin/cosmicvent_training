@@ -29,3 +29,29 @@ border-collapse: collapse;
 margin-left: 20px;
 margin-right: 20px;
 }
+
+#comid {
+
+margin: 40px 30px;
+/* background: #F5F5F5 ; */
+}
+
+#disp{
+
+border: solid black 1px;
+width: 400px;
+background: #D3D3D3;
+margin: 40px 30px;
+}
+
+#discom {
+
+background : #BC8F8F;
+padding: 5px;
+margin: 20px;
+}
+
+.hf{
+font-style: italic ;
+font-size: small;
+}

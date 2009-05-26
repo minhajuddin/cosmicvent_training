@@ -40,5 +40,27 @@
       $query->close();
       return $posts; //returns true if insert was successful
     }        
+    
+    //function which returns a post based on the input id
+    function get_post_by_id( $id ){
+      
+      $query_text = "SELECT id, title, content, author, created_on FROM posts WHERE id = ?";
+      
+      $query = $this->db->prepare( $query_text );
+      
+      $query->bind_param( 'i', $id );
+            
+      $query->bind_result( $id, $title, $content, $author, $created_on );
+      
+      $query->execute();
+      
+      if( $query->fetch() ){
+        $post = new Post( $id, $title, $content, $author, $created_on );
+        $query->close();
+        return $post;
+      } else {
+        return false;
+      }
+    }
   }
 ?>

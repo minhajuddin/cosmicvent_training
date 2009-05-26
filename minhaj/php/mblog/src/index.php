@@ -18,7 +18,7 @@
 
         //loop through them
         foreach( $posts as $post ){
-          echo "<li>$post->title</li>";
+          echo "<li><a href='display_post.php?id=$post->id' title='$post->title'>$post->title</a></li>";
         }
         echo "</ul>";
       ?>

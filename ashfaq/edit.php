@@ -38,6 +38,7 @@ echo "<table border='1'>
 <th>name</th>
 <th>discription</th>
 <th>price</th>
+<th>cname</th>
 
 </tr>";
 $row = mysql_fetch_array($result);

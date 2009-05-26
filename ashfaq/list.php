@@ -30,7 +30,7 @@ echo "<table border='1'>
 <th>discription</th>
 <th>price</th>
 
-<th>name</th>
+<th>cname</th>
 
 
 <th>edit</th>
@@ -47,7 +47,7 @@ while($row = mysql_fetch_array($result))
   echo "<td>" . $row['discription'] . "</td>";
   echo "<td>" . $row['price'] . "</td>";
 
-  echo "<td>" . $row['name'] . "</td>";
+  echo "<td>" . $row['cname'] . "</td>";
 
 
   
@@ -60,7 +60,7 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
   
-  <input type='hidden' name='name' value='  ". $row['name'] ."' />  
+  <input type='hidden' name='cname' value='  ". $row['cname'] ."' />  
 <input type='submit' value='edit'  />
   </form></td>";
        
@@ -71,7 +71,7 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
   
-  <input type='hidden' name='name' value='  ". $row['name'] ."'
+  <input type='hidden' name='cname' value='  ". $row['cname'] ."'
   <input type='submit' value='delete'  />
   </form> </td>";
   echo "</tr>";

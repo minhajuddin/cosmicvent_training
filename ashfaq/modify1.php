@@ -42,7 +42,6 @@ echo "<table border='1' bgcolor=#ffffff>
 <th>name</th>
 <th>discription</th>
 <th>price</th>
-<th>catagoeryid</th>
 
 </tr>";
 $row = mysql_fetch_array($result);
@@ -55,7 +54,6 @@ echo "<form action='modify1.php' method='post'>";
   echo "<td>$row[name]</td>";
   echo "<td>$row[discription]</td>";
   echo "<td>$row[price]</td>";
-  echo "<td>$row[catagoeryid]</td>";
 
   echo "</tr>";
   

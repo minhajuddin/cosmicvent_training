@@ -90,9 +90,8 @@ mysql_close($con)
 
 
 
-
 <tr><td>
-<a href="catagory.html"><b>products catagoery<b></a></td>
+<a href="catagory.html"><b>products catagory<b></a></td>
 </tr>
 
 

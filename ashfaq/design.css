@@ -1,0 +1,55 @@
+
+<!--
+a:link {color: #000000; text-decoration: underline; }
+a:active {color: #0000ff; text-decoration: underline; }
+a:visited {color: #008000; text-decoration: underline; }
+a:hover {color: #ff0000; text-decoration: none; }
+-->
+
+
+.mylist
+{
+background-color: #AFEEEE;
+}
+
+
+.delete,.mydelete
+{
+background-color: #AFEEEE;
+}
+
+
+.edit{
+background-color: #AFEEEE;
+
+}
+
+
+body{
+background-color: #000000;
+
+}
+
+table
+{
+background-color:#ffffff;
+text-align:center;
+width:500px;
+height:300px;
+border-width:7px;
+border-color:#000000;
+color:black;
+cellpadding:5px;
+cellspacing:5px;
+}
+
+.mytable{
+
+background-color:#ffffff;
+
+{
+
+.myth
+{
+text-align:right;
+}

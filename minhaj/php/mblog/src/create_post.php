@@ -15,15 +15,10 @@
       
       //TODO: Do the validation for the input
       
-      $post = new Post();
-      $post->title = $title;
-      $post->content = $content;
-      $post->author = $author;
-      
+      $post = new Post(0, $title, $content, $author, '' );
+            
       $post_repo = new PostRepo();
-      
       $result = $post_repo->insert_post( $post );
-      
       if( $result ){
         echo "Created successfully";
       } else {

@@ -1,6 +1,7 @@
   Create blog posts #
-  Display a list of blog posts *
-  Display a blog post with comments
+  Display a list of blog posts #
+  Display a complete blog post *
+  Display comments 
   Blog posts should be editable
   Blog posts should be deletable
  

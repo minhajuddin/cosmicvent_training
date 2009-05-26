@@ -38,6 +38,7 @@ echo "<table border='1'>
 <th>name</th>
 <th>discription</th>
 <th>price</th>
+<th>name</th>
 
 </tr>";
 $row = mysql_fetch_array($result);
@@ -50,7 +51,7 @@ echo "<form action='modify1.php' method='post'>";
   echo "<td><input type='text' name='name' value='$row[name]' /></td>";
   echo "<td><input type='text' name='discription' value=' " . $row['discription'] ."' /> </td>";
   echo "<td><input type='text' name='price' value='  ". $row['price'] ."' /></td>";
-  echo "<td><input type='text' name='catagoeryid' value='  ". $row['catagoeryid'] ."' /></td>";
+  echo "<td><input type='text' name='name' value='  ". $row['name'] ."' /></td>";
 
   echo "</tr>";
   

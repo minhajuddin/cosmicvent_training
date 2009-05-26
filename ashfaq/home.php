@@ -88,17 +88,11 @@ mysql_close($con)
 <a href="product.php"><b> ADD PRODUCT</b> </a>
 </td></tr>
 
-<tr><td>
-<a href="modify.html"><b>MODIFY PRODUCT</b> </a></td>
-</tr>
 
-<tr><td>
-<a href="delete.html"><b>DELETE PRODUCT<b></a></td>
-</tr>
 
 
 <tr><td>
-<a href="catagory.html"><b>products catagory<b></a></td>
+<a href="catagory.html"><b>products catagoery<b></a></td>
 </tr>
 
 

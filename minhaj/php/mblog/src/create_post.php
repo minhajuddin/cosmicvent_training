@@ -4,13 +4,31 @@
   </head>
   <body>
   <?php
+  
+  require_once 'data_access/post_repo.php';
+  
     if(isset($_POST['title'])){
       //insert the post
       $title = $_POST['title'];
       $content = $_POST['content'];
       $author = $_POST['author'];
       
-      echo "$title $content $author";
+      //TODO: Do the validation for the input
+      
+      $post = new Post();
+      $post->title = $title;
+      $post->content = $content;
+      $post->author = $author;
+      
+      $post_repo = new PostRepo();
+      
+      $result = $post_repo->insert_post( $post );
+      
+      if( $result ){
+        echo "Created successfully";
+      } else {
+        echo "Post creation failed";
+      }
     }
   ?>
     <div>

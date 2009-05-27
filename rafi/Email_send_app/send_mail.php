@@ -56,6 +56,10 @@ else
       $subject = $_POST['subject'];
       $message = $_POST['mbody'];
       
+   
+   $to = $_POST['fromid'] ;
+   mail($to, $subject, $message, $headers) ;  
+      
       
  foreach( $mailids as $mailid )
         {

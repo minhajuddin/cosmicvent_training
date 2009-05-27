@@ -1,0 +1,63 @@
+<html>
+ <head>
+    <title>
+-- Home
+    </title>
+    <link type="text/css" rel="stylesheet" href=" " />
+  </head>
+
+      
+<body>
+<?php
+  
+  require_once 'data_access/email_class.php';
+  
+  if(isset($_POST['mailid'])){
+      //insert the post
+      $username = $_POST['username'];
+      $mailid = $_POST['mailid'];
+      
+   $escp_username =    mysql_escape_string($username);
+    $escp_mailid =  mysql_escape_string($mailid);
+      
+      $mailid = new MailEntry(0, $escp_username, $escp_mailid, 1);
+      $mail_repo = new EmailRepo();
+      
+      $result = $mail_repo->insert_mailid( $mailid );
+      
+      if( $result ){
+        echo "Entry inserted  successfully";
+      } else {
+        echo "Mail insertion failed";
+      }
+      
+      }
+      
+      ?>
+      
+<div id ="header"></div>
+<div id ="sidebar">
+<?php
+$mail_repo = new EmailRepo();
+$mailids = $mail_repo->get_mailids();
+
+
+ //loop through them
+ foreach( $mailids as $mailid ){
+echo "$mailid->user_name &nbsp &nbsp $mailid->email_id <br/>";
+        }
+        
+?>
+</div>
+<div id ="content">
+<form action="" method="post">
+<lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
+<lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/>
+<input type="submit"> &nbps <input type="reset"
+</form>
+</div>
+<div id ="footer"></div>
+
+
+</body>
+</html>

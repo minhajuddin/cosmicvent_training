@@ -91,7 +91,7 @@ mysql_close($con)
 
 
 <tr><td>
-<a href="catagory.html"><b>products catagory<b></a></td>
+<a href="catagoery.php"><b>products catagory<b></a></td>
 </tr>
 
 

@@ -39,13 +39,30 @@
 </form> 
 
 <hr>
-<form action="catagory.html" method="post">
+<form action="catagoery.php" method="post">
 <h3>
 Enter the name of the product which you want to delete :
 </h3>
+<?php
+$con = mysql_connect("localhost","root","");
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+mysql_select_db("my_ash", $con);
+
+
+mysql_query("DELETE FROM catagoery WHERE cname='$_POST[cname]'");
+
+mysql_close($con);
+?> 
 <input type="text" name="cname" value="" ></br>
 <input type="submit"  value="delete" >
 </form>
+
+
+
 <hr>
 <br>
 

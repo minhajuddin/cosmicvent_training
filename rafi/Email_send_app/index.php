@@ -33,6 +33,7 @@
 <html>
  <head>
   <title>Email ID DataBase</title>
+  <link type="text/css"
  </head>
 
  <body>

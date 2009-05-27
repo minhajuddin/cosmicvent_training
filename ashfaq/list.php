@@ -78,7 +78,6 @@ while($row = mysql_fetch_array($result))
   }
 echo "</table>";
 
-
 mysql_close($con);
 ?> 
 <a href="home.php"><b>back to main page</b></a>

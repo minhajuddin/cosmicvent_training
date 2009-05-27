@@ -1,10 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
 
+<html> 
+<head> 
 
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>add catagoery</title> 
+<link type="text/css" rel="stylesheet" href="design.css" />
+<style type="text/css">
 
-
-<html>
-<head><title>add cat></title></head>
-
+</style> 
+</head>
 <body>
 
 <?php

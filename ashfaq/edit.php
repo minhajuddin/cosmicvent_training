@@ -6,14 +6,9 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>this is existing products</title> 
-<link type="text/css" rel="stylesheet" href="" />
+<link type="text/css" rel="stylesheet" href="design.css" />
 <style type="text/css">
-<!--
-a:link {color: #000000; text-decoration: underline; }
-a:active {color: #0000ff; text-decoration: underline; }
-a:visited {color: #008000; text-decoration: underline; }
-a:hover {color: #ff0000; text-decoration: none; }
--->
+
 </style> 
 </head>
 

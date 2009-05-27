@@ -6,7 +6,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>this is existing products</title> 
-<link type="text/css" rel="stylesheet" href="../css/index.css" />
+<link type="text/css" rel="stylesheet" href="design.css" />
 </head>
 
 <body>

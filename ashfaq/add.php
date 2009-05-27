@@ -6,6 +6,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Success Record addition</title> 
+<link type="text/css" rel="stylesheet" href="design.css" />
 
 </head>
 

@@ -6,15 +6,7 @@
 
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>this is existing products</title> 
-<link type="text/css" rel="stylesheet" href="" />
-<style type="text/css">
-<!--
-a:link {color: #000000; text-decoration: underline; }
-a:active {color: #0000ff; text-decoration: underline; }
-a:visited {color: #008000; text-decoration: underline; }
-a:hover {color: #ff0000; text-decoration: none; }
--->
-</style> 
+<link type="text/css" rel="stylesheet" href="design.css" />
 </head>
 
 <body bgcolor=#20b2a0>
@@ -37,6 +29,7 @@ echo "<table border='1' bgcolor=#ffffff>
 <th>name</th>
 <th>discription</th>
 <th>price</th>
+<th>cname</th>
 <th>edit</th>
 <th>delete</th>
 
@@ -50,6 +43,7 @@ while($row = mysql_fetch_array($result))
   echo "<td>" . $row['name'] . "</td>";
   echo "<td>" . $row['discription'] . "</td>";
   echo "<td>" . $row['price'] . "</td>";
+  echo "<td>" . $row['catagoeryid'] . "</td>";
 echo "<td>
   
   <form action='edit.php' method='post'>
@@ -57,6 +51,7 @@ echo "<td>
   <input type='hidden' name='name' value='$row[name]' />
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
+ <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."' />
   <input type='submit' value='edit'  />
   </form></td>";
        
@@ -66,6 +61,7 @@ echo "<td>
   <input type='hidden' name='name' value='$row[name]' />
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
+  <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."' />
   <input type='submit' value='delete'  />
   </form> </td>";
   echo "</tr>";  }

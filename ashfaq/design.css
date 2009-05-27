@@ -7,22 +7,6 @@ a:hover {color: #ff0000; text-decoration: none; }
 -->
 
 
-.mylist
-{
-background-color: #AFEEEE;
-}
-
-
-.delete,.mydelete
-{
-background-color: #AFEEEE;
-}
-
-
-.edit{
-background-color: #AFEEEE;
-
-}
 
 
 body{
@@ -43,13 +27,4 @@ cellpadding:5px;
 cellspacing:5px;
 }
 
-.mytable{
-
-background-color:#ffffff;
-
-{
-
-.myth
-{
-text-align:right;
-}
+.

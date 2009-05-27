@@ -9,7 +9,7 @@
 <link type="text/css" rel="stylesheet" href="design.css" />
 </head>
 
-<body bgcolor=#20b2aa>
+<body>
 
 
 <?php
@@ -20,8 +20,10 @@ if (!$con)
   }
 
 mysql_select_db("my_ash", $con);
+echo "SELECT * FROM catalogue WHERE id='$_POST[id]'";
 
-mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]',catagoeryid='$_POST[catagoeryid]'
+
+mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]', catagoeryid='$_POST[cname]'
  WHERE id = '$_POST[id]'");
 
 echo "<strong>THE UPDATED VALUES ARE :</strong>";
@@ -41,7 +43,7 @@ echo "<table border='1' bgcolor=#ffffff>
 $row = mysql_fetch_array($result);
   
 
-
+echo "$row[id]";
 echo "<form action='modify1.php' method='post'>";
   echo "<tr>";
   echo "<td>$row[id]</td>";

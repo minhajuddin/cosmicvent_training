@@ -13,7 +13,7 @@
 </title>
 </head>
 
-<body class=delete>
+<body>
 
 <?php
 $con = mysql_connect("localhost","root","");

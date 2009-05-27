@@ -9,7 +9,7 @@
 <link type="text/css" rel="stylesheet" href="design.css" />
 </head>
 
-<body class=mylist>
+<body>
 
 
 <?php
@@ -21,7 +21,7 @@ if (!$con)
 
 mysql_select_db("my_ash", $con);
 
-$result = mysql_query("SELECT * FROM catalogue");
+$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid");
 
 echo "<table border='1'>
 <tr>
@@ -47,7 +47,7 @@ while($row = mysql_fetch_array($result))
   echo "<td>" . $row['discription'] . "</td>";
   echo "<td>" . $row['price'] . "</td>";
 
-  echo "<td>" . $row['catagoeryid'] . "</td>";
+  echo "<td>" . $row['cname'] . "</td>";
 
 
   
@@ -60,7 +60,7 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
   
-  <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."' />  
+  <input type='hidden' name='cname' value='  ". $row['cname'] ."' />  
 <input type='submit' value='edit'  />
   </form></td>";
        
@@ -71,7 +71,7 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
   
-  <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."'
+  <input type='hidden' name='cname' value='  ". $row['cname'] ."'
   <input type='submit' value='delete'  />
   </form> </td>";
   echo "</tr>";

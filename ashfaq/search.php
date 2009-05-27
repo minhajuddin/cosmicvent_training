@@ -9,7 +9,7 @@
 <link type="text/css" rel="stylesheet" href="design.css" />
 </head>
 
-<body bgcolor=#20b2a0>
+<body>
 
 
 <?php

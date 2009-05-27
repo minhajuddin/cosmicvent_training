@@ -20,8 +20,8 @@ if (!$con)
   }
 
 mysql_select_db("my_ash", $con);
-echo "SELECT * FROM catalogue WHERE id='$_POST[id]'";
-$result = mysql_query("SELECT * FROM catalogue WHERE id='$_POST[id]'")
+
+$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid");
 
 echo "<table border='1'>
 <tr>
@@ -42,12 +42,12 @@ echo "<table border='1'>
 while($row = mysql_fetch_array($result))
   {
   echo "<tr>";
-  echo "<td> . $row['id'] . </td>";
-  echo "<td> . $row['name'] . </td>";
-  echo "<td> . $row['discription'] . </td>";
-  echo "<td> . $row['price'] . </td>";
+  echo "<td>" . $row['id'] . "</td>";
+  echo "<td>" . $row['name'] . "</td>";
+  echo "<td>" . $row['discription'] . "</td>";
+  echo "<td>" . $row['price'] . "</td>";
 
-  echo "<td>" . $row['catagoeryid'] . "</td>";
+  echo "<td>" . $row['cname'] . "</td>";
 
 
   
@@ -57,10 +57,10 @@ while($row = mysql_fetch_array($result))
   <form action='edit.php' method='post'>
   <input type='hidden' name='id' value='$row[id] '/>
   <input type='hidden' name='name' value='$row[name]' />
-  <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
-  <input type='hidden' name='price' value='  ". $row['price'] ."' />
+  <input type='hidden' name='discription' value=' $row[discription]' />
+  <input type='hidden' name='price' value=' $row'[price]' />
   
-  <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."' />  
+  <input type='hidden' name='cname' value='  $row'[cname]' />  
 <input type='submit' value='edit'  />
   </form></td>";
        
@@ -71,7 +71,7 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
   <input type='hidden' name='price' value='  ". $row['price'] ."' />
   
-  <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."'
+  <input type='hidden' name='cname' value='  ". $row['cname'] ."'
   <input type='submit' value='delete'  />
   </form> </td>";
   echo "</tr>";

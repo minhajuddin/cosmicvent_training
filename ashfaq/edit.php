@@ -24,9 +24,9 @@ if (!$con)
 
 mysql_select_db("my_ash", $con);
 
-
-$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid WHERE id='$_POST[id]'");
-
+echo "SELECT * FROM catagoery WHERE id='$_POST[id]'";
+$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid");
+print_r($result);
 echo "<table border='1'>
 <tr>
 <th>id</th>
@@ -36,10 +36,9 @@ echo "<table border='1'>
 <th>cname</th>
 
 </tr>";
+
 $row = mysql_fetch_array($result);
   
-
-
 echo "<form action='modify1.php' method='post'>";
   echo "<tr>";
   echo "<td><input type='hidden' name='id' value='$row[id] '/></td>";

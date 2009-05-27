@@ -20,7 +20,7 @@ if (!$con)
   }
 
 mysql_select_db("my_ash", $con);
-echo "SELECT * FROM catalogue WHERE id='$_POST[id]'";
+
 
 
 mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]', catagoeryid='$_POST[cname]'
@@ -28,7 +28,7 @@ mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[disc
 
 echo "<strong>THE UPDATED VALUES ARE :</strong>";
 
-$result = mysql_query("SELECT * FROM catalogue WHERE id='$_POST[id]'");
+$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid WHERE id='$_POST[id]'");
 
 echo "<table border='1' bgcolor=#ffffff>
 <tr>
@@ -44,13 +44,13 @@ $row = mysql_fetch_array($result);
   
 
 echo "$row[id]";
-echo "<form action='modify1.php' method='post'>";
+
   echo "<tr>";
   echo "<td>$row[id]</td>";
   echo "<td>$row[name]</td>";
   echo "<td>$row[discription]</td>";
   echo "<td>$row[price]</td>";
-  echo "<td>$row[catagoeryid]</td>";
+  echo "<td>$row[cname]</td>";
 
   echo "</tr>";
   

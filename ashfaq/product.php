@@ -37,9 +37,9 @@ mysql_select_db("my_ash", $con);
  
 
 
-$sql="INSERT INTO catagoery (cid,name)
+$sql="INSERT INTO catagoery (cid,cname)
 VALUES
-('$_POST[cid]','$_POST[name]')";
+('$_POST[cid]','$_POST[cname]')";
 
 if (!mysql_query($sql,$con))
   {
@@ -94,7 +94,7 @@ echo "<select name='catagoeryid'  width=90>";
 while($row = mysql_fetch_array($result))
 {
 
-  echo "<option value='$row[cid]'>$row[name]</option>";
+  echo "<option value='$row[cid]'>$row[cname]</option>";
   }
       
   echo  "</select>";

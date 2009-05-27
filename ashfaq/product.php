@@ -9,59 +9,11 @@
 
 </head>
 
-
-
 <body>
-
-<?php
-
-$con = mysql_connect("localhost","root","");
-
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-
-
-mysql_select_db("my_ash", $con);
-
-
-$result = mysql_query("SELECT * FROM catagoery");
-
-
-
-
-mysql_select_db("my_ash", $con);
-
-
- 
-
-
-$sql="INSERT INTO catagoery (cid,cname)
-VALUES
-('$_POST[cid]','$_POST[cname]')";
-
-if (!mysql_query($sql,$con))
-  {
-  die('Error: ' . mysql_error());
-  }
-echo "";
-
-mysql_close($con)
-?> 
-
-
-
-    
-
-
-
 
 <form action="add.php" method="post">
 
- 
-
-<table class="mytable">
+ <table class="mytable">
 
 <tr><th  colspan="2">
 <h1>Please fill the product details </th></tr>
@@ -86,9 +38,24 @@ mysql_close($con)
 <tr>
 <th align="right">catagoeryid:</th>
 <td> 
-
 <?php
 
+$con = mysql_connect("localhost","root","");
+
+if (!$con)
+  {
+  die('Could not connect: ' . mysql_error());
+  }
+
+
+mysql_select_db("my_ash", $con);
+
+$result = mysql_query("SELECT * FROM catagoery");
+
+mysql_close($con)
+?> 
+
+<?php
 echo "<select name='catagoeryid'  width=90>";
 
 while($row = mysql_fetch_array($result))
@@ -100,7 +67,6 @@ while($row = mysql_fetch_array($result))
   echo  "</select>";
   
   ?>
-  
 
 </td></tr>
 
@@ -113,15 +79,12 @@ while($row = mysql_fetch_array($result))
 <input type="reset" value="reset" >
 
 </td> </tr>
-
-
-
 </table>
 
+
 </form> 
-
-
 </body>
+
 </html>
 
 

@@ -14,7 +14,7 @@
 <body>
 
 
-<form action="product.php" method="post">
+<form action="catagory.php" method="post">
 
 <table class="mytable">
 
@@ -48,21 +48,6 @@ Enter the name of the product which you want to delete :
 </form>
 <hr>
 <br>
-<?php
-$con = mysql_connect("localhost","root","");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
-
-mysql_select_db("my_ash", $con);
-
-
-mysql_query("DELETE FROM catagoery WHERE name='$_POST[cname]'");
-
-mysql_close($con);
-?> 
-
 
 <a href="home.php"><b>Go back to main menu</b></a>
 

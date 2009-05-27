@@ -60,7 +60,7 @@ if (!mysql_query($sql,$con))
 mysql_select_db("my_ash", $con);
 $sql = "CREATE TABLE IF NOT EXISTS catalogue
 (
-id int NOT NULL AUTO_INCREMENT,
+id int NOT NULL,
 PRIMARY KEY(id),
 name varchar(50),
 discription varchar(500),

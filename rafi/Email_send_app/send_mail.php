@@ -6,7 +6,7 @@
     <link type="text/css" rel="stylesheet" href=" " />
   </head>
   <body>
-<div id ="header"> <a href="index.php"> Home </a></div>
+<div id ="header"> <a href="main.php"> Home </a></div>
 
 
 
@@ -44,11 +44,11 @@ $to = $to."$mailid->email_id ".",";
       $headers = "From:".$_POST['fromid'];
       $subject = $_POST['subject'];
       $message = $_POST['mbody'];
-      echo "it is running";
+      
       
      
 
-mail($to, $subject, $message, $headers);
+echo "it is running" .mail($to, $subject, $message, $headers);
      
     }
         

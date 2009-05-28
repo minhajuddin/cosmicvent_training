@@ -43,7 +43,7 @@
        <div id="search" align="right">
            <form action="main.php" method="post">
            <b>Search</b> 
-           <input type="text" name="search" value="" id="search">
+           <input type="text" name="search" value="user name" id="search">
            <input type=submit name=submit value="GO" id=submit>
            </form>
         </div>
@@ -91,19 +91,43 @@ else
 
 </div>
 
+
  
 <table id = "table_index">
 
-<tr><td><a href="send_mail.php">Send E-Mail</a></td>
+<tr>
+<td><a href="send_mail.php"><b>COMPOSE MAIL</b></a>
+    
+     <!-- <table>
+      <tr><td>Send to ALL</td></tr>
+      <tr><td>Send to Signle ID</td></tr>
+      </table>
+      */ -->
+</td>
+
+   <td>
+      <b>Delete from Database</b>
+      <table>
+      <tr><td><a href="delete_by_id.php"><b>Delete by ID</b></a></td></tr>
+      <tr><td><a href="delete_by_username.php"><b>Delete by UserName</b></a></td></tr>
+      
+      </table>
+   </td>
+   <td>
+      <b>Search Database</b>
+      <table>
+      <tr><td><a href="search_by_id.php"><b>Search by ID</b></a></td></tr>
+      <tr><td><a href="search_by_username.php"><b>Search by UserName</b></a></td></tr>
+      
+      </table>
+   </td>
+
 <td> 
-    
-    
-    
     <div id="add" align="right">
      <form action="main.php" method="post">
         <table>      
         <tr><td colspan="2" align="center"><b>ADD EMAIL ID</b></td></tr>
-        <tr><td><lable for="uname"><b>User Name:</b></td>        <td><input type="text" id="uname" name="username" size="30"/></label></td></tr>
+        <tr><td><lable for="uname"><b>User Name:</b></td>        <td><input type="text" id="uname" name="username" size="30" value=""/></label></td></tr>
         <tr><td><lable for="mailid"><b>Email ID:</b></td>        <td><input type="text" id="mailid" name="mailid" size="30"/></lablel></td></tr>
         <tr><td colspan="2" align="center"><input type="submit" value="Submit"> &nbsp<input type="reset" value="Reset"></td></tr>
         </table>
@@ -111,6 +135,7 @@ else
     </div>
 </td>
 </table> 
+
 
   
   </div>

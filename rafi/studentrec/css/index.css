@@ -1,0 +1,42 @@
+body{
+ background-color: #9ACD32;
+ font-family: sans-serif;
+ font-size: medium;
+color: #800000;
+}
+
+h1 {
+	font-size: 130%;
+	color: #000000;	
+	border-bottom: 1px solid black
+   }
+
+
+
+td,th {
+	padding: 5px;
+	border: #cococo;
+	cell-align: left;
+	}
+a {
+
+font-weight: lighter;
+/* font-size: 10%; */
+}
+
+table.fa {
+
+border: #9ACD32;
+/* background-color: #c0c0c0;*/
+
+}
+table.show{
+background-color: silver;
+}
+
+table {
+	margin-left: 20px;
+	margin-right:20%;
+	border: thin solid black;
+	border-collapse: collapse;
+	}

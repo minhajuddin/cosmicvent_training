@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>ADD BOOK</title>
+    <title>UPDATION COMPLETED</title>
   <style type="text/css">
   <!--
 a:link {color: #400000; text-decoration: underline; }
@@ -32,10 +32,10 @@ background-color:#4682B4;
       $bookObj = new book($id, $name, $author, $publisher, $price);
           
       $book_classObj = new book_class();
-      $result = $book_classObj->insert_book( $bookObj );
+      $result = $book_classObj->update_book( $bookObj );
       
       if( $result ){
-        echo "<br><b>Congrats!! Book added Succesfully.</b><br><br><br><br><b>The following are the details of the book:</b><br><br>";
+        echo "<br><b>Congrats!! Book added Succesfully.</b><br><br><br><br><b>The following are the new details of book:</b><br><br>";
       echo"
       <table class=\"search_result\" width=\"50%\">
  <tr><th>ID</th><th>Name</th><th>Author</th><th>Publisher</th><th>Price</th></tr>
@@ -43,28 +43,13 @@ background-color:#4682B4;
  </table>";
       
       } 
-      
-      
+            
       else {
-        echo "Sorry!! Addition of book failed.. GIVE SOME OTHER ID TO BOOK";
+        echo "Sorry!! Updation of book failed.. ";
       }
     }
   ?>
-    <div>
-      <form action='add_book.php' method='post'>
-        <h2>ADD ANOTHER BOOK :</h2>
-         <table>
-        <tr><td>ID:</td><td><input type="text" name="id" value="" id="id"</td></tr>
-        <tr><td>Name:</td><td><input type="text" name="name" value="" id="name"</td></tr>
-        <tr><td>Author:</td><td><input type="text" name="author" value="" id="author"</td></tr>
-        <tr><td>Publisher:</td><td><input type="text" name="publisher" value="" id="publisher"</td></tr>
-        <tr><td>Price:</td><td><input type="text" name="price" value="" id="price"</td></tr>
-        <tr><td><input type='submit' value='Add' /></td><td><input type='reset' value='reset' /></td></tr>
-        </table>
-      </form>
-      
-      <a href="admin.php"><b>RETURN TO HOME PAGE</b></a>
-     </div>
-  
+ <a href="admin.php"><b>RETURN TO ADMIN'S PAGE</b></a>
+
   </body>
-</html>
+  </html>

@@ -40,7 +40,7 @@
  
  <div id="header"></div>
  
- <a href="send_mail.php">Send Mail</a>
+ <a href="compose_mail.php">Compose Mail</a>
  
  <div id="content">
    <h1>Email ID DataBase</h1>
@@ -66,9 +66,9 @@ else
  
  foreach( $mailids as $mailid ){ 
  
- echo " $mailid->email_id <br/>";
+ echo " $mailid->email_id &nbsp <a href='edit_entry.php?id=$mailid->id'> Edit </a> <br/>" ;
  
- 
+
  }
  
  } }
@@ -81,7 +81,7 @@ else
 
 <div id="add">
 <h3>Add Email ID</h3>
-<form action="main.php" method="post">
+<form action="index.php" method="post">
 <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
 <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/>
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
@@ -92,9 +92,9 @@ else
 
   <dev id="search">
     <h3> Search </h3>
-  <form action="main.php" method="post">
-  <input type="text" name="search" value="" id="search">
-  <input type=submit name=submit value="GO" id=submit>
+  <form action="index.php" method="post">
+  <input type="text" name="search" value="user/id name" id="search">
+  <input type="submit" name="submit" value="GO" id="submit">
     </form>
   </div>
   

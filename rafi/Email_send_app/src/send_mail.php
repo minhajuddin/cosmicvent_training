@@ -12,7 +12,7 @@
  
  
  
- <div class="body">
+ <div class="mesbody">
  
  <?PHP
  

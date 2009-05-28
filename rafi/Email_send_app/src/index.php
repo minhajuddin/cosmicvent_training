@@ -39,13 +39,15 @@
  <body>
  
  <div class="header"> 
- <div class = "strip"><h1>Email Send Utility</h1></div></div>
+ <div class = "strip"><h1>CosmicVent</h1></div>
+ 
+ </div>
  
  
  
  
 
-<div class="body">
+<div class="mesbody">
 
 <?php
 

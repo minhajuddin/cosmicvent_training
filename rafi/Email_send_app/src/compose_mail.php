@@ -12,15 +12,15 @@
 
 
 
-<div class="body">
+<div class="mesbody">
 
 
 <form action="send_mail.php" method="post">
-<lable for="fromid">From Id</lable><br/> <input type="text" id="fromid" name="fromid"/><br/>
-<lable for="subject">Subject </lable><br/> <input type="text" id="subject" name="subject"/><br/>
+<label for="fromid">From Id</label> <input type="text" id="fromid" name="fromid"/><br/><br/>
+<label for="subject">Subject </label> <input type="text" id="subject" name="subject"/><br/><br/>
 
-<lable for="mbody">Message</lable><br/> 
-<textarea  id="mbody" name="mbody" rows="10" cols="48" >
+<label for="mbody">Message</label><br/> 
+<textarea  id="mbody" name="mbody" rows="20" cols="68" >
 </textarea><br/>
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
 </form>

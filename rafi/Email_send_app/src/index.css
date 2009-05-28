@@ -22,7 +22,9 @@ margin: 0px;
 .strip {
 
 background-color: yellow;
-color: black;
+background-image:    url(cosmic.gif);
+
+color: white;
 width: 270px;
 /*margin: 1px;*/
 padding: 25px;
@@ -36,7 +38,7 @@ padding: 25px;
     
 }
 
-.body {
+.mesbody {
 
 background-color: yellow;
 float: right;
@@ -54,13 +56,10 @@ height: 500px;
 padding: 20px;
 }
 
-#mbody
- {
+.name{
 
-background-color: yellow;
-float: left;
-width: 688px;
-height: 500px;
-padding-top: 40px;
-text-align: center;
+}
+
+.message-div{
+  float:left;
 }

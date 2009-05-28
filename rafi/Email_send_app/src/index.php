@@ -80,24 +80,20 @@ else
 
 
 <div id="add">
-<a href="compose_mail.php">Compose Mail</a>
+<a href="compose_mail.php"><h3> Compose Mail </h3></a>
 <h3>Add Email ID</h3>
 <form action="index.php" method="post">
 <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
-<lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/>
-<input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
+<lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
+<input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
 </form>
-</div>
-
-
-
-  <dev id="search">
+  
     <h3> Search </h3>
   <form action="index.php" method="post">
   <input type="text" name="search" value="user/id name" id="search">
   <input type="submit" name="submit" value="GO" id="submit">
     </form>
-  </div>
+ </div>
   
 
  </body>

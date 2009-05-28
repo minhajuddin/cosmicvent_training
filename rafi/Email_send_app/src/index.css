@@ -4,6 +4,7 @@ body{
 background-color: #F5F5F5;
 /*border-color: black;*/
 /*border-width: 1px;*/
+margin: 0px;
 
 }
 
@@ -12,7 +13,7 @@ background-color: #F5F5F5;
 .header {
   /*  border-color: black;*/
   /*  border-width: 1px;*/
-    border-style: solid;
+  /*  border-style: solid;*/
     background-color: #0000ff;
     //padding: 25px;
 
@@ -20,8 +21,8 @@ background-color: #F5F5F5;
 
 #strip {
 
-background-color: black;
-color: yellow;
+background-color: yellow;
+color: black;
 width: 270px;
 /*margin: 1px;*/
 padding: 25px;
@@ -39,16 +40,16 @@ padding: 25px;
 
 background-color: yellow;
 float: right;
-width: 670px;
+width: 688px;
 height: 500px;
 padding-top: 40px;
 text-align: center;
 }
 
 #add { 
-background-color: black;
+background-color: #0000ff;
 color : yellow;
 width : 280px;
-height: auto;
+height: 500px;
 padding: 20px;
 }

@@ -19,14 +19,24 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 
+echo "UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]'
+ WHERE id = '$_POST[id]' AND catagoeryid='$_POST[cname]'";
+
+
+
 mysql_select_db("my_ash", $con);
 
+echo "$row[cname]";
+echo "catagoeryid='$_POST[cname]";
 
-
-mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]', catagoeryid='$_POST[cname]'
- WHERE id = '$_POST[id]'");
+mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]'
+ WHERE id = '$_POST[id]' AND catagoeryid='$_POST[cname]'");
 
 echo "<strong>THE UPDATED VALUES ARE :</strong>";
+
+echo "discription ='$_POST[discription]'";
+
+echo "SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid WHERE id='$_POST[id]'";
 
 $result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid WHERE id='$_POST[id]'");
 
@@ -37,14 +47,11 @@ echo "<table border='1' bgcolor=#ffffff>
 <th>discription</th>
 <th>price</th>
 <th>cname</th>
-
-
 </tr>";
+
+echo "mysql_fetch_array($result)";
 $row = mysql_fetch_array($result);
   
-
-echo "$row[id]";
-
   echo "<tr>";
   echo "<td>$row[id]</td>";
   echo "<td>$row[name]</td>";

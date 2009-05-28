@@ -1,7 +1,7 @@
 
 <?php
   
-  require_once 'data_access/email_class.php';
+  require_once 'data_access/email_repo.php';
   
   if(isset($_POST['mailid'])){
       //insert the post
@@ -33,17 +33,17 @@
 <html>
  <head>
   <title>Email ID DataBase</title>
-  <link type="text/css"
+  <link type="text/css" rel="stylesheet" href="index.css">
  </head>
 
  <body>
  
- <div id="header"></div>
+ <div class="header"> 
+ <div id = "strip"><h1>Email Send Utility</h1></div></div>
  
- <a href="compose_mail.php">Compose Mail</a>
  
- <div id="content">
-   <h1>Email ID DataBase</h1>
+ 
+ 
 
 <div id="result">
 
@@ -80,6 +80,7 @@ else
 
 
 <div id="add">
+<a href="compose_mail.php">Compose Mail</a>
 <h3>Add Email ID</h3>
 <form action="index.php" method="post">
 <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
@@ -98,6 +99,6 @@ else
     </form>
   </div>
   
-  </div>
+
  </body>
 </html>

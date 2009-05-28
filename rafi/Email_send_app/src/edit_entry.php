@@ -9,13 +9,14 @@
       
 <body>
 
+<a href="index.php"> Home </a>
 <?php
 
-// require_once 'data_access/email_class.php';
+require_once 'data_access/email_repo.php';
 if(isset($_POST['mailid'])){
 
 
-require_once 'data_access/email_class.php';
+
 $mail_repo = new EmailRepo();
         
         
@@ -49,7 +50,7 @@ $mail_repo = new EmailRepo();
 
 if(isset($_GET['id'])){
 
-require_once 'data_access/email_class.php';
+require_once 'data_access/email_repo.php';
 
 $mail_repo = new EmailRepo();
         
@@ -64,12 +65,32 @@ $mail_repo = new EmailRepo();
 
 <?php 
 
+
+
+
 echo "<lable for='uname'>User Name <br/> <input type='text' id='uname' name='username' value='$mailid->user_name'/></lable>
-<br/>
+<br/><br/>
 <lable for='mailid'>Email ID<br/> <input type='text' id='mailid'name='mailid' value='$mailid->email_id'/></lable>
-<br/>
-<input type='hidden' name='id' value='$mailid->id' /> 
-<input type='hidden' name='enablestate' value='$mailid->enable_status' />";
+<br/><br/>
+
+<select name='enablestate' > "; 
+
+if( 0 == $mailid->enable_status)
+{
+echo "
+<option value='1' >Enable</option>
+<option value='0' selected = 'true'>Disable</option> ";}
+else
+{ echo"
+<option value='1' selected = 'true'>Enable</option>
+<option value='0' >Disable</option> ";
+}
+
+echo "
+</select><br/><br/>
+
+<input type='hidden' name='id' value='$mailid->id' /> ";
+
 ?>
 
 <input type="submit" value="Submit"> &nbsp<input type="reset" value="Cancel">

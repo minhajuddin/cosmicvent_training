@@ -21,7 +21,7 @@
     
     function get_mailids(){
     
-      $query_text = "SELECT * FROM mail_entries ORDER BY id desc ";
+      $query_text = "SELECT * FROM mail_entries WHERE enable_status=1 ";
 
       $query = $this->db->prepare( $query_text );
       
@@ -91,7 +91,7 @@
     
      function update_by_id($mailid ){
      
-     $query_text = "UPDATE mail_entries SET user_name='$mailid->user_name', email_id='$mailid->email_id'
+     $query_text = "UPDATE mail_entries SET user_name='$mailid->user_name', email_id='$mailid->email_id',enable_status='$mailid->enable_status'
 WHERE id = '$mailid->id' ";
 
 echo "$query_text";

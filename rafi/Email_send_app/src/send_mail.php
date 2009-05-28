@@ -63,7 +63,7 @@
 <?php
 
 
-require_once 'data_access/email_class.php';
+require_once 'data_access/email_repo.php';
   
   if(isset($_POST['sendid']))
   
@@ -85,7 +85,7 @@ echo " <h3> There are no existing mailid entries </h3> ";
 }
 else
 {
- //   echo "MESAGE BODY: $message";
+   
    $to = $from ;
    mail($to, $subject, $message, $headers) ;  
       

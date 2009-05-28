@@ -3,13 +3,14 @@
     <title>
 -- Home
     </title>
-    <link type="text/css" rel="stylesheet" href=" " />
+    <link type="text/css" rel="stylesheet" href=" index.css" />
   </head>
 
       
 <body>
 
-<a href="index.php"> Home </a>
+<div class="header" > <div class ="strip"> <h1> Email Send Utility </h1> </div> </div>
+
 <?php
 
 require_once 'data_access/email_repo.php';
@@ -59,7 +60,7 @@ $mail_repo = new EmailRepo();
         
         ?>
         
-        <div id ="content">
+        <div class ="mesbody">
 <form action="edit_entry.php" method="post">
 
 
@@ -96,6 +97,8 @@ echo "
 <input type="submit" value="Submit"> &nbsp<input type="reset" value="Cancel">
 </form>
 </div>
+
+<div class="sidebar"><h3> <a href="index.php"> Home </a> </h3></div>
 
 <?php } ?>
 

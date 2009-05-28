@@ -19,10 +19,12 @@ margin: 0px;
 
 }
 
-#strip {
+.strip {
 
 background-color: yellow;
-color: black;
+background-image:    url(cosmic.gif);
+
+color: white;
 width: 270px;
 /*margin: 1px;*/
 padding: 25px;
@@ -36,7 +38,7 @@ padding: 25px;
     
 }
 
-#result {
+.mesbody {
 
 background-color: yellow;
 float: right;
@@ -46,10 +48,18 @@ padding-top: 40px;
 text-align: center;
 }
 
-#add { 
+.sidebar { 
 background-color: #0000ff;
 color : yellow;
 width : 280px;
 height: 500px;
 padding: 20px;
+}
+
+.name{
+
+}
+
+.message-div{
+  float:left;
 }

@@ -68,10 +68,23 @@ class book_class
      $query = $this->db->query( $query_text );
      return ( 1 == $this->db->affected_rows );
 
+   }
+   
+     function delete_book($keyword)
+     {
+        $query_text="DELETE FROM book_list WHERE id=$keyword";
+        $query = $this->db->query( $query_text );
+        return ( 1 == $this->db->affected_rows );   
+     
+     }
+    
+    
     /*
     header("location: display_post.php?title=$_POST[postID]");
   */
-   } }
+   
+   
+}
 ?>
      
     

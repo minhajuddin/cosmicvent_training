@@ -38,7 +38,6 @@ color:#ffffff;
 <?php
 require_once 'data_access/book_class.php';
 $keyword = $_POST['id'];
-print_r($keyword);
 $book_classObj = new book_class();
 $booknames = $book_classObj->search_books_by_id($keyword);
 

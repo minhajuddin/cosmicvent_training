@@ -2,7 +2,7 @@
   <head>
     <title>ADD BOOK</title>
   </head>
-  <body>
+  <body><div align="middle"color=#999999><a href=index.html"><input type="button" value="home"></a></div>
   <?php
   
   require_once 'data_access/book_class.php';
@@ -41,6 +41,8 @@
         
         <p><input type='submit' value='Add' /></p>
       </form>
+      
+      
     </div>
   </body>
 </html>

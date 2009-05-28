@@ -3,15 +3,14 @@
 <html>
  <head>
   <title>-- Send Mail</title>
-  <link type="text/css"
+  <link type="text/css" rel="stylesheet" href="index.css" />
  </head>
 
  <body>
  
- <div class="header">
- </div>
+ <div class="header" > <div class ="strip"> <h1> Email Send Utility </h1> </div> </div>
  
- <a href="index.php"> Home </a><span>-></span><a href="compose_mail.php"> Compose Mail </a>
+ 
  
  <div class="body">
  
@@ -26,9 +25,9 @@
       
  echo "
  <h2> Mail preview</h2>
- <p1> From : $from</p1><br/>
- <p1> Subject: $subject</p1><br/
- <p1> Message: <br/>$message</p1> 
+ <p1> <h3>From : </h3>$from</p1>
+ <p1> <h3> Subject: </h3> $subject</p1>
+ <p1> <h3> Message:</h3> <br/>$message</p1> 
  
  
  
@@ -51,7 +50,7 @@
  
  
  </div>
-
+<div class="sidebar"><a href="index.php"> Home </a><span><br/></span><a href="compose_mail.php"> Compose Mail </a></div>
 
 </body>
 </html>
@@ -103,7 +102,7 @@ else
       echo " <h2 style= 'color :green'> 	Your message has been sent</h2> ";
 
   }    
-     
+     header('location: compose_mail.php');
     }
         
 ?> 

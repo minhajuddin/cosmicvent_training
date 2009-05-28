@@ -39,13 +39,13 @@
  <body>
  
  <div class="header"> 
- <div id = "strip"><h1>Email Send Utility</h1></div></div>
+ <div class = "strip"><h1>Email Send Utility</h1></div></div>
  
  
  
  
 
-<div id="result">
+<div class="body">
 
 <?php
 
@@ -79,7 +79,7 @@ else
 
 
 
-<div id="add">
+<div class="sidebar">
 <a href="compose_mail.php"><h3> Compose Mail </h3></a>
 <h3>Add Email ID</h3>
 <form action="index.php" method="post">

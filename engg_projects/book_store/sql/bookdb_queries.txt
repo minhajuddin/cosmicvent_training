@@ -1,0 +1,8 @@
+ CREATE TABLE `bookdb`.`book_entries` (
+`id` INT( 15 ) NOT NULL ,
+`name` VARCHAR( 50 ) NOT NULL ,
+`author` VARCHAR( 50 ) NOT NULL ,
+`publisher` VARCHAR( 50 ) NULL ,
+`price` FLOAT( 50 ) NOT NULL ,
+PRIMARY KEY ( `id` )
+) ENGINE = InnoDB 

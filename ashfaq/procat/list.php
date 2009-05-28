@@ -58,9 +58,9 @@ while($row = mysql_fetch_array($result))
   <input type='hidden' name='id' value='$row[id] '/>
   <input type='hidden' name='name' value='$row[name]' />
   <input type='hidden' name='discription' value=' $row[discription]' />
-  <input type='hidden' name='price' value=' $row'[price]' />
+  <input type='hidden' name='price' value=' $row[price]' />
   
-  <input type='hidden' name='cname' value='  $row'[cname]' />  
+  <input type='hidden' name='cname' value='  $row[cname]' />  
 <input type='submit' value='edit'  />
   </form></td>";
        

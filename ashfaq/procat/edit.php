@@ -24,9 +24,9 @@ if (!$con)
 
 mysql_select_db("my_ash", $con);
 
-echo "SELECT * FROM catagoery WHERE id='$_POST[id]'";
+echo "SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid";
 $result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid");
-print_r($result);
+
 echo "<table border='1'>
 <tr>
 <th>id</th>

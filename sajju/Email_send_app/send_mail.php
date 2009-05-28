@@ -1,24 +1,33 @@
 <html>
  <head>
     <title>
--- Send mail
+   COMPOSE MAIL
     </title>
-    <link type="text/css" rel="stylesheet" href=" " />
+    <link type="text/css" rel="stylesheet" href="style.css " />
   </head>
   <body>
-<div id ="header"> <a href="index.php"> Home </a></div>
+
+<div id="header">
+       <div id="search" align="right">
+           <form action="main.php" method="post">
+           <b>Search</b> 
+           <input type="text" name="search" value="user name" id="search">
+           <input type=submit name=submit value="GO" id=submit>
+           </form>
+        </div>
+
+       <div id = "heading" align="center">
+          <h1>Email ID DataBase</h1> 
+       </div>
+ </div>
 
 
-
-<div id ="sidebar">
-
-
-
+<div id ="sidebar" align="right">
+<a href="index.php"><b>Return to Main Menu</b></a>
 </div>
 
+
 <div id ="content">
-
-
 <form action="send_mail.php" method="post">
 <lable for="fromid">From Id</lable><br/> <input type="text" id="fromid" name="fromid"/><br/>
 <lable for="subject">Subject </lable><br/> <input type="text" id="subject" name="subject"/><br/>

@@ -21,7 +21,7 @@
     
     function get_mailids(){
     
-      $query_text = "SELECT * FROM mail_entries ORDER BY id desc ";
+      $query_text = "SELECT * FROM mail_entries WHERE enable_status=1 ";
 
       $query = $this->db->prepare( $query_text );
       
@@ -42,7 +42,7 @@
     }       
     
     
- /*   function get_mailid_by_id( $id ){
+   function get_mailid_by_id( $id ){
       
       $query_text = "SELECT *  FROM mail_entries WHERE id = ?";
       
@@ -50,18 +50,18 @@
       
       $query->bind_param( 'i', $id );
             
-      $query->bind_result( $id, $user_name, $mail_id);
+      $query->bind_result( $id, $user_name, $email_id,$enable_status);
       
       $query->execute();
       
       if( $query->fetch() ){
-        $mailid = new MailEntry( $id, $user_name, $mail_id);
+        $mailid = new MailEntry( $id, $user_name, $email_id,$enable_status);
         $query->close();
         return $mailid;
       } else {
         return false;
       }
-    }*/
+    }
     
     function search_ids($keyword)
     
@@ -87,6 +87,18 @@
       return $mails;
     
     }
+    
+    
+     function update_by_id($mailid ){
+     
+     $query_text = "UPDATE mail_entries SET user_name='$mailid->user_name', email_id='$mailid->email_id',enable_status='$mailid->enable_status'
+WHERE id = '$mailid->id' ";
+
+echo "$query_text";
+$query = $this->db->query( $query_text );
+      return ( 1 == $this->db->affected_rows ); //returns true if insert was successful
+     
+     }
     
     
     

@@ -17,22 +17,32 @@
         </div>
 
        <div id = "heading" align="center">
-          <h1>Email ID DataBase</h1> 
+          <h2>New E-mail Message</h2> 
        </div>
  </div>
 
 
-<div id ="sidebar" align="right">
+<div id ="main_menu_link" align="right">
 <a href="index.php"><b>Return to Main Menu</b></a>
 </div>
 
+<b>Compose New Email-Message:</b>
 
 <div id ="content">
 <form action="send_mail.php" method="post">
-<lable for="fromid">From Id</lable><br/> <input type="text" id="fromid" name="fromid"/><br/>
-<lable for="subject">Subject </lable><br/> <input type="text" id="subject" name="subject"/><br/>
-<lable for="mbody">Message</lable><br/> <textarea  id="mbody" name="mbody"></textarea><br/>
-<input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
+<label for="fromid">From :</lable> &nbsp &nbsp &nbsp <input type="text" id="fromid" name="fromid" size="100"/><br/>
+</br>
+<label for="subject">Subject :</lable> &nbsp <input type="text" id="subject" name="subject" size="101" /><br/>
+</br>
+Body :&nbsp <br> <textarea rows=12 cols=84 id="mbody" name="mbody"></textarea><br/>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="submit" value="Send"> &nbsp <input type="reset" value="Discard">
 </form>
 
 </div>

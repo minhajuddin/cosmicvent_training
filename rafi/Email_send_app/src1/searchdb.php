@@ -61,7 +61,7 @@
 
     if(!$mailids)
       {
-      echo " <h3> No result found </h3> ";
+      echo " <span style='color: red'> No results found </span> ";
       }
     else
         {

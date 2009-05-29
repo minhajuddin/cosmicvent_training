@@ -45,7 +45,7 @@ color:#ffffff;
 </div>
 
 <div id="searchbar" align="center">
-<form action="admin.php" method="POST">
+<form action="admin.php" method="GET">
  SEARCH:<input type="text" name="search" id="search" value="" size="50">
 <input type="submit"  value="GO">&nbsp <a href="advance_search.php"><b><i>ADVANCE SEARCH</i></b></a>
 </form>
@@ -62,28 +62,55 @@ color:#ffffff;
 require_once 'data_access/book_class.php';
   
 if(!isset($_POST['search'])){
-echo" <table width='100%'>
- 
+echo"
+	
+	
+ <table width='100%' >
  <tr>
- <td align='left'></td><h3>categories </h3>
-     <ol type=\"square\">
-<<<<<<< HEAD:engg_projects/book_store/src/admin.php
-     <li><a target='b' href=\"Maths.html\">maths</a></li>
-     <li><a target='b' href=\"languages.html\">languages</a></li>
-     <li><a target='b' href=\"Science.html\">Science</a></li>
-     <li><a target='b' href=\"SOcial.html\">social</a></li>
-=======
-     <li><a href=\"Maths.html\">maths</a></li>
-     <li><a href=\"languages.html\">languages</a></li>
-     <li><a href=\"Science.html\">Science</a></li>
-     <li><a href=\"SOcial.html\">social</a></li>
->>>>>>> a24b73003d47dac38f2a0489e1c607e67185cffc:engg_projects/book_store/src/admin.php
-     </ol>
+
+ <td align='left'><h3>CATAGEORIES </h3>
+    
+     
+     <form action=\"search_by_catageory.php\" method=\"GET\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fiction\">
+     <input type='submit' name='submit' id='submit' value='FICTION' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"GET\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"non-fiction\">
+     <input type='submit' name='submit' id='submit' value='NON-FICTION' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"GET\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fantasy\">
+     <input type='submit' name='submit' id='submit' value='FANTASY' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"GET\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"sports\">
+     <input type='submit' name='submit' id='submit' value='SPORTS'style=\"height: 25px; width: 125px\">
+     </form>
+     
+     	
+     
+     <form action=\"search_by_catageory.php\" method=\"GET\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"entertainment\">
+     <input type='submit' name='submit' id='submit' value='ENTERTAINMENT' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
      </td>
- <td>
+ <td align='center'>
  <h3>LIST OF POPULAR BOOKS</h3>
      <ol type=\"\">
-<<<<<<< HEAD:engg_projects/book_store/src/admin.php
+
      <li><a target='b' href=\"\">Fountain Head<a></li>
      <li><a target='b' href=\"\">Hound of Baskerville<a></li>
      <li><a target='b' href=\"\">Treasure Island<a></li>
@@ -91,15 +118,7 @@ echo" <table width='100%'>
      <li><a target='b' href=\"\">Harry Potter and the Chamber of Secrets<a></li>
      <li><a target='b' href=\"\">Harry Potter and the Prisoner of Azkaban<a></li>
      <li><a target='b' href=\"\">arry Potter and the Goblet of Fire<a></li>
-=======
-     <li><a href=\"\">Fountain Head<a></li>
-     <li><a href=\"\">Hound of Baskerville<a></li>
-     <li><a href=\"\">Treasure Island<a></li>
-     <li><a href=\"\">Harry Potter and the sorcerer's Stone<a></li>
-     <li><a href=\"\">Harry Potter and the Chamber of Secrets<a></li>
-     <li><a href=\"\">Harry Potter and the Prisoner of Azkaban<a></li>
-     <li><a href=\"\">arry Potter and the Goblet of Fire<a></li>
->>>>>>> a24b73003d47dac38f2a0489e1c607e67185cffc:engg_projects/book_store/src/admin.php
+
      </ol>
     
  </td>
@@ -108,8 +127,8 @@ echo" <table width='100%'>
  </table> ";
  
 }
-if(isset($_POST['search'])){
-$keyword = $_POST['search'];
+if(isset($_GET['search'])){
+$keyword = $_GET['search'];
 $book_classObj = new book_class();
 $booknames = $book_classObj->search_books($keyword);
 
@@ -157,21 +176,39 @@ else
  </td><td align="right"><div id="add_book">
       <form action='add_book.php' method='post'>
          <h2>ADD BOOK</h2>
-        <p><label for='id'><b>ID:</b></label><input type='text' id='id' name='id' /></p>
-        <p><label for='name'><b>Name:</b></label><input type='text' id='name' name='name'/></p>
-        <p><label for='author'><b>Author:</b></label><input type='text' id='author' name='author' /></p>
-        <p><label for='publisher'><b>Publisher:</b></label><input type='text' id='publisher' name='publisher' /></p>
-        <p><label for='price'><b>Price:</label></b><input type='text' id='price' name='price' /></p>
+        
+        <p><label for='name'><b>Name:</b></label><input type='text' id='name' name='name' size='35'/></p>
+        <p><label for='author'><b>Author:</b></label><input type='text' id='author' name='author' size='35'/></p>
+        <p><label for='publisher'><b>Publisher:</b></label><input type='text' id='publisher' name='publisher' size='35'/></p>
+        <p><label for='price'><b>Price:</label></b><input type='text' id='price' name='price' size='35'/></p>
+        <p>catageory:
+        	
+        <?php 
+        require_once 'data_access/catageory_class.php';
+        $Obj = new catageory_class();
+        $catageorynames = $Obj->display_catageory();
+        if(!$catageorynames)
+            { 
+             echo " <h3> No catageories found </h3> ";
+	        }	
+		else
+			{
+			 echo "<select name='catagoery'  width=90>";
+			     foreach( $catageorynames as $catageoryObj )
+		    	 {
+		    	   echo "<option value='$catageoryObj->cid'>$catageoryObj->cname</option>";
+		    	  }
+                 echo"</select>";
+            }
+    	 
+         ?>
+         
+         <b>Description:<textarea rows='5' cols='27' id='description' name='description' /> </textarea> </p>
         
         <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
       </form>
      </div>
   </td></tr></table>
- 
-
-
- 
- 
  
 </body>
 </html>

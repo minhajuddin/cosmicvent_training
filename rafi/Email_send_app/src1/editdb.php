@@ -51,7 +51,7 @@ $mail_repo = new EmailRepo();
       
       
       if( (0==strlen($username)) || ( 0 == strlen($mailid) ) ) {
-    echo " <h3> Enter user name and mailid </h3> <br/> <a href='edit_entry.php'>Edit Mail Entry</a>";
+    echo " <span style='color: red'> Enter user name and mailid </span> <br/> ";
     die();
     }
       

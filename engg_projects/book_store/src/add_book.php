@@ -1,7 +1,8 @@
 <html>
   <head>
-    <title>ADD BOOK</title>
-  <style type="text/css">
+  		<title>ADD BOOK</title>
+ 
+ 	 <style type="text/css">
   <!--
 a:link {color: #400000; text-decoration: underline; }
 a:active {color: #0000ff; text-decoration: underline; }
@@ -14,10 +15,13 @@ background-color:#4682B4;
 }
   </style>
   </head>
-  <body><a href="admin.php"><b>RETURN TO ADMIN'S PAGE</b></a>
-  <?php
-  
-  require_once 'data_access/book_class.php';
+ 
+  <body>
+  	
+  	
+  	<a href="admin.php"><b>RETURN TO ADMIN'S PAGE</b></a>
+    <?php
+    require_once 'data_access/book_class.php';
   
     if(isset($_POST['name'])){
       //insert the post
@@ -48,8 +52,8 @@ background-color:#4682B4;
       else {
         echo "Sorry!! Addition of book failed.. GIVE SOME OTHER ID TO BOOK";
       }
-    }
-  ?>
+} 
+ ?> 
     <div>
       <form action='add_book.php' method='post'>
         <h2>ADD ANOTHER BOOK :</h2>
@@ -65,6 +69,6 @@ background-color:#4682B4;
       
       <a href="admin.php"><b>RETURN TO HOME PAGE</b></a>
      </div>
-  
+ 
   </body>
 </html>

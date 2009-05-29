@@ -1,29 +1,37 @@
-
-  
-
-
-
-
-
 <html>
- <head>
-  <title>Email ID DataBase</title>
+  <head>
+    <title>Template</title>
     <link type="text/css" rel="stylesheet" href="new.css">
- </head>
-
+  </head>
   <body>
-   
-  <div id="wrapper">
-    
-    <div id ="header"> 
-      <div id = "logo">CosmicVent</div>
-      <div id = "logo-text">Emailer</div>
-    </div>
+    <div id='wrapper'>
+      <div id='header'>
+        <div id='logo'>
+          Cosmicvent
+        </div>
+        <div id='logo-text'>
+          Emailer
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+      <div id='content'>
+        <div id='navbar'>
+          <a href="compose_mail.php"><h3> Compose Mail </h3></a>
+      <h3>Add Email ID</h3>
+        <form action="index.php" method="post">
+          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
+          <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
+          <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
+        </form>
   
-  <div id="content">
- 
-    <div id="page">
-  <?php
+    <h3> Search </h3>
+      <form action="index.php" method="post">
+        <input type="text" name="search" value="user/id name" id="search">
+        <input type="submit" name="submit" value="GO" id="submit">
+    </form>
+        </div>
+        <div id='page'>
+          <?php
 
    if(isset($_POST['search']))
     {
@@ -79,30 +87,12 @@
       }
       
    ?>
-   </div>
-
-  <div id="navbar">
-    <a href="compose_mail.php"><h3> Compose Mail </h3></a>
-      <h3>Add Email ID</h3>
-        <form action="index.php" method="post">
-          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
-          <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
-          <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
-        </form>
-  
-    <h3> Search </h3>
-      <form action="index.php" method="post">
-        <input type="text" name="search" value="user/id name" id="search">
-        <input type="submit" name="submit" value="GO" id="submit">
-    </form>
-  </div>
-  
-  </div>
-  
+        </div>
+        <div style="clear:both;"></div>
+      </div>
       <div id='footer'>
         Cosmicvent &copy; 2009
       </div>
-
-</div>
- </body>
+    </div>
+  </body>
 </html>

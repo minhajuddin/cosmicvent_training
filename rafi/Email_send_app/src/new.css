@@ -1,0 +1,63 @@
+     
+     
+      body{
+        margin:0px;
+        background-color:#696969;
+      }
+      
+      #wrapper{
+        width:90%;
+        margin:0 auto;
+        
+      }
+      
+      #header{
+        height:100px;
+        border:solid 1px black;
+        background-color: #4682B4;
+      }
+      
+      #header #logo{
+        
+        font-size: x-large;
+        float:left;
+        padding:36px;
+       width: 30%;
+        color: white;
+       background-color:9c9c9c; 
+      /*  background-image:    url(cosmic.gif);*/
+      }
+      
+      #header #logo-text{
+        float:right;
+       /* text-align:right;*/
+        font-size:x-large;
+        padding:36px;
+      }
+      
+      #content{
+      }
+      
+      #content #navbar{
+        float:left;
+        width:30%;
+        height:400px;
+        background-color:#f00;
+      }
+      
+      #content #page{
+        float:right;
+        width:70%;
+        height:400px;
+        background-color:#0f0;
+      }
+      
+      #footer{
+        height:30px;
+        border:solid 1px black;
+        text-align: center;
+        color: #fff;
+        font-size:0.9em;
+      }
+            
+    

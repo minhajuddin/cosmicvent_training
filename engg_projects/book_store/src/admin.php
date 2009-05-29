@@ -135,8 +135,10 @@ else
 </form>
 
 <form action=\"delete.php\" method=\"POST\">
+<input type=\"hidden\" name=\"id\" id=\"id\" value=\"$bookObj->book_id\">
 <input type='submit' name=\"delete\" id=\"delete\" value=\"Delete\">
 </form>
+
  </td></tr></table>
 <h2></h2> 
  

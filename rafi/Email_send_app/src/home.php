@@ -152,7 +152,7 @@ else
 
 <label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <textarea  id="mbody" name="mbody" rows="20" cols="68" >
-</textarea><br/><br/>
+</textarea><br/><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
 </form>
 

@@ -1,28 +1,55 @@
 <html>
    <head>
-      <title>
-      HOME PAGE
-      </title>
+      <title>Online Repository</title>
+      <link href="style.css" rel="stylesheet" type="text/css">
+   <style type="text/css">
+<!--
+a:link {color: #400000; text-decoration: underline; }
+a:active {color: #0000ff; text-decoration: underline; }
+a:visited {color: #000000; text-decoration: underline; }
+a:hover {color: #ff0000; text-decoration: none; }
+-->
+  
+#header_table{
+width:100%;
+background-color:#000066;
+color:#ffffff;
+}
+
+#header{
+background-color:#000066;
+color:#ffffff;
+}
+   </style>
    
-    </head>
+   
+   </head>
    
     <body>
      
-     <a href="index.html"> HOME</a><br>
-    
-    
-    <div id="header">
-<div id="login" align="middle">
-<form action="index.php" method="post">
-<b align ="middle"> login</b><br> 
-&nbsp&nbsp&nbsp<b>username</b>
-<input type="text" name="username" value="" id="login">
-<b>password</b>
-<input type="password" name="password" value="" id="login">
-
-<input type=submit name=submit value="GO" id=submit>
+     
+<div id="header">
+<div id="login" align="right">
+<form action="admin.php" method="post">
+Username:<input type="text" name="username" value="" id="login">&nbsp
+Password:<input type="password" name="password" value="" id="login">&nbsp
+<input type=submit name=submit value="Login" id=submit>
 </form>
+</div>
 
+<div id = "header_table">
+<table >
+<tr><td align=><h1>COSMICVENT ONLINE BOOK STORE</h1></td>
+</tr>
+</table>
+</div>
+</div>  
+<a href="index.html">Go back to Main Menu</a>
+
+<table width="100%">
+<tr><td align="right"> 
+<a href="signup.php">Sign Up</a></div>
+</tr>
 
 
      <a target="signup" href="signup.php"> <input type="button" name="SignUp" value="signup" id="signup"></a><br>
@@ -30,17 +57,24 @@
      <form action="search.php" method="POST">
      SEARCH:<input type="text" name="search" id="search" value="">
      <input type="submit"  value="GO">
+
+
      </form>
-     
-     <h3>categories </h3>
+ </td></tr></table>
+
+ <table width="100%">
+ 
+ <tr>
+ <td align="left"><h3>categories </h3>
      <ol type="square">
      <li><a target="b" href="Maths.html">maths</a></li>
      <li><a target="b" href="languages.html">languages</a></li>
      <li><a target="b" href="Science.html">Science</a></li>
      <li><a target="b" href="SOcial.html">social</a></li>
      </ol>
-     
-     <h3>LIST OF POPULAR BOOKS</h3>
+     </td>
+ <td>
+ <h3>LIST OF POPULAR BOOKS</h3>
      <ol type="disc">
      <li><a target="b" href="">Fountain Head<a></li>
      <li><a target="b" href="">Hound of Baskerville<a></li>
@@ -51,6 +85,13 @@
      <li><a target="b" href="">arry Potter and the Goblet of Fire<a></li>
      </ol>
     
+ </td>
+ </tr>
+ 
+ </table>    
+ 
+     
+     
     
     
     </body>

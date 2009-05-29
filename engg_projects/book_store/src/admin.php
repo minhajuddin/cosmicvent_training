@@ -62,18 +62,51 @@ color:#ffffff;
 require_once 'data_access/book_class.php';
   
 if(!isset($_POST['search'])){
-echo" <table width='100%'>
- 
+echo"
+	
+	
+ <table width='100%' >
  <tr>
- <td align='left'></td><h3>categories </h3>
-     <ol type=\"square\">
-     <li><a href=\"Maths.html\">maths</a></li>
-     <li><a href=\"languages.html\">languages</a></li>
-     <li><a href=\"Science.html\">Science</a></li>
-     <li><a href=\"SOcial.html\">social</a></li>
-     </ol>
+ <td align='left'><h3>CATAGEORIES </h3>
+    
+     
+     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fiction\">
+     <input type='submit' name='submit' id='submit' value='FICTION' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"non-fiction\">
+     <input type='submit' name='submit' id='submit' value='NON-FICTION' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fantasy\">
+     <input type='submit' name='submit' id='submit' value='FANTASY' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
+     
+     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"sports\">
+     <input type='submit' name='submit' id='submit' value='SPORTS'style=\"height: 25px; width: 125px\">
+     </form>
+     
+     	
+     
+     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"entertainment\">
+     <input type='submit' name='submit' id='submit' value='ENTERTAINMENT' style=\"height: 25px; width: 125px\">
+     </form>
+     
+     
      </td>
- <td>
+ <td align='center'>
  <h3>LIST OF POPULAR BOOKS</h3>
      <ol type=\"\">
      <li><a href=\"\">Fountain Head<a></li>

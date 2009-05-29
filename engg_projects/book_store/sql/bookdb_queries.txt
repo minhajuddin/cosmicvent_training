@@ -1,4 +1,4 @@
- CREATE TABLE `bookdb`.`book_entries` (
+ CREATE TABLE `book_db`.`book_list` (
 `id` INT( 15 ) NOT NULL ,
 `name` VARCHAR( 50 ) NOT NULL ,
 `author` VARCHAR( 50 ) NOT NULL ,

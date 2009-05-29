@@ -1,33 +1,45 @@
-
-  
-
-
-
-
-
 <html>
- <head>
-  <title>Email ID DataBase</title>
+  <head>
+    <title>Template</title>
     <link type="text/css" rel="stylesheet" href="new.css">
- </head>
-
+  </head>
   <body>
-   
-  <div id="wrapper">
-    
-    <div id ="header"> 
-      <div id = "logo">CosmicVent</div>
-      <div id = "logo-text">Emailer</div>
-    </div>
   
-  <div id="content">
- 
-    <div id="page">
-  <?php
+    <div class='wrapper'>
+      <div class='header'>
+        <div class='logo'>
+          Cosmicvent
+        </div>
+        <div class='logo-text'>
+          Emailer
+        </div>
+        <div style="clear:both;"></div>
+      </div>
+      
+      <div class='content'>
+        
+        <div class='navbar'>
+          <a href="compose_mail.php"><h3> Compose Mail </h3></a>
+      <h4>Add Email ID</h4>
+        <form action="index.php" method="post">
+          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
+          <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
+          <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
+        </form>
+  
+    <h4> Search </h4>
+      <form action="index.php" method="post">
+        <input type="text" name="search" value="user/id name" id="search">
+        <input type="submit" name="submit" value="GO" id="submit">
+    </form>
+        </div>
+        
+        <div class='page'>
+          <?php
 
    if(isset($_POST['search']))
     {
-    
+    require_once 'data_access/email_repo.php';
     $keyword = $_POST['search'];
     $escp_keyword = mysql_escape_string($keyword);
     $mail_repo = new EmailRepo();
@@ -79,30 +91,16 @@
       }
       
    ?>
-   </div>
-
-  <div id="navbar">
-    <a href="compose_mail.php"><h3> Compose Mail </h3></a>
-      <h3>Add Email ID</h3>
-        <form action="index.php" method="post">
-          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
-          <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
-          <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
-        </form>
-  
-    <h3> Search </h3>
-      <form action="index.php" method="post">
-        <input type="text" name="search" value="user/id name" id="search">
-        <input type="submit" name="submit" value="GO" id="submit">
-    </form>
-  </div>
-  
-  </div>
-  
-      <div id='footer'>
+        </div>
+        
+        <div style="clear:both;"></div>
+      </div>
+      
+      
+      <div class='footer'>
         Cosmicvent &copy; 2009
       </div>
-
-</div>
- </body>
+      
+    </div>
+  </body>
 </html>

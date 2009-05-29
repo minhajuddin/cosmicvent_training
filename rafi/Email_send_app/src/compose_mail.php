@@ -3,16 +3,25 @@
     <title>
 -- Send mail
     </title>
-    <link type="text/css" rel="stylesheet" href="index.css" />
+    <link type="text/css" rel="stylesheet" href="new.css" />
   </head>
   <body>
-<div class="header" > <div class ="strip"> <h1> Email Send Utility </h1> </div> </div>
+  
+  <div class="wrapper">
+<div class="header" > 
+<div class ="logo-text">  Emailer  </div> 
+<div style="clear:both;"></div>
+</div>
 
 
+<div class="content" >
 
 
+<div class="comp-navbar">
+<a href="index.php">  <br/> <br/>Home </a>
+</div>
 
-<div class="mesbody">
+<div  class="comp-page">
 
 
 <form action="send_mail.php" method="post">
@@ -20,7 +29,7 @@
 <label for="subject">Subject </label> <input type="text" id="subject" name="subject"/><br/><br/>
 
 <label for="mbody">Message</label><br/> 
-<textarea  id="mbody" name="mbody" rows="20" cols="68" >
+<textarea  id="mbody" name="mbody" rows="10" cols="48" >
 </textarea><br/>
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
 </form>
@@ -28,16 +37,16 @@
 
 
 </div>
-<div class ="sidebar">
+<div style="clear:both;"></div>
+</div>
 
-<a href="index.php"> <h3> Home </h3></a>
+
+
+<div class ="footer"> Cosmicvent &copy; 2009</div>
+
+
 
 </div>
-<div id ="footer"></div>
-
-
-
-
 
 </body>
 </html>

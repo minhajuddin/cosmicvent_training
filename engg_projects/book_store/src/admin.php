@@ -33,7 +33,7 @@ color:#ffffff;
 <div id="header">
 
 <div id="search" align="right">
-<form action="admin.php" method="post">
+<form action="admin.php" method="GET">
 <input type=submit name=submit value="LOGOUT" id=submit>
 </form>
 </div>
@@ -61,7 +61,7 @@ color:#ffffff;
 
 require_once 'data_access/book_class.php';
   
-if(!isset($_POST['search'])){
+if(!isset($_GET['search'])){
 echo"
 	
 	

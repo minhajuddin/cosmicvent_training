@@ -26,7 +26,8 @@ class catageory_class{
     $i=0;
     while($query->fetch()){
     $catageorynames["$i"] = new catageory( $cid, $cname);
-    $i++;}
+    $i++;
+    }
     $query->close();
     return $catageorynames;          
                           

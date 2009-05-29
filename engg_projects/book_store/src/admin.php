@@ -173,21 +173,39 @@ else
  </td><td align="right"><div id="add_book">
       <form action='add_book.php' method='post'>
          <h2>ADD BOOK</h2>
-        <p><label for='id'><b>ID:</b></label><input type='text' id='id' name='id' /></p>
-        <p><label for='name'><b>Name:</b></label><input type='text' id='name' name='name'/></p>
-        <p><label for='author'><b>Author:</b></label><input type='text' id='author' name='author' /></p>
-        <p><label for='publisher'><b>Publisher:</b></label><input type='text' id='publisher' name='publisher' /></p>
-        <p><label for='price'><b>Price:</label></b><input type='text' id='price' name='price' /></p>
+        
+        <p><label for='name'><b>Name:</b></label><input type='text' id='name' name='name' size='35'/></p>
+        <p><label for='author'><b>Author:</b></label><input type='text' id='author' name='author' size='35'/></p>
+        <p><label for='publisher'><b>Publisher:</b></label><input type='text' id='publisher' name='publisher' size='35'/></p>
+        <p><label for='price'><b>Price:</label></b><input type='text' id='price' name='price' size='35'/></p>
+        <p>catageory:
+        	
+        <?php 
+        require_once 'data_access/catageory_class.php';
+        $Obj = new catageory_class();
+        $catageorynames = $Obj->display_catageory();
+        if(!$catageorynames)
+            { 
+             echo " <h3> No catageories found </h3> ";
+	        }	
+		else
+			{
+			 echo "<select name='catagoery'  width=90>";
+			     foreach( $catageorynames as $catageoryObj )
+		    	 {
+		    	   echo "<option value='$catageoryObj->cid'>$catageoryObj->cname</option>";
+		    	  }
+                 echo"</select>";
+            }
+    	 
+         ?>
+         
+         <b>Description:<textarea rows='5' cols='27' id='description' name='description' /> </textarea> </p>
         
         <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
       </form>
      </div>
   </td></tr></table>
- 
-
-
- 
- 
  
 </body>
 </html>

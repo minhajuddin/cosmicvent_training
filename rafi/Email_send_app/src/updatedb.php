@@ -12,8 +12,8 @@
           
           
     <div class="header">
-      <div class="logo">Cosmicvent</div>
-      <div class = "logo-text">Emailer</div>
+      
+      <div class = "logo-text">Cosmicvent Emailer</div>
   </div>
       
           <!-- navigation bar -->
@@ -21,8 +21,8 @@
       
       <div class="navbar"> 
       <a href="home.php"> Home </a> &nbsp &nbsp
-      <a href="updatedb.php"> Update DB </a> &nbsp &nbsp
-      <a href="searchdb.php"> Search DB </a> &nbsp &nbsp
+      <a href="updatedb.php"> Add User</a> &nbsp &nbsp
+      <a href="searchdb.php"> Search</a> &nbsp &nbsp
       </div>
       
        <!-- PAGE -->
@@ -30,7 +30,7 @@
      
   <div class = " page" >
   
-  <h4>Add Email ID</h4>
+  <h4>Add New User</h4>
         <form action="updatedb.php" method="post">
           <lable for="uname">User Name <br/> <input style='width: 300px' type="text" id="uname" name="username"/></lable><br/><br/>
           <lable for="mailid">Email ID<br/> <input style='width: 300px' type="text" id="mailid" name="mailid"/></lable><br/><br/>

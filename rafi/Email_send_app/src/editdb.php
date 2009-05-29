@@ -12,8 +12,8 @@
   
   
   <div class="header">
-      <div class="logo">Cosmicvent</div>
-      <div class = "logo-text">Emailer</div>
+      
+      <div class = "logo-text">Cosmicvent Emailer</div>
   </div>
       
           <!-- navigation bar -->
@@ -21,8 +21,8 @@
       
       <div class="navbar"> 
       <a href="home.php"> Home </a> &nbsp &nbsp
-      <a href="updatedb.php"> Update DB </a> &nbsp &nbsp
-      <a href="searchdb.php"> Search DB </a> &nbsp &nbsp
+      <a href="updatedb.php"> Add User</a> &nbsp &nbsp
+      <a href="searchdb.php"> Search</a> &nbsp &nbsp
       </div>
       
       

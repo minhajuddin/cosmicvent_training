@@ -17,7 +17,7 @@
         background-color: #4682B4;
       }
       
-       .logo{
+ /*      .logo{
         
         font-size: x-large;
         float:left;
@@ -25,11 +25,11 @@
        width: 30%;
         color: white;
        background-color:#9c9c9c; 
-      /*  background-image:    url(cosmic.gif);*/
-      }
+       background-image:    url(cosmic.gif);
+      } */
       
      .logo-text{
-        float:right;
+        float:left;
        /* text-align:right;*/
         font-size:x-large;
         padding:36px;

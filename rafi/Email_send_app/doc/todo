@@ -1,7 +1,10 @@
 
 
 @ Add validation to all input fields # 
-@ displaying proper error message when mail() fails to send message *
+@ displaying proper error message when mail() fails to send message 
 @ in edit page validation error message is appearing in a new page.
 @ Testing is pending.
 @ Code review is pending
+
+@ in update page "ADd email id" has to be changed to " Add New User".#
+@ Search result has to be shown in a taber form having user name, emailid, enable status and edit button. *

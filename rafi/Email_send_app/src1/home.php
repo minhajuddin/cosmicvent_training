@@ -30,14 +30,70 @@
       
       <div class = " page" >
       
+     
       
-
-<!-- Handler to compose mail -->
-
-<?PHP
+      <!-- Handler for send mail -->
  
- if(isset($_POST['fromid']))
+ <?php
+
+
+require_once 'data_access/email_repo.php';
+  
+  if(isset($_POST['sendid']))
+  
+  {
+  
+  $from = $_POST['fromid'];
+  $headers = "From:".$from;
+  $subject = $_POST['subject'];
+  $message = $_POST['mbody'];
+  
+  
+  $mail_repo = new EmailRepo();
+  $mailids = $mail_repo->get_mailids();
+
+
+if(!$mailids)
+{
+echo " <h3> There are no existing mailid entries </h3> ";
+}
+else
+{
+   
+   $to = $from ;
+   mail($to, $subject, $message, $headers) ;  
+      
+      
+ foreach( $mailids as $mailid )
+        {
+ 
+  $to = $mailid->email_id ;
+ // echo "$to <br/>";
+ echo "result".
+  mail($to, $subject, $message, $headers) ;
+ 
+         }
+        
+      echo " <span style= 'color :green'> 	Your message has been sent</span> ";
+
+  }    
+ //    header('location: home.php');
+    }
+        
+        ?>
+        
+        
+        
+        
+  <?php
+  
+  // Handler to compose mail 
+   if(isset($_POST['fromid']))
  {
+     
+       
+
+
       $from = $_POST['fromid'];
      // $headers = "From:".$from ;
       $subject = $_POST['subject'];
@@ -103,56 +159,7 @@
 <?php } ?>
  
   
- <!-- Handler for send mail -->
  
- <?php
-
-
-require_once 'data_access/email_repo.php';
-  
-  if(isset($_POST['sendid']))
-  
-  {
-  
-  $from = $_POST['fromid'];
-  $headers = "From:".$from;
-  $subject = $_POST['subject'];
-  $message = $_POST['mbody'];
-  
-  
-  $mail_repo = new EmailRepo();
-  $mailids = $mail_repo->get_mailids();
-
-
-if(!$mailids)
-{
-echo " <h3> There are no existing mailid entries </h3> ";
-}
-else
-{
-   
-   $to = $from ;
-   mail($to, $subject, $message, $headers) ;  
-      
-      
- foreach( $mailids as $mailid )
-        {
- 
-  $to = $mailid->email_id ;
- // echo "$to <br/>";
- //echo "result".
-  mail($to, $subject, $message, $headers) ;
- 
-         }
-        
-      echo " <h2 style= 'color :green'> 	Your message has been sent</h2> ";
-
-  }    
-     header('location: home.php');
-    }
-        
-?> 
-      
       
       
        </div>

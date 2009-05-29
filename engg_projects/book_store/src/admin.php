@@ -67,15 +67,23 @@ echo" <table width='100%'>
  <tr>
  <td align='left'></td><h3>categories </h3>
      <ol type=\"square\">
+<<<<<<< HEAD:engg_projects/book_store/src/admin.php
      <li><a target='b' href=\"Maths.html\">maths</a></li>
      <li><a target='b' href=\"languages.html\">languages</a></li>
      <li><a target='b' href=\"Science.html\">Science</a></li>
      <li><a target='b' href=\"SOcial.html\">social</a></li>
+=======
+     <li><a href=\"Maths.html\">maths</a></li>
+     <li><a href=\"languages.html\">languages</a></li>
+     <li><a href=\"Science.html\">Science</a></li>
+     <li><a href=\"SOcial.html\">social</a></li>
+>>>>>>> a24b73003d47dac38f2a0489e1c607e67185cffc:engg_projects/book_store/src/admin.php
      </ol>
      </td>
  <td>
  <h3>LIST OF POPULAR BOOKS</h3>
      <ol type=\"\">
+<<<<<<< HEAD:engg_projects/book_store/src/admin.php
      <li><a target='b' href=\"\">Fountain Head<a></li>
      <li><a target='b' href=\"\">Hound of Baskerville<a></li>
      <li><a target='b' href=\"\">Treasure Island<a></li>
@@ -83,6 +91,15 @@ echo" <table width='100%'>
      <li><a target='b' href=\"\">Harry Potter and the Chamber of Secrets<a></li>
      <li><a target='b' href=\"\">Harry Potter and the Prisoner of Azkaban<a></li>
      <li><a target='b' href=\"\">arry Potter and the Goblet of Fire<a></li>
+=======
+     <li><a href=\"\">Fountain Head<a></li>
+     <li><a href=\"\">Hound of Baskerville<a></li>
+     <li><a href=\"\">Treasure Island<a></li>
+     <li><a href=\"\">Harry Potter and the sorcerer's Stone<a></li>
+     <li><a href=\"\">Harry Potter and the Chamber of Secrets<a></li>
+     <li><a href=\"\">Harry Potter and the Prisoner of Azkaban<a></li>
+     <li><a href=\"\">arry Potter and the Goblet of Fire<a></li>
+>>>>>>> a24b73003d47dac38f2a0489e1c607e67185cffc:engg_projects/book_store/src/admin.php
      </ol>
     
  </td>

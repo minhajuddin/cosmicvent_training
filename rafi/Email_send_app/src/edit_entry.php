@@ -21,10 +21,17 @@ if(isset($_POST['mailid'])){
 $mail_repo = new EmailRepo();
         
         
+        
         $username = $_POST['username'];
       $mailid = $_POST['mailid'];
       $id = $_POST['id'];
       $enable_status = $_POST['enablestate'];
+      
+      
+      if( (0==strlen($username)) || ( 0 == strlen($mailid) ) ) {
+    echo " <h3> Enter user name and mailid </h3> <br/> <a href='edit_entry.php'>Edit Mail Entry</a>";
+    die();
+    }
       
    $escp_username =    mysql_escape_string($username);
     $escp_mailid =  mysql_escape_string($mailid);

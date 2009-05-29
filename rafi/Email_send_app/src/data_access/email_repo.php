@@ -12,6 +12,13 @@
     
     //Insert a  mail id entry in the database
     function insert_mailid( $mailid ){
+    
+    if( (0==strlen($mailid->user_name)) || ( 0 == strlen($mailid->email_id) )) {
+    echo " <h3> Enter Both username and emailid</h3> <br/> <a href='index.php'>Home</a>";
+    die();
+    }
+    
+    
       $query_text = "INSERT INTO mail_entries( user_name, email_id,enable_status) VALUES( '$mailid->user_name' , '$mailid->email_id',1)";
      
       $query = $this->db->query( $query_text );
@@ -66,6 +73,15 @@
     function search_ids($keyword)
     
     {
+    
+    if( 0==strlen($keyword))
+    {
+    echo " <h3> Enter username or emailid </h3> <br/> <a href='index.php'>Home</a>";
+    die();
+    }
+    
+    
+    
     $query_text = "SELECT * FROM mail_entries WHERE email_id LIKE '%$keyword%' OR user_name LIKE '%$keyword%' ";
     
     

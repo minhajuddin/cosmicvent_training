@@ -23,6 +23,14 @@
       $subject = $_POST['subject'];
       $message = $_POST['mbody'];
       
+      
+      
+      
+      if( (0==strlen($from)) || ( 0 == strlen($subject) ) || ( 0 == strlen($message) )) {
+    echo " <h3> Enter from ID , subject and message </h3> <br/> <a href='compose_mail.php'>Compose Mail</a>";
+    die();
+    }
+      
  echo "
  <h2> Mail preview</h2>
  <p1> <h3>From : </h3>$from</p1>

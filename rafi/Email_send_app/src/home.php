@@ -21,7 +21,7 @@
       
       <div class="navbar"> 
       <a href="home.php"> Home </a> &nbsp &nbsp
-      <a href="updatedb.php"> update DB </a> &nbsp &nbsp
+      <a href="updatedb.php"> Update DB </a> &nbsp &nbsp
       <a href="searchdb.php"> Search DB </a> &nbsp &nbsp
       </div>
       
@@ -43,7 +43,7 @@ require_once 'data_access/email_repo.php';
   
   {
   
-  $from = $_POST['fromid'];
+  $from = $_POST['fromID'];
   $headers = "From:".$from;
   $subject = $_POST['subject'];
   $message = $_POST['mbody'];
@@ -69,12 +69,12 @@ else
  
   $to = $mailid->email_id ;
  // echo "$to <br/>";
- echo "result".
+ //echo "result".
   mail($to, $subject, $message, $headers) ;
  
          }
         
-      echo " <span style= 'color :green'> 	Your message has been sent</span> ";
+      echo " <span style= 'color :green'> 	Your message has been sent Successfully </span> <br/><br/>";
 
   }    
  //    header('location: home.php');
@@ -91,7 +91,7 @@ else
    if(isset($_POST['fromid']))
  {
      
-       
+       echo " i am inpost";
 
 
       $from = $_POST['fromid'];
@@ -105,7 +105,7 @@ else
       if( (0==strlen($from)) || ( 0 == strlen($subject) ) || ( 0 == strlen($message) )) {
       
  echo "     <form action='home.php' method='post'>
-<label for='fromid' >From Id</label> <input type='text' id='fromid' name='fromid'/><br/><br/>
+<label for='fromid' >From Id</label> <input style='width: 300px' type='text' id='fromid' name='fromid'/><br/><br/>
 <label for='subject' >Subject  </label> <input style='width: 450px' type='text' id='subject' name='subject'/><br/><br/>
 
 <label for='mbody'>Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
@@ -130,7 +130,7 @@ else
  
  <form action='home.php' method='post'>
  <input type='hidden' name='sendid' value=1 />
- <input type='hidden' name='fromid' value='$from' />
+ <input type='hidden' name='fromID' value='$from' />
  <input type='hidden' name='subject' value='$subject' />
  <input type='hidden' name='mbody' value='$message' />
  <input type='submit' value='Submit'>
@@ -147,10 +147,10 @@ else
   
   
  <form action="home.php" method="post">
-<label for="fromid" >From Id</label> <input type="text" id="fromid" name="fromid"/><br/><br/>
-<label for="subject" >Subject  </label> <input style='width: 450px' type="text" id="subject" name="subject"/><br/><br/>
+<label for="fromid" >From ID</label> <input style='width: 300px' type="text" id="fromid" name="fromid"/><br/><br/>
+<label for="subject" >Subject &nbsp</label> <input style='width: 450px' type="text" id="subject" name="subject"/><br/><br/>
 
-<label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <textarea  id="mbody" name="mbody" rows="20" cols="68" >
 </textarea><br/><br/>
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">

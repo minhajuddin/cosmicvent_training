@@ -1,1 +1,7 @@
-# Add validation to all input fields
+
+
+@ Add validation to all input fields # 
+@ displaying proper error message when mail() fails to send message *
+@ in edit page validation error message is appearing in a new page.
+@ Testing is pending.
+@ Code review is pending

@@ -13,10 +13,6 @@
     //Insert a  mail id entry in the database
     function insert_mailid( $mailid ){
     
-    if( (0==strlen($mailid->user_name)) || ( 0 == strlen($mailid->email_id) )) {
-    echo " <h3> Enter Both username and emailid</h3> <br/> <a href='index.php'>Home</a>";
-    die();
-    }
     
     
       $query_text = "INSERT INTO mail_entries( user_name, email_id,enable_status) VALUES( '$mailid->user_name' , '$mailid->email_id',1)";
@@ -74,12 +70,7 @@
     
     {
     
-    if( 0==strlen($keyword))
-    {
-    echo " <h3> Enter username or emailid </h3> <br/> <a href='index.php'>Home</a>";
-    die();
-    }
-    
+       
     
     
     $query_text = "SELECT * FROM mail_entries WHERE email_id LIKE '%$keyword%' OR user_name LIKE '%$keyword%' ";
@@ -110,7 +101,7 @@
      $query_text = "UPDATE mail_entries SET user_name='$mailid->user_name', email_id='$mailid->email_id',enable_status='$mailid->enable_status'
 WHERE id = '$mailid->id' ";
 
-echo "$query_text";
+
 $query = $this->db->query( $query_text );
       return ( 1 == $this->db->affected_rows ); //returns true if insert was successful
      

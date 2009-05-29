@@ -20,9 +20,9 @@
       
       
       <div class="navbar"> 
-      <a href="home"> Home </a> &nbsp &nbsp
-      <a href="home"> update DB </a> &nbsp &nbsp
-      <a href="home"> Search DB </a> &nbsp &nbsp
+      <a href="home.php"> Home </a> &nbsp &nbsp
+      <a href="updatedb.php"> update DB </a> &nbsp &nbsp
+      <a href="searchdb.php"> Search DB </a> &nbsp &nbsp
       </div>
       
        <!-- PAGE -->
@@ -31,8 +31,8 @@
   <div class = " page" >
   
   <h4>Add Email ID</h4>
-        <form action="index.php" method="post">
-          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/>
+        <form action="updatedb.php" method="post">
+          <lable for="uname">User Name <br/> <input type="text" id="uname" name="username"/></lable><br/><br/>
           <lable for="mailid">Email ID<br/> <input type="text" id="mailid" name="mailid"/></lable><br/><br/>
           <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
         </form>

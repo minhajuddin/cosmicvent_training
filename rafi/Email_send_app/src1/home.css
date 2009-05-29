@@ -51,7 +51,7 @@
        .page{
       /*  float: right; */
       /*  width: 68%; */
-        height: 90%;
+        height: auto ;
         background-color: #9c9c9c;
         text-align: left;
         padding: 30px;

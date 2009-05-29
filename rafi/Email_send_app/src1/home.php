@@ -22,7 +22,7 @@
       <div class="navbar"> 
       <a href="home.php"> Home </a> &nbsp &nbsp
       <a href="updatedb.php"> update DB </a> &nbsp &nbsp
-      <a href="home"> Search DB </a> &nbsp &nbsp
+      <a href="searchdb.php"> Search DB </a> &nbsp &nbsp
       </div>
       
       
@@ -34,7 +34,7 @@
 <label for="fromid" >From Id</label> <input type="text" id="fromid" name="fromid"/><br/><br/>
 <label for="subject" >Subject  </label> <input type="text" id="subject" name="subject"/><br/><br/>
 
-<label for="mbody">Message</label><br/> 
+<label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
 <textarea  id="mbody" name="mbody" rows="20" cols="68" >
 </textarea><br/><br/>
 <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">

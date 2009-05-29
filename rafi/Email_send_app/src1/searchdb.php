@@ -44,6 +44,19 @@
     $keyword = $_POST['search'];
     $escp_keyword = mysql_escape_string($keyword);
     $mail_repo = new EmailRepo();
+    
+    if( 0==strlen($keyword))
+    {
+    
+    echo " <p><span style='color : red'> Enter username or emailid</span></p> ";
+  //  header('location: searchdb.php#footer');
+  
+    }
+    
+    else 
+    
+    {
+    
     $mailids = $mail_repo->search_ids($escp_keyword);
 
     if(!$mailids)
@@ -57,7 +70,7 @@
                 echo " $mailid->email_id &nbsp <a href='editdb.php?id=$mailid->id'> Edit </a> <br/>" ;
                }
         }
-        
+        }
     }
 
   ?>
@@ -68,7 +81,7 @@
       
        <!-- footer -->
       
-      <div class = "footer">Cosmicvent &copy; 2009 </div>
+      <div id = "footer" class = "footer">Cosmicvent &copy; 2009 </div>
       
   </div>
   

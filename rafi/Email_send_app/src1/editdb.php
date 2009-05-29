@@ -66,7 +66,7 @@ $mail_repo = new EmailRepo();
       if( $result ){
       header('Location: searchdb.php');
       } else {
-        echo "Mail insertion failed";
+        echo "Nothing is updated";
       }
       
       }

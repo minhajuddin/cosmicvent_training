@@ -30,15 +30,7 @@
       
       <div class = " page" >
       
-      <form action="home.php" method="post">
-<label for="fromid" >From Id</label> <input type="text" id="fromid" name="fromid"/><br/><br/>
-<label for="subject" >Subject  </label> <input type="text" id="subject" name="subject"/><br/><br/>
-
-<label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-<textarea  id="mbody" name="mbody" rows="20" cols="68" >
-</textarea><br/><br/>
-<input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
-</form>
+      
 
 <!-- Handler to compose mail -->
 
@@ -55,15 +47,28 @@
       
       
       if( (0==strlen($from)) || ( 0 == strlen($subject) ) || ( 0 == strlen($message) )) {
-    echo " <h3> Enter from ID , subject and message </h3> <br/> <a href='compose_mail.php'>Compose Mail</a>";
-    die();
+      
+ echo "     <form action='home.php' method='post'>
+<label for='fromid' >From Id</label> <input type='text' id='fromid' name='fromid'/><br/><br/>
+<label for='subject' >Subject  </label> <input style='width: 450px' type='text' id='subject' name='subject'/><br/><br/>
+
+<label for='mbody'>Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<textarea  id='mbody' name='mbody' rows='20' cols='68' >
+</textarea><br/><br/>
+<input type='submit' value='Submit'> &nbsp <input type='reset' value='Reset'>
+</form> ";
+
+    echo " <p><span style='color : red'> Enter from ID , subject and message </span></p> ";
+    
     }
       
+      else {
  echo "
  <h2> Mail preview</h2>
- <p1> <h3>From : </h3>$from</p1>
- <p1> <h3> Subject: </h3> $subject</p1>
- <p1> <h3> Message:</h3> <br/>$message</p1> 
+ <p1 id='preview'> From : $from <br/><br/>
+  Subject:  $subject <br/><br/>
+  Message: <br/> <br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+  $message</p1> <br/><br/>
  
  
  
@@ -74,15 +79,30 @@
  <input type='hidden' name='mbody' value='$message' />
  <input type='submit' value='Submit'>
  
- </form>";
+ </form>"; }
  
  
  }
  
- 
+ else {
  ?>
  
+  <!-- Mail form -->
+  
+  
+ <form action="home.php" method="post">
+<label for="fromid" >From Id</label> <input type="text" id="fromid" name="fromid"/><br/><br/>
+<label for="subject" >Subject  </label> <input style='width: 450px' type="text" id="subject" name="subject"/><br/><br/>
+
+<label for="mbody">Message</label><br/> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+<textarea  id="mbody" name="mbody" rows="20" cols="68" >
+</textarea><br/><br/>
+<input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset">
+</form>
+
+<?php } ?>
  
+  
  <!-- Handler for send mail -->
  
  <?php
@@ -128,7 +148,7 @@ else
       echo " <h2 style= 'color :green'> 	Your message has been sent</h2> ";
 
   }    
-     header('location: compose_mail.php');
+     header('location: home.php');
     }
         
 ?> 

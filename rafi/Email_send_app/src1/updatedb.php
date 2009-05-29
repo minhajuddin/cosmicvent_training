@@ -37,7 +37,7 @@
           <input type="submit" value="Submit"> &nbsp <input type="reset" value="Reset"><br/><br/><br/>
         </form>
         
-   </div>
+   
    
    <!-- Handler to Add entry to DB -->
    
@@ -54,6 +54,14 @@
       $escp_username =    mysql_escape_string($username);
       $escp_mailid =  mysql_escape_string($mailid);
       
+      if( (0==strlen($mailid->user_name)) || ( 0 == strlen($mailid->email_id) )) {
+    echo " <p><span style='color : red'> Enter Both username and emailid</span></p> ";
+    
+    }
+    
+    else
+    {
+      
       $mailid = new MailEntry(0, $escp_username, $escp_mailid,1);
       $mail_repo = new EmailRepo();
       
@@ -69,8 +77,11 @@
         }
       
       }
+      }
       
    ?>     
+   
+   </div>
          <!-- footer -->
       
       <div class = "footer">Cosmicvent &copy; 2009 </div>

@@ -45,7 +45,7 @@ color:#ffffff;
 </div>
 
 <div id="searchbar" align="center">
-<form action="admin.php" method="POST">
+<form action="admin.php" method="GET">
  SEARCH:<input type="text" name="search" id="search" value="" size="50">
 <input type="submit"  value="GO">&nbsp <a href="advance_search.php"><b><i>ADVANCE SEARCH</i></b></a>
 </form>
@@ -70,7 +70,7 @@ echo"
  <td align='left'><h3>CATAGEORIES </h3>
     
      
-     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <form action=\"search_by_catageory.php\" method=\"GET\">
      <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fiction\">
      <input type='submit' name='submit' id='submit' value='FICTION' style=\"height: 25px; width: 125px\">
      </form>
@@ -78,28 +78,28 @@ echo"
      
      
      
-     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <form action=\"search_by_catageory.php\" method=\"GET\">
      <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"non-fiction\">
      <input type='submit' name='submit' id='submit' value='NON-FICTION' style=\"height: 25px; width: 125px\">
      </form>
      
      
      
-     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <form action=\"search_by_catageory.php\" method=\"GET\">
      <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"fantasy\">
      <input type='submit' name='submit' id='submit' value='FANTASY' style=\"height: 25px; width: 125px\">
      </form>
      
      
      
-     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <form action=\"search_by_catageory.php\" method=\"GET\">
      <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"sports\">
      <input type='submit' name='submit' id='submit' value='SPORTS'style=\"height: 25px; width: 125px\">
      </form>
      
      	
      
-     <form action=\"search_by_catageory.php\" method=\"POST\">
+     <form action=\"search_by_catageory.php\" method=\"GET\">
      <input type=\"hidden\" name=\"catageory\" id=\"catageory\" value=\"entertainment\">
      <input type='submit' name='submit' id='submit' value='ENTERTAINMENT' style=\"height: 25px; width: 125px\">
      </form>
@@ -124,8 +124,8 @@ echo"
  </table> ";
  
 }
-if(isset($_POST['search'])){
-$keyword = $_POST['search'];
+if(isset($_GET['search'])){
+$keyword = $_GET['search'];
 $book_classObj = new book_class();
 $booknames = $book_classObj->search_books($keyword);
 

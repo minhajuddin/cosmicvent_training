@@ -24,7 +24,7 @@ color:#ffffff;
    </head>
 <body>
 
-div id="header">
+<div id="header">
 
 <div id="search" align="right">
 <form action="admin.php" method="GET">
@@ -36,6 +36,22 @@ div id="header">
 <h1>Welcome to Admin's Home Page</h1>
 </div>
 
+</div>
+<div id="searchbar" align="center">
+<form action="admin.php" method="GET">
+		<b>search by:
+        <select name="name">
+        <option value="name">name</option>
+        <option value="auther">auther</option>
+        <option value="publisher">publisher</option>
+        <option value="price">price</option>
+        <option value="catageory">catageory</option>
+    </select></b>
+
+
+ <input type="text" name="search" id="search" value="" size="50">
+<input type="submit"  value="search">&nbsp <a href="advance_search.php"> </a>
+</form>
 </div>
 
 

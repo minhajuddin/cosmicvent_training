@@ -26,10 +26,11 @@ background-color:#4682B4;
       $author = $_POST['author'];
       $publisher= $_POST['publisher'];
       $price = $_POST['price'];
-      
+      $catageory = $_POST['catageory'];
+      $description = $_POST['description'];
       //TODO: Do the validation for the input
       
-      $bookObj = new book($id, $name, $author, $publisher, $price);
+      $bookObj = new book($id, $name, $author, $publisher, $price, $catageory, $description);
           
       $book_classObj = new book_class();
       $result = $book_classObj->update_book( $bookObj );
@@ -38,8 +39,8 @@ background-color:#4682B4;
         echo "<br><b>Congrats!! Book added Succesfully.</b><br><br><br><br><b>The following are the new details of book:</b><br><br>";
       echo"
       <table class=\"search_result\" width=\"50%\">
- <tr><th>ID</th><th>Name</th><th>Author</th><th>Publisher</th><th>Price</th></tr>
- <tr><td>$id</td><td>$name</td><td>$author</td><td>$publisher</td><td>$price</td></tr>
+ <tr><th>ID</th><th>Name</th><th>Author</th><th>Publisher</th><th>Price</th><th>Catageory</th><th>Description</th></tr>
+ <tr><td>$id</td><td>$name</td><td>$author</td><td>$publisher</td><td>$price</td><td>$catageory</td><td>$description</td></tr>
  </table>";
       
       } 

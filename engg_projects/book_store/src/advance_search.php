@@ -39,15 +39,27 @@ color:#ffffff;
 </div>
  
 <div id = "heading" align="center">
-<h1>Welcome to Admin's Home Page</h1>
+<h1>Advance Search Page</h1>
 </div>
 
 </div>
 
 <div id="searchbar" align="center">
-<form action="admin.php" method="GET">
+<form action="advance_search.php" method="GET">
  SEARCH:<input type="text" name="search" id="search" value="" size="50">
-<input type="submit"  value="GO">&nbsp <a href="advance_search.php"><b><i>ADVANCE SEARCH</i></b></a>
+ 
+ Search by:
+ <select name='type' id ='type' width=90>
+ 	<option value='1'>Name</option>
+ 	<option value='2'>Author</option>
+ 	<option value='3'>Publisher</option>
+    <option value='4'>Catageory</option>
+ 	<option value='5'>Description</option>
+ 	<option value='6'>ID</option>
+</select>
+ 
+ <br>
+<input type="submit"  value="Advance Search">&nbsp </b></a>
 </form>
 </div>
 
@@ -107,16 +119,6 @@ echo"
      
      </td>
  <td align='center'>
- <h3>LIST OF POPULAR BOOKS</h3>
-     <ol type=\"\">
-     <li><a href=\"\">Fountain Head<a></li>
-     <li><a href=\"\">Hound of Baskerville<a></li>
-     <li><a href=\"\">Treasure Island<a></li>
-     <li><a href=\"\">Harry Potter and the sorcerer's Stone<a></li>
-     <li><a href=\"\">Harry Potter and the Chamber of Secrets<a></li>
-     <li><a href=\"\">Harry Potter and the Prisoner of Azkaban<a></li>
-     <li><a href=\"\">arry Potter and the Goblet of Fire<a></li>
-     </ol>
     
  </td>
  </tr>
@@ -127,7 +129,35 @@ echo"
 if(isset($_GET['search'])){
 $keyword = $_GET['search'];
 $book_classObj = new book_class();
+
+switch ($_GET['type'])
+{
+case 1:
+  $booknames = $book_classObj->search_books($keyword);
+  break;
+case 2:
+  $booknames = $book_classObj->search_books_by_author($keyword);
+  break;
+case 3:
+  $booknames = $book_classObj->search_books_by_publisher($keyword);
+  break;
+case 4:
+  $booknames = $book_classObj->search_books_by_catageory($keyword);
+  break;
+case 5:
+  $booknames = $book_classObj->search_books_by_description($keyword);
+  break;
+  case 6:
+  $booknames = $book_classObj->search_books_by_id($keyword);
+  break;
+default:
 $booknames = $book_classObj->search_books($keyword);
+  
+  
+}
+
+
+
 
 if(!$booknames)
 { 
@@ -194,41 +224,8 @@ else
 
 ?>
  
- </td><td align="right"><div id="add_book">
-      <form action='add_book.php' method='post'>
-         <h2>ADD BOOK</h2>
-        <p><label for='id'><b>ID:</b></label><input type='text' id='id' name='id' size='35'/></p>
-        <p><label for='name'><b>Name:</b></label><input type='text' id='name' name='name' size='35'/></p>
-        <p><label for='author'><b>Author:</b></label><input type='text' id='author' name='author' size='35'/></p>
-        <p><label for='publisher'><b>Publisher:</b></label><input type='text' id='publisher' name='publisher' size='35'/></p>
-        <p><label for='price'><b>Price:</label></b><input type='text' id='price' name='price' size='35'/></p>
-        <p>catageory:
-        	
-        <?php 
-        require_once 'data_access/catageory_class.php';
-        $Obj = new catageory_class();
-        $catageorynames = $Obj->display_catageory();
-        if(!$catageorynames)
-            { 
-             echo " <h3> No catageories found </h3> ";
-	        }	
-		else
-			{
-			 echo "<select name='catageory' id ='catageory' width=90>";
-			     foreach( $catageorynames as $catageoryObj )
-		    	 {
-		    	   echo "<option value='$catageoryObj->cid'>$catageoryObj->cname</option>";
-		    	  }
-                 echo"</select>";
-            }
-    	 
-         ?>
-         
-         <b>Description:<textarea rows='5' cols='27' id='description' name='description' /> </textarea> </p>
-        
-        <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
-      </form>
-     </div>
+ </td><td align="right">
+ 	
   </td></tr></table>
  
 </body>

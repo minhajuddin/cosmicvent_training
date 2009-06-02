@@ -30,20 +30,23 @@ background-color:#4682B4;
       $author = $_POST['author'];
       $publisher= $_POST['publisher'];
       $price = $_POST['price'];
-      
+      $catageory = $_POST['catageory'];
+      $description=$_POST['description'];
       //TODO: Do the validation for the input
       
-      $bookObj = new book($id, $name, $author, $publisher, $price);
-          
+      
+      
+      $bookObj = new book($id, $name, $author, $publisher, $price, $catageory, $description);
       $book_classObj = new book_class();
       $result = $book_classObj->insert_book( $bookObj );
+      
       
       if( $result ){
         echo "<br><b>Congrats!! Book added Succesfully.</b><br><br><br><br><b>The following are the details of the book:</b><br><br>";
       echo"
       <table class=\"search_result\" width=\"50%\">
- <tr><th>ID</th><th>Name</th><th>Author</th><th>Publisher</th><th>Price</th></tr>
- <tr><td>$id</td><td>$name</td><td>$author</td><td>$publisher</td><td>$price</td></tr>
+ <tr><th>ID</th><th>Name</th><th>Author</th><th>Publisher</th><th>Price</th><th>catageory</th><th>Description</th></tr>
+ <tr><td>$id</td><td>$name</td><td>$author</td><td>$publisher</td><td>$price</td><td>$catageory</td><td>$description</td></tr>
  </table>";
       
       } 
@@ -63,6 +66,27 @@ background-color:#4682B4;
         <tr><td>Author:</td><td><input type="text" name="author" value="" id="author"</td></tr>
         <tr><td>Publisher:</td><td><input type="text" name="publisher" value="" id="publisher"</td></tr>
         <tr><td>Price:</td><td><input type="text" name="price" value="" id="price"</td></tr>
+        <tr><td>Catageory:</td><td> <?php 
+        require_once 'data_access/catageory_class.php';
+        $Obj = new catageory_class();
+        $catageorynames = $Obj->display_catageory();
+        if(!$catageorynames)
+            { 
+             echo " <h3> No catageories found </h3> ";
+	        }	
+		else
+			{
+			 echo "<select name='catagoery'  width=90>";
+			     foreach( $catageorynames as $catageoryObj )
+		    	 {
+		    	   echo "<option value='$catageoryObj->cid'>$catageoryObj->cname</option>";
+		    	  }
+                 echo"</select>";
+            }
+    	 
+         ?>
+       </tr>
+        <tr><td>Description:</td><td><textarea rows='5' cols='27' id='description' name='description' /> </textarea></td></tr>
         <tr><td><input type='submit' value='Add' /></td><td><input type='reset' value='reset' /></td></tr>
         </table>
       </form>

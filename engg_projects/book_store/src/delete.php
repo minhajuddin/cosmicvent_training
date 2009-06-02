@@ -61,12 +61,14 @@ else
      <th>Name</th>
      <th>Author</th>
      <th>Publisher</th>
-     <th>Price</th></tr>
+     <th>Price</th><th>Catageory</th><th>Description</th></tr>
   <tr><td>$bookObj->book_id</td>
       <td>$bookObj->book_name</td>
       <td>$bookObj->book_author</td>
       <td>$bookObj->book_publisher</td>
-      <td>$bookObj->book_price</td></tr>
+      <td>$bookObj->book_price</td>
+      	<td>$bookObj->book_catageory</td>
+      		<td>$bookObj->book_description</td></tr>
    </table></td><td>
 
       <input type='hidden'name='id' id='id' value='$bookObj->book_id'>
@@ -74,7 +76,9 @@ else
       <input type='hidden' name='author' id='author' value='$bookObj->book_author'>
       <input type='hidden' name='publisher' id='publisher' value='$bookObj->book_publisher'>
       <input type='hidden' name='price' id='price' value='$bookObj->book_price'>
-
+      <input type='hidden' name='catageory' id='catageory' value='$bookObj->book_catageory'>
+      <input type='hidden' name='description' id='description' value='$bookObj->book_description'>
+  
 
 
 <input type='submit' name=\"delete\" id=\"delete\" value=\"Delete\">

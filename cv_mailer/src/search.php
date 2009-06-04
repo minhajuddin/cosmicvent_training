@@ -23,14 +23,13 @@ Description: This is the file that is used to display content. It is unique for 
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="search.php" class="current">Search</a></li>
-					<li><a href="edit.php">Edit</a></li>
 				</ul>
 			</div>
 			<div id="page">
 				<div id="header"><h1>EMail Application</h1></div>
 				<div id="content">
 					<form action="search.php" method="get">
-						<p><label>Search: </label><input type="text" name="q" value="<?php if(isset($_GET["q"])) echo $_GET["q"]; ?>" /><input type="submit" id="submit" value="Send" /></p>
+						<p><label>Search: </label><input type="text" name="q" value="<?php if(isset($_GET["q"])) echo $_GET["q"]; ?>" /><input type="submit" value="Search" /></p>
 					</form>
 					<?php
 					if(isset($_GET["q"]))

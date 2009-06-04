@@ -23,7 +23,6 @@ Description: This is the file that is used to display content. It is unique for 
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="search.php">Search</a></li>
-					<li><a href="edit.php" class="current">Edit</a></li>
 				</ul>
 			</div>
 			<div id="page">

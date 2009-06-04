@@ -65,7 +65,7 @@ Description: This is the file that is used to display content. It is unique for 
 					</form>
 				</div>
 				<div id="footer">
-					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="index.php">Clear</a></p>
+					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="login.php?logout">Logout</a></p>
 				</div>
 			</div>
 		</div>

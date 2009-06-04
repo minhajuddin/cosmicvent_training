@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 04, 2009 at 07:50 AM
+-- Generation Time: Jun 04, 2009 at 07:13 PM
 -- Server version: 5.1.33
 -- PHP Version: 5.2.9-2
 
@@ -12,6 +12,25 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Database: `emailcv`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `Name` varchar(50) NOT NULL,
+  `Pass` varchar(200) NOT NULL,
+  PRIMARY KEY (`Name`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`Name`, `Pass`) VALUES
+('admin', 'adminpass');
 
 -- --------------------------------------------------------
 

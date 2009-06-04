@@ -128,17 +128,17 @@ label {
 }
 
 .error {
-	margin: 5px;
 	border: solid 1px #ff0000;
+	background-color: #ffaaaa;
 	padding: 5px;
-	color: #ff0000;
+	margin: 5px;
 }
 
 .success {
-	margin: 5px;
 	border: solid 1px #00ff00;
+	background-color: #aaffaa;
 	padding: 5px;
-	color: #00ff00;
+	margin: 5px;
 }
 
 .wmd-preview {

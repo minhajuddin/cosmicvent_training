@@ -1,3 +1,8 @@
+<?php
+session_start();
+if(!isset($_SESSION["name"]))
+	header("Location:login.php")
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <!--
 File: index.php
@@ -19,6 +24,7 @@ Description: This is the file that is used to display content. It is unique for 
 				<ul>
 					<li><a href="index.php" class="current">Home</a></li>
 					<li><a href="search.php">Search</a></li>
+					<li><a href="admin.php">Admin</a></li>
 				</ul>
 			</div>
 			<div id="page">
@@ -80,7 +86,7 @@ Description: This is the file that is used to display content. It is unique for 
 					</form>
 				</div>
 				<div id="footer">
-					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a></p>
+					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="login.php?logout">Logout</a></p>
 				</div>
 			</div>
 		</div>

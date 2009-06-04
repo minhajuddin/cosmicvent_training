@@ -23,6 +23,7 @@ Description: This is the file that is used to display content. It is unique for 
 				<ul>
 					<li><a href="index.php">Home</a></li>
 					<li><a href="search.php" class="current">Search</a></li>
+					<li><a href="admin.php">Admin</a></li>
 				</ul>
 			</div>
 			<div id="page">
@@ -55,7 +56,7 @@ Description: This is the file that is used to display content. It is unique for 
 					</form>
 				</div>
 				<div id="footer">
-					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="index.php">Clear</a></p>
+					<p>Powered by CosmicVent | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a> | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML</a> | <a href="login.php?logout">Logout</a></p>
 				</div>
 			</div>
 		</div>

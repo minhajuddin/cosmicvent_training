@@ -106,5 +106,34 @@ class MySQLDA {
 
 		return mysql_query("INSERT INTO templates(Name,Message) VALUES('$name', '$message')");
 	}
+
+	function adminExists($name, $pass)
+	{
+		$name = addslashes($name);
+		$name = strtolower($name);
+		$pass = addslashes($pass);
+		$result = mysql_query("SELECT * FROM admin WHERE Name='$name' AND Pass='$pass'");
+		if(mysql_num_rows($result) == 1)
+			return 1;
+		else
+			return 0;
+	}
+
+	function addAdmin($name, $pass)
+	{
+		$name = addslashes($name);
+		$name = strtolower($name);
+		$pass = addslashes($pass);
+		return mysql_query("INSERT INTO admin (Name, Pass) VALUES ('$name','$pass')");
+	}
+
+	function changeAdminPass($name, $pass)
+	{
+		$pass = addslashes($pass);
+		$name = addslashes($name);
+		$name = strtolower($name);
+		
+		return mysql_query("UPDATE admin SET Pass='$pass' WHERE Name='$name'");
+	}
 }
 ?>

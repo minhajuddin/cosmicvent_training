@@ -17,9 +17,7 @@
                      
         <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
       </form>
-      
-  
-       
+           
      <?php
     require_once 'data_access/employee_repository.php';
   
@@ -38,8 +36,6 @@
       
       //TODO: Do the validation for the input
       $employeeobj = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
-     
-     
       $employeerepositoryobj = new EmployeeRepository();
       $result = $employeerepositoryobj->insert_employee( $employeeobj);	
     echo "</ hr>";
@@ -81,5 +77,81 @@
       }
 } 
  ?>
+ 
+ 
+ <!--
+ search starts here 
+ -->
+  <form action='hrpage.php' method='get'>
+      <p><input type='text' id='name' name='name' value='' /> &nbsp 
+      <input type='submit' id='name' value='search' />
+      </p>
+  </form> 
+  
+ <?php
+
+
+
+
+require_once 'data_access/employee_repository.php';
+ 
+ if(isset($_GET['name'])){
+$keyword = $_GET['name'];
+
+$employee_repositoryObj = new Employee_Repository();
+
+$employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
+
+
+print_r($employeedetails);
+
+
+if(!$employeedetails)
+{ 
+ echo " <h3> No result found </h3> ";
+}
+
+else
+{
+ echo "<h2>SEARCH RESULTS ARE:</h2>";
+ foreach($employeedetails as $empoyeeobj )
+ {
+ echo"
+ <table>
+ <tr><td><table class=\"search_result\" width=\"70%\">
+ <tr>
+ <th>Employee_Number</th>
+ <th>Name</th>
+ <th>Father_Name</th>
+ <th>Skills</th>
+ <th>Location</th>
+ <th>Salary</th>
+ <th>Mobile_Number</th>
+ </tr>
+ 
+ <tr>
+ <td>$empoyeeobj->employee_number</td>
+ <td>$empoyeeobj->name</td>
+ <td>$empoyeeobj->father_name</td>
+ <td>$empoyeeobj->skills</td>
+ <td>$empoyeeobj->location</td>
+ <td>$empoyeeobj->salary</td>
+ <td>$empoyeeobj->mobile_number</td>
+ </tr>
+ </table></td><td>
+
+
+ </td></tr></table>";
+ 
+} 
+ 
+ } 
+
+}
+?>
+
+
+ 
+
      </body>
      </html>

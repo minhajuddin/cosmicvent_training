@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+	<head>
+		<style type='text/css'>
+			body {
+			 text-align: center;
+			}
+			#wrapper {
+			 width: 750px;
+			 margin: 0 auto;
+			 text-align: left;
+			 position: relative;
+			}
+			#contentArea {
+			 width: 450px;
+			 float: left;
+			 background-color:blue;
+			}
+			#leftPanel {
+			 width: 150px;
+			 float: left;
+			 background-color:red;
+			}
+			#rightPanel {
+			 width: 150px;
+			 float: left;
+			 background-color:green;
+			}
+			#footer {
+			 clear: both;
+			 background-color:pink;
+			}
+			/*
+			Absolute positioning
+			#wrapper{width:750px;margin: 0 auto;text-align:left;position:relative;}
+			#contentArea {width: 450px; position: absolute; top: 0; left: 150px;background-color:red;}
+			#leftPanel {width: 150px; position: absolute; top: 0; left: 0;background-color:blue;}
+			#rightPanel {width: 150px; position: absolute; top: 0; left: 600px;background-color:green;}
+			#footer {display: none;}
+			*/
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+		   <div id="leftPanel">
+		      <p>(links and various text items here)</p>
+		   </div>
+			<div id="contentArea">
+		      <p>(headers and text here)</p>
+		   </div>
+		
+		   <div id="rightPanel">
+		      <p>(links and various text items here)</p>
+		   </div>
+		   <div id="footer">
+		      <p>(Copyright statement, links, etc.)</p>
+		   </div>
+		</div>
+	</body>
+</html>

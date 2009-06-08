@@ -1,5 +1,5 @@
 <?php
-class Hr{
+class Employee{
 
 
    public $employee_number;
@@ -12,7 +12,7 @@ class Hr{
    
        
     
-    function Hr($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number){
+    function Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number){
       $this->employee_number=$employee_number;
       $this->name=$name;
       $this->father_name=$father_name;

@@ -1,16 +1,16 @@
 <?php
 
-require_once 'hr.php';
+require_once 'employee.php';
  
-class Hrenter{
+class EmployeeRepository{
   
   private $db;
   function __construct(){
-    $this->db = new mysqli('localhost', 'root', '', 'management');
+    $this->db = new mysqli('localhost', 'root', '', 'employee_management');
   }
  
   function insert_employee($employee){
-    $query_text = "INSERT INTO  businesses  ( employee_number,name,father_name,skills,location,salary,mobile_number) 
+    $query_text = "INSERT INTO  employees  ( employee_number,name,father_name,skills,location,salary,mobile_number) 
     VALUES( '$employee->employee_number' , '$employee->name','$employee->father_name','$employee->skills','$employee->location','$employee->salary','$employee->mobile_number')";
     
     $query = $this->db->query( $query_text );

@@ -5,14 +5,14 @@
 
       <form action='hrpage.php' method='post'>
          <h2>ADD an employee</h2>
-         <p><label for='employee_number'></label><b>employee_number:</b></label><input type='text' id='employee_number' name='employee_number' size='35'/></p>
+         <p><label for='employee_number'></label><b>Employee_Number:</b></label><input type='text' id='employee_number' name='employee_number' size='35'/></p>
         <p><label for='name'></label><b>Name:</b></label><input type='text' id='name' name='name' size='35'/></p>
-        <p><label for='father_name'><b>fathername:</b></label><input type='text' id='father_name' name='father_name' size='35'/></p>
-        <p><label for='skills'></label><b>skills:</b></label><input type='text' id='skills' name='skills' size='35'/></p>
-        <p><label for='location'></label><b>location:</b></label><input type='text' id='location' name='location' size='35'/></p>
+        <p><label for='father_name'><b>Father_Name:</b></label><input type='text' id='father_name' name='father_name' size='35'/></p>
+        <p><label for='skills'></label><b>Skills:</b></label><input type='text' id='skills' name='skills' size='35'/></p>
+        <p><label for='location'></label><b>Location:</b></label><input type='text' id='location' name='location' size='35'/></p>
         
-        <p><label for='salary'><b>salary:</b></label><input type='text' id='salary' name='salary' size='35'/></p>
-        <p><label for='mobile_number'><b>mobile_number:</label></b><input type='text' id='mobile_number' name='mobile_number' size='35'/></p>
+        <p><label for='salary'><b>Salary:</b></label><input type='text' id='salary' name='salary' size='35'/></p>
+        <p><label for='mobile_number'><b>Mobile_Number:</label></b><input type='text' id='mobile_number' name='mobile_number' size='35'/></p>
         
                      
         <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
@@ -21,7 +21,7 @@
   
        
      <?php
-    require_once 'data_access/hrentry.php';
+    require_once 'data_access/employee_repository.php';
   
     if(isset($_POST['name']))
     {
@@ -37,28 +37,28 @@
       $mobile_number = $_POST['mobile_number'];
       
       //TODO: Do the validation for the input
-      $hrobj = new Hr($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+      $employeeobj = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
      
      
-      $hrenterobj = new Hrenter();
-      $result = $hrenterobj->insert_employee( $hrobj);	
+      $employeerepositoryobj = new EmployeeRepository();
+      $result = $employeerepositoryobj->insert_employee( $employeeobj);	
     echo "</ hr>";
       if( $result )
       {
         echo "<br><b>Congrats!! employee added Succesfully.
-        </b><br><br><br><br>
+        </b><br><br>
         <b>The following are the  details:</b>
-        <br><br>";
+        <br>";
        echo"
       <table  border=1 width=\"50%\">
  <tr>
- <th>employee_number</th>
- <th>name</th>
- <th>father_name</th>
- <th>skills</th>
- <th>location</th>
- <th>salary</th>
- <th>mobile_number</th>
+ <th>Employee_Number</th>
+ <th>Name</th>
+ <th>Father_Name</th>
+ <th>Skills</th>
+ <th>Location</th>
+ <th>Salary</th>
+ <th>Mobile_Number</th>
  </tr>
  <tr>
  <td>$employee_number</td>

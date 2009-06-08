@@ -1,0 +1,78 @@
+<?php
+
+  require_once 'includes.php';
+  require_once 'category.php';
+  
+   
+  class CategoryRepo
+  {
+    
+    private $db;
+    
+    // function to connect to the DB
+    
+    function __construct()
+    {
+    
+      $this->db = new mysqli('SERVER_NAME','USER_NAME','PASSWORD','DB_NAME');
+      
+    }
+    
+      /******* Operaions on category table **********************/
+    
+    
+    // function to insert an category entry.
+    
+    function insert_category_entry($CategoryEntry)
+    {
+      
+      $query_string = "INSERT INTO paint(name, description) VALUES ('$CategoryEntry->name', '$CategoryEntry->description'";
+      $query_result = $this->db->query($query_string);
+      
+      return ( 1 == $this->db->affected_rows);       //  true if insertion is succesful
+      
+    }
+    
+    // function to get all category entries
+    
+    function get_all_category_entries()
+    {
+    
+      $query_string = " SELECT * FROM category";
+      $query = $this->db->prepare($query_string);
+      $query->bind_result($id, $name, $description);
+      $query->execute();
+      
+      $categories = array();
+      $i = 0;
+      
+      while($query->fetch())
+      {
+        $categories["$i"] = new Paint($id, $name, $description);
+        $i++;
+      }
+      
+      $query->close();
+      return $categories;
+    }    
+    
+    // function to delete an category entry
+    
+    function delete_category_entry_byId($id)
+    {
+      $query_string = "DELETE FROM category WHERE id = '$id ' ";
+      $query_result = $this->db->query( $query_string );
+      
+      return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
+    }  
+    
+    // function to edit an category entry 
+    
+    function edit_category_entry_byId($id)
+    {
+      $query_string = "UPDATE category SET name='$name', description='$description' WHERE id='$id'";
+      $query_result = $this->db->query($query_string);
+      
+      return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
+    }  
+?>

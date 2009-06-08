@@ -1,0 +1,21 @@
+CORE =>
+x) Search by CATEGORY, ARTIST, SUBJECT?, SIZE?, KEYWORDS?, TAGS?
+x) Images/Artists should be taggable? Dimensions of the image?
+x) Fullscreen should display a modal box with the image stretched
+x) FEATURED Artist, FEATURED Paintings
+1) Allow to manage ARTISTS and their IMAGES
+      Name, Picture, Description, Sort Order, SHOW/HIDE of ARTIST
+      Title, Description, Price, Available/SOLD of Painting
+      
+2) Allow to manage EXHIBITIONS
+      START DATE, END DATE, Exhibition Title, Theme, Additional Information of an EXHIBITION
+      Featured Paintings/Artists
+3) CONTACT US Page
+      Contact form
+      Map (Google Location)
+3) Allow changing of TEXT on ANY PAGE
+4) Allow predefined TEMPLATES
+
+
+1) Administrator will be able to Add/Delete/Edit artists
+2) 

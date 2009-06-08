@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+	<head>
+		<title>Layouts</title>
+		<style type='text/css'>
+			html{margin:0px;}
+			*{margin:0px;}
+			div#static-image {
+			   background-image: url('images/beach.jpg');
+			   background-repeat: no-repeat;
+			   background-position: left bottom;
+			   position: fixed;
+			   left: 0;
+			   bottom: 50%;
+			   margin-top:-120px;
+			   height: 240px;
+			   width: 170px;
+			   z-index: 2;
+			}
+			
+
+			#container{
+				position:absolute;
+				left:-10%;
+				width:200px;
+				/*margin-left:-100px;*/
+				background-color:red;
+				z-index:1
+			}
+			#container2{
+				position:absolute;
+				left:10%;
+				width:200px;
+				/*margin-left:-100px;*/
+				background-color:green;
+				z-index:0
+			}
+			#wrapper{
+				position:relative;
+				margin:0 auto;
+				width:800px;
+				background-color:blue;
+				height:100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="container">
+			Here is some text which is to be centered
+			</div>
+			<div id="container2">
+			Here is another container
+			I've been doing ASP.NET for a while, mostly at my current employer where 
+			we make large-scale online banking web sites. During that, what I've 
+			noticed more and more as new features come out for ASP.NET is that 
+			there's a heavy focus on rapid application development - drag, drop, and ship - 
+			and less around the idea of creating a commercial application using ASP.NET. 
+			There are a few products like Community Server and DotNetNuke out there, 
+			but not many (or not as many as there could be) and I'd wager a lot 
+			of it has to do with lack of framework support for that sort of app.
+			
+			To put what I'm talking about in context, let me first describe at 
+			a high level the kind of application I'm working on. Customers might want 
+			to have us host the application for them or they might want 
+			to host it themselves, so it needs to be something fairly easy to 
+			deploy. In a hosted environment, the customers want to be able to change 
+			their settings easily, so there's a sort of "configuration user interface" 
+			that has to be put in place. Changes might include not only application 
+			settings, but text that appears on the various pages, so localization comes 
+			into play. It needs to be easily upgraded, deployed, and managed, so you don't 
+			want a full copy of the application out there for every customer; 
+			you want a single copy with different IIS apps pointing at it... but that 
+			means the application has to support multi-tenancy (you can't just stick all 
+			your config in web.config because there's only one, right?). In a custom 
+			deployment, the application will be taken by a team, put into the customer's 
+			environment, and programmatically customized, which means it needs to have a 
+			lot of extensibility points.
+
+			So, with that context, here are the big challenges.
+			Multi-Tenancy Everything in the .NET framework assumes there's only 
+			one tenant running on the application. When you ask for a configuration 
+			value, the value comes from The One Configuration Source and that's that. 
+			There's no qualifier in there anywhere to say "I want this configuration 
+			value for this specific tenant." You have to write that. If you want a default 
+			</div>
+			<div id="static-image"></div>
+		</div>
+	</body>
+</html>

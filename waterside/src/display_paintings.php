@@ -10,9 +10,27 @@
         
         $painting_obj = new PaintingRepo;
         
-        if(isset($_POST['subject']))
+        if(isset($_POST['title']))
         {
-        $painting = new Painting(0,$_POST['subject'],$_POST['description'],$_POST['categoryid'],$_POST['artistid']);
+        
+        $target_path = "paintings/";
+        $image = basename( $_FILES['image']['name']);
+        $target_path = $target_path . $image; 
+
+        if(move_uploaded_file($_FILES['image']['tmp_name'], $target_path)) {
+        echo "The file ".  $image . 
+        " has been uploaded";
+        } 
+        else{
+          echo "There was an error uploading the file, please try again!";
+        }
+        
+        
+        
+        
+        
+        
+        $painting = new Painting(0,$_POST['title'],$_POST['description'],$_POST['price'],$_POST['status'],$image,$_POST['categoryid'],$_POST['artistid']);
         $result=$painting_obj->insert_painting($painting);
         if(!$result)
         echo "insertion failed";
@@ -29,7 +47,7 @@
         {
           foreach($paintings as $painting)
           {
-            echo "subject: $painting->subject <br/> Description: $painting->description <br/> categoryId: $painting->categoryId<br/>AuthorId: $painting->artistId<br/><br/><br/>";
+            echo "subject: $painting->title <br/> price: $painting->price <br/> status: $painting->status <br/> <image src='paintings/$painting->image'/>,Description: $painting->description <br/> categoryId: $painting->categoryId<br/>AuthorId: $painting->artistId<br/><br/><br/>";
           }
         }
         }
@@ -39,9 +57,14 @@
     
     <div>
     
-      <form action="display_paintings.php" method="POST">
-        <input type="text" name="subject"/><br/>
-        <textarea rows=10 cols=48 name="description"></textarea><br/>
+      <form enctype="multipart/form-data" action="display_paintings.php" method="POST">
+       <p> name</p><input type="text" name="title"/><br/>
+       <p>price</p> <input type="text" name="price"/><br/>
+       <p>description </p><textarea rows=10 cols=48 name="description"></textarea><br/>
+        <input type="radio" name="status" value="1"> Available<br/><br/>
+        <input type="radio" name="status" value="0" checked> Not Available<br/><br/>
+        <input type="hidden" name="MAX_FILE_SIZE" value="100000" />
+      Upload image: <input name="image" type="file" /><br />
         
         <select name="categoryid">
         <?PHP

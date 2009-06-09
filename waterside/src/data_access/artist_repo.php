@@ -74,5 +74,32 @@
       
       return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
     }  
+    
+    // function to search an artist
+    
+    function search_artists($keyword)
+    
+    {
+    
+      $query_string = "SELECT * FROM artists WHERE name LIKE '%$keyword%' ";
+      $query = $this->db->prepare( $query_string );
+      $query->bind_result( $id, $name, $description);
+      $query->execute();
+      
+      $artists = array( );
+      
+      $i=0;
+      
+      while($query->fetch())
+      {
+        $artists["$i"] = new Artist( $id, $name, $description);
+        $i++;
+      }
+      
+      $query->close();
+      return $artists;
+    
     }
+    
+  }
 ?>    

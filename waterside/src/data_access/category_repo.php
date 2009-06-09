@@ -75,5 +75,31 @@
       
       return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
     } 
+    
+    // function to search an paintings
+    
+    function search_categories($keyword)
+    
+    {
+    
+      $query_string = "SELECT * FROM categories WHERE name LIKE '%$keyword%' ";
+      $query = $this->db->prepare( $query_string );
+      $query->bind_result( $id, $name, $description);
+      $query->execute();
+      
+      $categories = array( );
+      
+      $i=0;
+      
+      while($query->fetch())
+      {
+        $categories["$i"] = new Category( $id, $name, $description);
+        $i++;
+      }
+      
+      $query->close();
+      return $categories;
+    
+    }
   }   
 ?>

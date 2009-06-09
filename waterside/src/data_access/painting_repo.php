@@ -76,6 +76,32 @@
       
       return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
     }  
+    
+    // function to search an paintings
+    
+    function search_paintings($keyword)
+    
+    {
+    
+      $query_string = "SELECT * FROM paintings WHERE subject LIKE '%$keyword%' ";
+      $query = $this->db->prepare( $query_string );
+      $query->bind_result( $id, $subject, $description, $categoryId, $artistId);
+      $query->execute();
+      
+      $paintings = array( );
+      
+      $i=0;
+      
+      while($query->fetch())
+      {
+        $paintings["$i"] = new Painting( $id, $subject, $description, $categoryId, $artistId);
+        $i++;
+      }
+      
+      $query->close();
+      return $paintings;
+    
     }
+  }
 ?>
     

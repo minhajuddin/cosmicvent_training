@@ -46,7 +46,7 @@
         <b>The following are the  details:</b>
         <br>";
        echo"
-      <table  border=1 width=\"50%\">
+      <table  border=1 width='50%'>
  <tr>
  <th>Employee_Number</th>
  <th>Name</th>
@@ -91,7 +91,7 @@
  <?php
 
 
-
+// display the search function
 require_once 'data_access/employee_repository.php';
  
  if(isset($_GET['name'])){
@@ -121,7 +121,7 @@ else
  {
  echo"
  <table>
- <tr><td><table class=\"search_result\" width=\"70%\">
+ <tr><td><table  width='70%'>
  <tr>
  <th>Employee_Number</th>
  <th>Name</th>
@@ -130,8 +130,7 @@ else
  <th>Location</th>
  <th>Salary</th>
  <th>Mobile_Number</th>
- <th>edit</th>
- <th>delete</th>
+
  
  </tr>
  
@@ -144,8 +143,16 @@ else
  <td>$empoyeeobj->skills</td>
  <td>$empoyeeobj->location</td>
  <td>$empoyeeobj->salary</td>
- <td>$empoyeeobj->mobile_number</td>
+ <td>$empoyeeobj->mobile_number</td><td>
  
+ <form action='edit.php' method='POST'>
+<input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+<input type='submit' name='edit' id='edit' value='Edit'>
+</form>
+
+
+
+ </td>
  </tr>
  </table></td><td>
 

@@ -1,22 +1,23 @@
 <html>
 <head>
-<title>this is hrs page</head><body>
-
-
+<title>this is hrs page</head>
+<body>
+ <h2>ADD an employee</h2>
+<table>
       <form action='hrpage.php' method='post'>
-         <h2>ADD an employee</h2>
-         <p><label for='employee_number'></label><b>Employee_Number:</b></label><input type='text' id='employee_number' name='employee_number' size='35'/></p>
-        <p><label for='name'></label><b>Name:</b></label><input type='text' id='name' name='name' size='35'/></p>
-        <p><label for='father_name'><b>Father_Name:</b></label><input type='text' id='father_name' name='father_name' size='35'/></p>
-        <p><label for='skills'></label><b>Skills:</b></label><input type='text' id='skills' name='skills' size='35'/></p>
-        <p><label for='location'></label><b>Location:</b></label><input type='text' id='location' name='location' size='35'/></p>
         
-        <p><label for='salary'><b>Salary:</b></label><input type='text' id='salary' name='salary' size='35'/></p>
-        <p><label for='mobile_number'><b>Mobile_Number:</label></b><input type='text' id='mobile_number' name='mobile_number' size='35'/></p>
+         <tr><td><p><label for='employee_number'></label><b>Employee_Number:</b></label></td><td><input type='text' id='employee_number' name='employee_number' size='35'/></p></td></tr>
+       <tr><td> <p><label for='name'></label><b>Name:</td><td></b></label><input type='text' id='name' name='name' size='35'/></p></td></tr>
+        <tr><td><p><label for='father_name'><b>Father_Name:</td><td></b></label><input type='text' id='father_name' name='father_name' size='35'/></p></td></tr>
+        <tr><td><p><label for='skills'></label><b>Skills:</td><td></b></label><input type='text' id='skills' name='skills' size='35'/></p></td></tr>
+        <tr><td><p><label for='location'></label><b>Location:</td><td></b></label><input type='text' id='location' name='location' size='35'/></p></td></tr>
+        
+        <tr><td><p><label for='salary'><b>Salary:</td><td></b></label><input type='text' id='salary' name='salary' size='35'/></p></td></tr>
+        <tr><td><p><label for='mobile_number'><b>Mobile_Number:</td><td></label></b><input type='text' id='mobile_number' name='mobile_number' size='35'/></p></td></tr>
         
                      
-        <p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p>
-      </form>
+        <tr><td></td><td><p><input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' /></p></td></tr>
+      </form></table>
            
      <?php
     require_once 'data_access/employee_repository.php';
@@ -106,8 +107,6 @@ echo "<br>";
 $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
  echo "<br>";
 
- 
-
 
 if(!$employeedetails)
 { 
@@ -117,11 +116,9 @@ if(!$employeedetails)
 else
 {
  echo "<h2>SEARCH RESULTS ARE:</h2>";
- foreach($employeedetails as $empoyeeobj )
- {
+ 
  echo"
- <table>
- <tr><td><table  width='70%'>
+ <table border=1 width='70%'>
  <tr>
  <th>Employee_Number</th>
  <th>Name</th>
@@ -132,11 +129,14 @@ else
  <th>Mobile_Number</th>
 
  
- </tr>
+ </tr>";
  
 
- 
- <tr>
+ foreach($employeedetails as $empoyeeobj )
+  {
+  
+ echo 
+ "<tr> 
  <td>$empoyeeobj->employee_number</td>
  <td>$empoyeeobj->name</td>
  <td>$empoyeeobj->father_name</td>
@@ -153,17 +153,13 @@ else
 <form action='delete_confirmation.php' method='POST'>
 <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
 <input type='submit' name='delete' id='delete' value='delete'>
-</form>
-
-
-
- </td>
- </tr>
- </table></td><td>
-
-
- </td></tr></table>";
- }}
+</form></td>
+ </tr>" ;
+ }
+ 
+ echo "</table>";
+ 
+ }
 } 
  
   

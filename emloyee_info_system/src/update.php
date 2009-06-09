@@ -1,3 +1,7 @@
+  <html>
+  <head>
+  <title>updating a page</title></head><body>
+  
   <?php
     require_once 'data_access/employee_repository.php';
   
@@ -56,3 +60,5 @@
       }
 } 
  ?>
+ </br>
+  <a href="hrpage.php">BACK TO HRPAGE </a></body></html>

@@ -35,7 +35,7 @@ else
  echo"
  <form action='update.php' method='POST'>
  <table>
- <tr><td><table class='search_result' width='70%'>
+ <tr><td><table border=1 width='70%'>
  <tr>
  <th>Employee_Number</th>
  <th>Name</th>
@@ -61,7 +61,7 @@ else
  }}
   ?>
   
-  
+ <a href="hrpage.php">BACK TO HRPAGE </a>
   
   
  

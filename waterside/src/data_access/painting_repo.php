@@ -26,7 +26,8 @@
     function insert_painting($PaintEntry)
     {
       
-      $query_string = "INSERT INTO paintings(subject, description, categoryId, artistId) VALUES ('$PaintEntry->subject', '$PaintEntry->description', '$PaintEntry->categoryId', '$PaintEntry->artistId')";
+      $query_string = "INSERT INTO paintings(title, description, price, status, image, categoryId, artistId) VALUES ('$PaintEntry->subject', '$PaintEntry->description','$PaintEntry->price' ,'$PaintEntry->status','$PaintEntry->image ','$PaintEntry->categoryId', '$PaintEntry->artistId')";
+      
       
       $query_result = $this->db->query($query_string);
       
@@ -39,9 +40,9 @@
     function get_all_paintings()
     {
     
-      $query_string = " SELECT * FROM paintings";
+      $query_string = " SELECT id, title, description, price, status, image, categoryId, artistId FROM paintings";
       $query = $this->db->prepare($query_string);
-      $query->bind_result($id, $subject, $description, $categoryId, $artistId);
+      $query->bind_result($id, $title, $price, $status, $image, $description, $categoryId, $artistId);
       $query->execute();
       
       $paints = array();
@@ -49,7 +50,7 @@
       
       while($query->fetch())
       {
-        $paints["$i"] = new Painting($id, $subject, $description, $categoryId, $artistId);
+        $paints["$i"] = new Painting($id, $title, $price, $status, $image, $description, $categoryId, $artistId);
         $i++;
       }
       
@@ -71,7 +72,8 @@
     
     function edit_painting_byId($id)
     {
-      $query_string = "UPDATE paintings SET subject='$subject', description='$description', categoryId='$categoryId', artistId='$artistId' WHERE id='$id'";
+      $query_string = "UPDATE paintings SET title='$title', price = '$price', status= '$status', image='$image', description='$description', categoryId='$categoryId', artistId='$artistId' WHERE id='$id'";
+      
       $query_result = $this->db->query($query_string);
       
       return ( 1 == $this->db->affected_rows ); //returns true if delete was successful
@@ -83,9 +85,9 @@
     
     {
     
-      $query_string = "SELECT * FROM paintings WHERE subject LIKE '%$keyword%' ";
+      $query_string = "SELECT * FROM paintings WHERE title LIKE '%$keyword%' ";
       $query = $this->db->prepare( $query_string );
-      $query->bind_result( $id, $subject, $description, $categoryId, $artistId);
+      $query->bind_result( $id, $title, $price, $status, $image, $description, $categoryId, $artistId);
       $query->execute();
       
       $paintings = array( );
@@ -94,7 +96,7 @@
       
       while($query->fetch())
       {
-        $paintings["$i"] = new Painting( $id, $subject, $description, $categoryId, $artistId);
+        $paintings["$i"] = new Painting( $id, $title, $price, $status, $image, $description, $categoryId, $artistId);
         $i++;
       }
       

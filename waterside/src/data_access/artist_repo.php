@@ -25,7 +25,7 @@
     function insert_artist($ArtistEntry)
     {
       
-      $query_string = "INSERT INTO artists(name, description) VALUES ('$ArtistEntry->name','$ArtistEntry->description')";
+      $query_string = "INSERT INTO artists(name, picture, description, show_status) VALUES ('$ArtistEntry->name', '$ArtistEntry->picture', '$ArtistEntry->description', '$ArtistEntry->show_status')";
       $query_result = $this->db->query($query_string);
       
       return ( 1 == $this->db->affected_rows);       //  true if insertion is succesful
@@ -37,9 +37,9 @@
     function get_all_artists()
     {
     
-      $query_string = " SELECT * FROM artists";
+      $query_string = " SELECT id, name, picture, description, show_status FROM artists";
       $query = $this->db->prepare($query_string);
-      $query->bind_result($id, $name, $description);
+      $query->bind_result($id, $name, $picture, $description, $show_status);
       $query->execute();
       
       $artists = array();
@@ -47,7 +47,7 @@
       
       while($query->fetch())
       {
-        $artists["$i"] = new Artist($id, $name, $description);
+        $artists["$i"] = new Artist($id, $name, $picture, $description, $show_status);
         $i++;
       }
       
@@ -69,7 +69,7 @@
     
     function edit_artist_byId($id)
     {
-      $query_string = "UPDATE artists SET name='$name', description='$description' WHERE id='$id'";
+      $query_string = "UPDATE artists SET name='$name', description='$description', picture=$picture, show_status=$show_status WHERE id='$id'";
       $query_result = $this->db->query($query_string);
       
       return ( 1 == $this->db->affected_rows ); //returns true if delete was successful

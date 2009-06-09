@@ -36,8 +36,8 @@
       
       //TODO: Do the validation for the input
       $employeeobj = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
-      $employeerepositoryobj = new EmployeeRepository();
-      $result = $employeerepositoryobj->insert_employee( $employeeobj);	
+      $employee_repositoryobj = new Employee_Repository();
+      $result = $employee_repositoryobj->insert_employee( $employeeobj);	
     echo "</ hr>";
       if( $result )
       {
@@ -92,18 +92,21 @@
 
 
 
-
 require_once 'data_access/employee_repository.php';
  
  if(isset($_GET['name'])){
 $keyword = $_GET['name'];
 
+
+
 $employee_repositoryObj = new Employee_Repository();
+echo "<br>";
+
 
 $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
+ echo "<br>";
 
-
-print_r($employeedetails);
+ 
 
 
 if(!$employeedetails)
@@ -127,7 +130,12 @@ else
  <th>Location</th>
  <th>Salary</th>
  <th>Mobile_Number</th>
+ <th>edit</th>
+ <th>delete</th>
+ 
  </tr>
+ 
+
  
  <tr>
  <td>$empoyeeobj->employee_number</td>
@@ -137,17 +145,18 @@ else
  <td>$empoyeeobj->location</td>
  <td>$empoyeeobj->salary</td>
  <td>$empoyeeobj->mobile_number</td>
+ 
  </tr>
  </table></td><td>
 
 
  </td></tr></table>";
- 
+ }}
 } 
  
- } 
+  
 
-}
+
 ?>
 
 

@@ -59,9 +59,23 @@ class Employee_Repository{
        $query = $this->db->query( $query_text );
         return ( 1 == $this->db->affected_rows );
         }
+        
+        
+      //delete employee from database
+    
+      function delete_employee($keyword ){
+     
+     
+      $query_text = "DELETE FROM employees WHERE name='$keyword ' ";
+   
+      $query = $this->db->query($query_text);
+      return (1 == $this->db->affected_rows) ;
+
+      
+      }
       
  
-      
+       
   
    
     

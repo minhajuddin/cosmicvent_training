@@ -51,7 +51,7 @@
       
       
       else {
-        echo "Sorry!! updation of information  failed.." ;
+        echo "Sorry!! updating of information  failed.." ;
       
       }
 } 

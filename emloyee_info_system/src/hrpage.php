@@ -150,6 +150,11 @@ else
 <input type='submit' name='edit' id='edit' value='Edit'>
 </form>
 
+<form action='delete_confirmation.php' method='POST'>
+<input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+<input type='submit' name='delete' id='delete' value='delete'>
+</form>
+
 
 
  </td>

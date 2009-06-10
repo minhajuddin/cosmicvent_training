@@ -9,12 +9,15 @@
       // display the search function by name
           require_once 'data_access/employee_repository.php';
  
-  if(isset($_GET['search_term'])){
-     $keyword = $_GET['search_term'];
-     $search_by_type = $_GET['search_by_type'];
+  if(isset($_GET['name'])){
+     $keyword = $_GET['name'];
      $employee_repositoryObj = new Employee_Repository();
-     $employeedetails = $employee_repositoryObj->search_term($keyword,$search_by_type);
-       if(!$employeedetails){ 
+     echo "<br>";
+     $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
+     echo "<br>";
+
+
+        if(!$employeedetails){ 
           echo " <h3> No result found </h3> ";
          }
 
@@ -46,8 +49,18 @@
          <td>$empoyeeobj->skills</td>
          <td>$empoyeeobj->location</td>
          <td>$empoyeeobj->salary</td>
-         <td>$empoyeeobj->mobile_number</td><td>";
+         <td>$empoyeeobj->mobile_number</td><td>
          
+         <form action='edit.php' method='POST'>
+        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='submit' name='edit' id='edit' value='Edit'>
+        </form>
+
+        <form action='delete_confirmation.php' method='POST'>
+        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='submit' name='delete' id='delete' value='delete'>
+        </form></td>
+         </tr>";
          }
          
          echo "</table>";

@@ -1,19 +1,14 @@
- <html> 
+<html>
  <head>
- <title>this is search page</title>
- </head><body>
-  
- <?php
-
-
-      // display the search function
-          require_once 'data_access/employee_repository.php';
- 
-  if(isset($_GET['name'])){
-     $keyword = $_GET['name'];
+ <title>list of employees</title>
+ </head>
+ <body>
+    <?php
+    require_once 'data_access/employee_repository.php';
+      
      $employee_repositoryObj = new Employee_Repository();
      echo "<br>";
-     $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
+     $employeedetails = $employee_repositoryObj->list_employees();
      echo "<br>";
 
 
@@ -38,7 +33,7 @@
          </tr>";
          
 
-         foreach($employeedetails as $empoyeeobj )
+         while($employeeobj = mysql_fetch_array($employeedetatils))
           {
           
          echo 
@@ -49,22 +44,26 @@
          <td>$empoyeeobj->skills</td>
          <td>$empoyeeobj->location</td>
          <td>$empoyeeobj->salary</td>
-         <td>$empoyeeobj->mobile_number</td><td>";
+         <td>$empoyeeobj->mobile_number</td><td>
          
-          }
+         <form action='edit.php' method='POST'>
+        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='submit' name='edit' id='edit' value='Edit'>
+        </form>
+
+        <form action='delete_confirmation.php' method='POST'>
+        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='submit' name='delete' id='delete' value='delete'>
+        </form></td>
+         </tr>";
+         }
          
          echo "</table>";
          
         }
-  } 
    
-?>
-
-
-
-
-
-      </br>
-      <a href="index.html">BACK TO HOME</a>
-      </body>
-      </html>
+     ?>
+ <br>
+ <a href="hrpage.php">BACK TO HRPAGE </a>
+  </body>
+  </html>

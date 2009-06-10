@@ -82,12 +82,12 @@
  <!--
  search starts here 
  -->
-  <form action='search.php' method='get'>
+  <form action='hr_search.php' method='get'>
       <p><input type='text' id='name' name='name' value='' /> &nbsp 
       <input type='submit' id='name' value='search' />
       </p>
   </form> 
-  <a href="advance_search.html">ADVANCE SEARCH</A>
+  <a href="hr_advance_search.html">ADVANCE SEARCH</A>
  
 
 

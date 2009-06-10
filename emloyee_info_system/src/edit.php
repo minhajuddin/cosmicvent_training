@@ -5,7 +5,7 @@
 
 
 <title>this is existing products</title> 
-
+<link rel='stylesheet' href='design.css' />
 </head>
 
 <body>

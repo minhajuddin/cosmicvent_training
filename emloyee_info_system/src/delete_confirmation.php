@@ -4,7 +4,7 @@
 
 
 <title>delete employee from database</title> 
-
+<link rel='stylesheet' href='design.css' />
 </head>
 
 <body>

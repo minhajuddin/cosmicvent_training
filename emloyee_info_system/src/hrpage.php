@@ -1,6 +1,7 @@
 <html>
 <head>
 <title>this is hrs page</head>
+<link rel='stylesheet' href='design.css' />
 <body>
  <h2>ADD an employee</h2>
 <table>
@@ -88,11 +89,8 @@
       <a href="hr_advance_search.html">ADVANCE SEARCH</A>
       </p>
   </form>
-   <form action='hr_list.php' method='post'>
-      <p> 
-      <input type='submit' id='list' value='list of all employees' />
-      </p>
-  </form>  
+  
+<a href="hr_list.php">list of all employees</a>
   
  
 

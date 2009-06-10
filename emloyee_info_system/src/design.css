@@ -1,0 +1,19 @@
+
+
+#header{
+align:right;
+}
+
+#caption{
+background-color: #BC8F8F;
+paddind:20px;
+
+}
+
+body{
+    background-color: #e6e6fa;
+a:link {color: #400000; text-decoration: underline; }
+a:active {color: #0000ff; text-decoration: underline; }
+a:visited {color: #000000; text-decoration: underline; }
+a:hover {color: #ff0000; text-decoration: none; }
+} 

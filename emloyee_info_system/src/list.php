@@ -1,6 +1,7 @@
 <html>
  <head>
  <title>list of employees</title>
+<link rel='stylesheet' href='design.css' />
  </head>
  <body>
     <?php
@@ -16,7 +17,7 @@
          }
 
         else{
-          echo "<h2>SEARCH RESULTS ARE:</h2>";
+          echo "<h2>LIST OF ALLEMPLOYEES:</h2>";
           echo"
          <table border=1 width='70%'>
          <tr>

@@ -1,6 +1,9 @@
   <html>
   <head>
-  <title>updating a page</title></head><body>
+  <title>updating a page</title>
+<link rel='stylesheet' href='design.css' />
+</head>
+<body>
   
   <?php
     require_once 'data_access/employee_repository.php';

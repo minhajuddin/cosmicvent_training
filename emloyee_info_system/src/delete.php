@@ -1,6 +1,7 @@
  <html>
  <head>
  <title>deletes employee</title>
+<link rel='stylesheet' href='design.css' />
  </head>
  <body>
     <?php

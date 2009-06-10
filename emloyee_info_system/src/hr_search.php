@@ -1,6 +1,7 @@
  <html> 
  <head>
  <title>this is search page</title>
+<link rel='stylesheet' href='design.css' />
  </head><body>
   
  <?php

@@ -27,7 +27,6 @@ class Employee_Repository{
       
       $query = $this->db->prepare($query_text);
       if($query){
-      $query = $this->db->prepare($query_text); 
       $keyword = $keyword . '%';
       $query->bind_param('s', $keyword);
       $query->execute();
@@ -125,18 +124,31 @@ class Employee_Repository{
         $query = $this->db->query($query_text);
         return (1 == $this->db->affected_rows) ;      
       }
+   
       
    // display list of all employees
      
      function list_employees(){
-      $query_text = "SELECT * FROM employees";
-      $query = $this->db->query($query_text);
-        return (1 == $this->db->affected_rows) ;      
-      }
+      $query_text = "SELECT employee_number,name,father_name,skills,location,salary,mobile_number FROM employees";
+      $query = $this->db->prepare($query_text);
+      $query->execute();
+      $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+      $employeedetails = array();
+      $i=0;
+
+
+    
+          while($query->fetch()){
+            $employeedetails["$i"] = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+            $i++;
+         }
+          
+       $query->close();
+       return $employeedetails; //returns true if insert was successful
+     }  
      
        
   
-   
-    
+     
 }
 ?>

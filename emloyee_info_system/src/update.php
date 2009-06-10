@@ -59,4 +59,6 @@
       } 
  ?>
  </br>
-  <a href="hrpage.php">BACK TO HRPAGE </a></body></html>
+  <a href="hrpage.php">BACK TO HRPAGE </a></br>
+ <a href="index.html">BACK TO Home </a></body></html>
+</body></html>

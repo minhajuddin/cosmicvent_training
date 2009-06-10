@@ -22,6 +22,7 @@
         
      ?>
  <br>
- <a href="hrpage.php">BACK TO HRPAGE </a>
+ <a href="hrpage.php">BACK TO HRPAGE </a></br>
+<a href="index.html">BACK TO HOME </a>
   </body>
   </html>

@@ -6,11 +6,10 @@
     <?php
     require_once 'data_access/employee_repository.php';
       
-     $employee_repositoryObj = new Employee_Repository();
+     $employee_repositoryobj = new Employee_Repository();
      echo "<br>";
-     $employeedetails = $employee_repositoryObj->list_employees();
+     $employeedetails =  $employee_repositoryobj->list_employees();
      echo "<br>";
-
 
         if(!$employeedetails){ 
           echo " <h3> No result found </h3> ";
@@ -32,8 +31,8 @@
          
          </tr>";
          
-
-         while($employeeobj = mysql_fetch_array($employeedetatils))
+     foreach( $employeedetails as $empoyeeobj)
+         
           {
           
          echo 
@@ -44,18 +43,9 @@
          <td>$empoyeeobj->skills</td>
          <td>$empoyeeobj->location</td>
          <td>$empoyeeobj->salary</td>
-         <td>$empoyeeobj->mobile_number</td><td>
+         <td>$empoyeeobj->mobile_number</td><td>";
          
-         <form action='edit.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
-        <input type='submit' name='edit' id='edit' value='Edit'>
-        </form>
-
-        <form action='delete_confirmation.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
-        <input type='submit' name='delete' id='delete' value='delete'>
-        </form></td>
-         </tr>";
+        
          }
          
          echo "</table>";
@@ -64,6 +54,6 @@
    
      ?>
  <br>
- <a href="hrpage.php">BACK TO HRPAGE </a>
+ <a href="index.html">BACK TO HOME </a>
   </body>
   </html>

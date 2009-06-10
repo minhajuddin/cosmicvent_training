@@ -85,9 +85,15 @@
   <form action='hr_search.php' method='get'>
       <p><input type='text' id='name' name='name' value='' /> &nbsp 
       <input type='submit' id='name' value='search' />
+      <a href="hr_advance_search.html">ADVANCE SEARCH</A>
       </p>
-  </form> 
-  <a href="hr_advance_search.html">ADVANCE SEARCH</A>
+  </form>
+   <form action='hr_list.php' method='post'>
+      <p> 
+      <input type='submit' id='list' value='list of all employees' />
+      </p>
+  </form>  
+  
  
 
 

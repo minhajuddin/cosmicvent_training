@@ -59,7 +59,8 @@ $employeedetails= $employee_repositoryobj->search_employee_by_name($keyword);
         }
         ?>
   
- <a href="hrpage.php">BACK TO HRPAGE </a>
+ <a href="hrpage.php">BACK TO HRPAGE </a></br>
+<a href="index.html">BACK TO Home </a>
   
   
  

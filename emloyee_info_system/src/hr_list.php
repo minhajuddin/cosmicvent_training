@@ -1,21 +1,15 @@
- <html> 
+<html>
  <head>
- <title>this is search page</title>
- </head><body>
-  
- <?php
-
-
-      // display the search function by name
-          require_once 'data_access/employee_repository.php';
- 
-  if(isset($_GET['name'])){
-     $keyword = $_GET['name'];
-     $employee_repositoryObj = new Employee_Repository();
+ <title>list of employees</title>
+ </head>
+ <body>
+    <?php
+    require_once 'data_access/employee_repository.php';
+      
+     $employee_repositoryobj = new Employee_Repository();
      echo "<br>";
-     $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
+     $employeedetails =  $employee_repositoryobj->list_employees();
      echo "<br>";
-
 
         if(!$employeedetails){ 
           echo " <h3> No result found </h3> ";
@@ -37,8 +31,8 @@
          
          </tr>";
          
-
-         foreach($employeedetails as $empoyeeobj )
+     foreach( $employeedetails as $empoyeeobj)
+         
           {
           
          echo 
@@ -66,16 +60,9 @@
          echo "</table>";
          
         }
-  } 
    
-?>
-   
-   
-   
-   
-   
-      </br> 
-      <a href="hrpage.php">BACK TO HRPAGE</a></br>
-      <a href="index.html">BACK TO HOME</a>
-      </body>
-      </html>
+     ?>
+ <br>
+ <a href="hrpage.php">BACK TO HRPAGE </a>
+  </body>
+  </html>

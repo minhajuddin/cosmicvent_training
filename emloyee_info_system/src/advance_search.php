@@ -9,15 +9,12 @@
       // display the search function by name
           require_once 'data_access/employee_repository.php';
  
-  if(isset($_GET['name'])){
-     $keyword = $_GET['name'];
+  if(isset($_GET['search_term'])){
+     $keyword = $_GET['search_term'];
+     $search_by_type = $_GET['search_by_type'];
      $employee_repositoryObj = new Employee_Repository();
-     echo "<br>";
-     $employeedetails = $employee_repositoryObj->search_employee_by_name($keyword);
-     echo "<br>";
-
-
-        if(!$employeedetails){ 
+     $employeedetails = $employee_repositoryObj->search_term($keyword,$search_by_type);
+       if(!$employeedetails){ 
           echo " <h3> No result found </h3> ";
          }
 

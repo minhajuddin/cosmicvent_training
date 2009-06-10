@@ -6,7 +6,7 @@
  <?php
 
 
-      // display the search function by name
+      // display the search function
           require_once 'data_access/employee_repository.php';
  
   if(isset($_GET['name'])){
@@ -49,19 +49,9 @@
          <td>$empoyeeobj->skills</td>
          <td>$empoyeeobj->location</td>
          <td>$empoyeeobj->salary</td>
-         <td>$empoyeeobj->mobile_number</td><td>
+         <td>$empoyeeobj->mobile_number</td><td>";
          
-         <form action='edit.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
-        <input type='submit' name='edit' id='edit' value='Edit'>
-        </form>
-
-        <form action='delete_confirmation.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
-        <input type='submit' name='delete' id='delete' value='delete'>
-        </form></td>
-         </tr>";
-         }
+          }
          
          echo "</table>";
          
@@ -69,11 +59,11 @@
   } 
    
 ?>
-   
-   
-   
-   
-   
+
+
+
+
+
       </br>
       <a href="index.html">BACK TO HOME</a>
       </body>

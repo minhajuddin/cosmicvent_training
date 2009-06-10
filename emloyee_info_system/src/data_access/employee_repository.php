@@ -21,26 +21,24 @@ class Employee_Repository{
   
   
   
-  // search employee by employee_by_name
+  // search employee by name 
     function search_employee_by_name($keyword){
-      $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE name like ?";
+      $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE name ?";
       $query = $this->db->prepare($query_text);
       if($query){
           $keyword = $keyword . '%';
           $query->bind_param('s', $keyword);
           $query->execute();
-          
           $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
-
           $i=0;
        
-          while($query->fetch()){ 
-            $employeedetails[$i] = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
-            $i++;                       
-          }
+              while($query->fetch()){ 
+                $employeedetails[$i] = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+                $i++;                       
+             }
 
-          $query->close();
-          return $employeedetails; //returns true if insert was successful
+         $query->close();
+         return $employeedetails; //returns true if insert was successful
          } 
          else {
           die('unable to connect to the database');
@@ -48,6 +46,62 @@ class Employee_Repository{
       }
       
       
+       // search employee by advance search 
+    function search_term($keyword,$search_by_type){
+   
+        if($search_by_type ==1){
+      
+          $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE name like ?";
+          $query = $this->db->prepare($query_text);
+          $keyword = $keyword . '%';
+          $query->bind_param('s', $keyword);
+          }
+                          
+        if($search_by_type ==2){
+          $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE employee_number like ?";
+          $query = $this->db->prepare($query_text);
+          $keyword = $keyword . '%';
+          $query->bind_param('i', $keyword);
+          }
+          
+        if($search_by_type ==3){
+      
+          $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE location like ?";
+          
+          
+          $query = $this->db->prepare($query_text);
+         
+          $keyword = $keyword . '%';
+          $query->bind_param('s', $keyword);
+          }
+          
+        if($search_by_type ==4){
+      
+          $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE skills like ?";
+          
+          
+          $query = $this->db->prepare($query_text);
+         
+          $keyword = $keyword . '%';
+          $query->bind_param('s', $keyword);
+          }
+          
+          
+    $query->execute();
+    $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+    $i=0;
+           
+          while($query->fetch()){ 
+              $employeedetails[$i] = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+              $i++;                       
+            }
+
+    $query->close();
+    return $employeedetails; //returns true if insert was successful
+              
+      
+   } 
+       
       // update employee detais
       
       function update_employee($employee){

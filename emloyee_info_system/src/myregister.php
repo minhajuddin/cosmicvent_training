@@ -42,6 +42,10 @@
                   <input type='submit' id= 'submit' value='submit' /> 
                   <input type='reset' id= 'reset' value='reset' />
               </form><br>
+              <form  action='index.html' method="post"> 
+                  <input type='submit' id= 'submit' value='login' /> 
+               </form>
+              
            
             </div> 
 						
@@ -98,34 +102,38 @@ if(isset($_POST['user_name'],$_POST['password'],$_POST['confirm_password'],$_POS
       $firstname = $_POST['firstname'];
       $lastname = $_POST['lastname'];
       $gender = $_POST['gender'];
-
-      print_r($gender);   
-  
+      
+           
     if($password != $confirm_password)
     {
-      echo" PASSWORD AND CONFIRM PASSWORD DONT MATCH";
+      echo" <h1><font color='red'> *PASSWORD AND CONFIRM PASSWORD DONT MATCH </h1></font>";
       
     }
   else
      {
     
       //TODO: Do the validation for the input
-      $userobj = new User($user_name,$password, $firstname,$lastname, $gender );
-      $user_repositoryobj = new User_Repository();
-      $result = $employee_repositoryobj->signup_user( $userobj);	
-    echo "</ hr>";
+    
+      $userObj = new User($user_name,$password, $firstname,$lastname, $gender );
+    
+      $user_repositoryObj = new User_Repository();
+    
+      $result = $user_repositoryObj->signup_user( $userObj);	
+    
+    echo "</ br>";
             if( $result ){
-               echo "<br><b>Congrats!! registration is Succesfully.
-               </b><br><br>";
-              
+               echo "<br><b> Congratulations";
+               echo "  $firstname ";
+               echo "$lastname ";
+               echo " You can now login with your username and password";
+                       
                     
               } 
       
       
           else {
               echo "Sorry!!  exist
-              <br>
-              <h1>please apply once again</h1>";
+               <h1><font color='red'> *Please enter a different user name</h1></font>";
             
             }
       }

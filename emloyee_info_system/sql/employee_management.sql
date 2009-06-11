@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 10, 2009 at 01:08 PM
+-- Generation Time: Jun 11, 2009 at 01:49 PM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -41,4 +41,36 @@ CREATE TABLE `employees` (
 --
 
 INSERT INTO `employees` (`employee_number`, `name`, `father_name`, `skills`, `location`, `salary`, `mobile_number`) VALUES
-(17, 'ashfaq', 'farooq', 'html', 'bdn', 0, 99);
+(0, 'asdsa', 'rtret', 'rt', '', 0, 0),
+(12, 'rafi', 'xyzghfgh', 'c,php,xyz', 'sc', 0, 0),
+(17, 'ashfaq', 'farooq', 'html', 'bdn', 0, 999),
+(34, 'ys', 'hj', 'jhj', 'jh', 876, 87),
+(123, 'rafi', 'xyz', 'c,php,xyz', 'sc', 0, 0),
+(4334, '', '', '', '', 0, 0),
+(5465, '', '', '', '', 0, 0),
+(12345, 'ashfa', 'mohamm', 'c,php', 'bdn', 0, 0),
+(34324, '', '', '', '', 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `user_name` varchar(50) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  `firstname` varchar(50) NOT NULL,
+  `lastname` varchar(50) NOT NULL,
+  `gender` varchar(50) NOT NULL,
+  UNIQUE KEY `user_name` (`user_name`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`user_name`, `password`, `firstname`, `lastname`, `gender`) VALUES
+('as', '12', 'as', 'ds', 'male'),
+('ashfaq', '12345', 'ashfaq', 'md', 'male'),
+('user', 'pwd', 'fname', 'lname', 'male');

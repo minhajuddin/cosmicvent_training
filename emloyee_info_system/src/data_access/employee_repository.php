@@ -48,6 +48,36 @@ class Employee_Repository{
         die('unable to connect to the database');
       } 
   }
+  
+  
+  
+   // search employee by employee_number
+     function search_employee_by_number($keyword){
+      $query_text="SELECT employee_number, name, father_name, skills, location, salary, mobile_number FROM employees WHERE employee_number like ? ";
+      
+      $query = $this->db->prepare($query_text);
+      if($query){
+      $keyword = $keyword . '%';
+      $query->bind_param('i', $keyword);
+      $query->execute();
+      $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+      $employeedetails = array();
+      $i=0;
+
+
+    
+          while($query->fetch()){
+            $employeedetails["$i"] = new Employee($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+            $i++;
+         }
+          
+       $query->close();
+       return $employeedetails; //returns true if insert was successful
+     } 
+      else {
+        die('unable to connect to the database');
+      } 
+  }
       
       
        // search employee by advance search 

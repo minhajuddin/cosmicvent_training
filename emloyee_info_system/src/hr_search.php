@@ -34,6 +34,7 @@
          <th>Location</th>
          <th>Salary</th>
          <th>Mobile_Number</th>
+         
 
          
          </tr>";
@@ -52,7 +53,7 @@
          <td>$empoyeeobj->salary</td>
          <td>$empoyeeobj->mobile_number</td><td>
          
-         <form action='edit.php' method='POST'>
+         <td><form action='edit.php' method='POST'>
         <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
         <input type='submit' name='edit' id='edit' value='Edit'>
         </form>
@@ -62,9 +63,11 @@
         <input type='submit' name='delete' id='delete' value='delete'>
         </form></td>
          </tr>";
-         }
          
          echo "</table>";
+         }
+         
+         
          
         }
   } 

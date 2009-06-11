@@ -66,9 +66,11 @@
                <td>$salary</td>
                <td>$mobile_number</td>
                </tr>
-               </table>";
-                    
-              } 
+               
+               
+               
+          </table>";
+         }
       
       
           else {

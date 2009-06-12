@@ -17,9 +17,9 @@ require_once 'data_access/employee_repository.php';
 // display the old content of emplyee to update
 
 
-$keyword = $_POST['name'];
+$keyword = $_POST['employee_number'];
 $employee_repositoryobj = new Employee_Repository();
-$employeedetails= $employee_repositoryobj->search_employee_by_name($keyword);
+$employeedetails= $employee_repositoryobj->search_employee_by_number($keyword);
 
 
   if(!$employeedetails){ 

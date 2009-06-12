@@ -47,12 +47,12 @@
          <td>$empoyeeobj->mobile_number</td><td>
          
          <form action='edit.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='hidden' name='employee_number' id='employee_number' value='$empoyeeobj->employee_number'>
         <input type='submit' name='edit' id='edit' value='Edit'>
         </form>
 
         <form action='delete_confirmation.php' method='POST'>
-        <input type='hidden' name='name' id='name' value='$empoyeeobj->name'>
+        <input type='hidden' name='employee_number' id='employee_number' value='$empoyeeobj->employee_number'>
         <input type='submit' name='delete' id='delete' value='delete'>
         </form></td>
          </tr>";

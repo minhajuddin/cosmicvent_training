@@ -14,20 +14,19 @@
     require_once 'data_access/employee_repository.php';
 
     //show details and ask for confirmation
-    $keyword = $_POST['name'];
+    $keyword = $_POST['employee_number'];
     $employee_repositoryobj = new Employee_Repository();
-    $employeedetails= $employee_repositoryobj->search_employee_by_name($keyword);
-
-      if(!$employeedetails){ 
+    $employeedetails= $employee_repositoryobj->search_employee_by_number($keyword);
+          if(!$employeedetails){ 
          echo " <h3> UNABLE TO DELETE </h3> ";
        }
 
       else
       {
-       echo "<h2>ARE YOU SURE YOU WANT TO DELETE THIS EMPLYEE???????:</h2>";
+       echo "<h2>ARE YOU SURE YOU WANT TO DELETE THIS EMPLOYEE???????:</h2>";
           
           
-          foreach($employeedetails as $empoyeeobj )
+          foreach( $employeedetails as $empoyeeobj)
              {
              echo"
              <form action='delete.php' method='POST'>
@@ -52,7 +51,7 @@
              <td>$empoyeeobj->salary</td>
              <td>$empoyeeobj->mobile_number</td><td>
              
-              <td><input type='hidden' name='name' id='name' value='$empoyeeobj->name' ></td>
+              <td><input type='hidden' name='employee_number' id='employee_number' value='$empoyeeobj->employee_number' ></td>
              </tr>
              </table>
              <input type='submit' name='delete' id='delete' value='Delete'>

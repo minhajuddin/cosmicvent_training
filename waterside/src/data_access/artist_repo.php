@@ -81,9 +81,9 @@
     
     {
     
-      $query_string = "SELECT * FROM artists WHERE name LIKE '%$keyword%' ";
+      $query_string = "SELECT id, name, picture,description,show_status FROM artists WHERE name LIKE '%$keyword%' ";
       $query = $this->db->prepare( $query_string );
-      $query->bind_result( $id, $name, $description);
+      $query->bind_result( $id, $name, $picture, $description, $show_status);
       $query->execute();
       
       $artists = array( );
@@ -92,7 +92,7 @@
       
       while($query->fetch())
       {
-        $artists["$i"] = new Artist( $id, $name, $description);
+        $artists["$i"] = new Artist( $id, $name, $picture, $description, $show_status);
         $i++;
       }
       

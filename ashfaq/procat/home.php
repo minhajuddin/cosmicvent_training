@@ -84,12 +84,12 @@ mysql_close($con)
 
 
 <tr><td>
-<a href="catagoery.php"><b>products catagory<b></a></td>
+<a href="catagoery.php"><b>ADD A PRODUCT CATAGOERY<b></a></td>
 </tr>
 
 
 <tr><td>
-<a href="list.php"><b>LIST PRODUCTS</b></a></td>
+<a href="list.php"><b>LIST ALL PRODUCTS AVAILABLE</b></a></td>
 </tr>
 </b>
 </table>

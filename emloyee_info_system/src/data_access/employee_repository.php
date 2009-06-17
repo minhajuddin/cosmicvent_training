@@ -54,12 +54,12 @@ class Employee_Repository{
    // search employee by employee_number
      function search_employee_by_number($keyword){
       $query_text="SELECT * FROM employees WHERE employee_number=$keyword ";
-     $query = $this->db->prepare($query_text); 
-    $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
-    $query->execute();
+      $query = $this->db->prepare($query_text); 
+      $query->bind_result($employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);
+      $query->execute();
     
-    $employeedetails = array();
-    $i=0;
+      $employeedetails = array();
+      $i=0;
     
     while($query->fetch()){
     $employeedetails["$i"] = new Employee( $employee_number,$name,$father_name,$skills,$location,$salary,$mobile_number);

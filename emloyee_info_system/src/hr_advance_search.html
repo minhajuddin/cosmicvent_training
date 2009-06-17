@@ -14,7 +14,10 @@
     
     <div id="menu">
 		<ul>
-			<li class="first"><a href="index.html">Home</a></li>
+		<li><form action="index.html" method="post">
+			<input type='submit' value='logout'>
+			</form></li>
+			<li class="first"><a href="hrpage.php">Home</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">Contact Us</a></li>

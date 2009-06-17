@@ -86,9 +86,7 @@ if(isset($_POST['user_name'],$_POST['password']))
            <br><input type='submit' id= 'submit' value='submit' /> 
            <input type='reset' id= 'reset' value='reset' />
           </form><br>
-           <form action='myregister.php' action='post'> 
-            <input type='submit' id= 'register' value='register' />
-          </form>
+          
         
              </div>"; 
               

@@ -14,7 +14,11 @@
     
     <div id="menu">
 		<ul>
-			<li class="first"><a href="index.html">Home</a></li>
+			<li class="first">
+			<li><form action="index.html" method="post">
+			<input type='submit' value='logout'>
+			</form></li>
+			
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">Contact Us</a></li>
@@ -32,7 +36,7 @@
       <form action='hrpage.php' method='post'>
         
          <label for='employee_number'></label><b>Employee_Number:</b></label><input type='text' id='employee_number' name='employee_number' size='35'/><br>
-       <label for='name'></label><b>Name:</b></label><input type='text' id='name' name='name' size='35'/><br><br>
+       <label for='name'></label><b>Name:</b></label><input type='text' id='name' name='name' size='35'/><br>
        <label for='father_name'><b>Father_Name:</b></label><input type='text' id='father_name' name='father_name' size='35'/><br>
        <label for='skills'></label><b>Skills:</b></label><input type='text' id='skills' name='skills' size='35'/><br>
        <label for='location'></label><b>Location:</b></label><input type='text' id='location' name='location' size='35'/><br>
@@ -43,9 +47,7 @@
                      
        <input type='submit' value='Add' /> &nbsp <input type='reset' value='reset' />
       </form>
-      <form action='myregister.php' action='post'> 
-            <input type='submit' id= 'register' value='register' />
-          </form>
+     
            
      <?php
     require_once 'data_access/employee_repository.php';
@@ -92,7 +94,10 @@
                <td>$location</td>
                <td>$salary</td>
                <td>$mobile_number</td>
-               </tr>
+               <td>
+                
+        
+         </tr>
                
                
                

@@ -28,7 +28,7 @@
           <th>name</th>
           <th>discription</th>
           <th>price</th>
-          <th>cname</th>
+         
 
 
           <th>edit</th>
@@ -44,7 +44,7 @@
               echo "<td>" . $row['name'] . "</td>";
               echo "<td>" . $row['discription'] . "</td>";
               echo "<td>" . $row['price'] . "</td>";
-              echo "<td>" . $row['catagoeryid'] . "</td>";
+             
               
               echo "<td>
               <form action='edit.php' method='post'>
@@ -52,7 +52,7 @@
               <input type='hidden' name='name' value='$row[name]' />
               <input type='hidden' name='discription' value=' $row[discription]' />
               <input type='hidden' name='price' value=' $row[price]' />
-              <input type='hidden' name='catagoeryid' value='$row[catagoeryid]' />  
+             
               <input type='submit' value='edit'  />
               </form></td>";
                    
@@ -63,7 +63,7 @@
               <input type='hidden' name='discription' value=' " . $row['discription'] ."' />
               <input type='hidden' name='price' value='  ". $row['price'] ."' />
               
-              <input type='hidden' name='catagoeryid' value='  ". $row['catagoeryid'] ."'
+              
               <input type='submit' value='delete'  />
               </form> </td>";
               echo "</tr>";

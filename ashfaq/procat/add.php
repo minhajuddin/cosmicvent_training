@@ -45,7 +45,34 @@ if (!mysql_query($sql,$con))
   die( '<strong>THERE IS ALREADY A RECORD WITH THE ENTERED ID.<a href ="product.php"> CLICK HERE TO ENTER SOME OTHER ID</a></strong>'.mysql_error());
   
 }
-echo "<H1> PRODUCT SUCCESSFULLY ADDED <h1>";
+echo "<H1>SUCCESSFULLY ADDED PRODUCT IS:: <h1>";
+
+$result=mysql_query("SELECT * FROM catalogue WHERE id=$_POST[id]" );
+echo "<table border='1' bgcolor=#ffffff>
+<tr>
+<th>id</th>
+<th>name</th>
+<th>discription</th>
+<th>price</th>
+
+</tr>";
+
+
+$row = mysql_fetch_array($result);
+  
+  echo "<tr>";
+  echo "<td>" .$row[id] . "</td>";
+  echo "<td>" .$row[name] . "</td>";
+  echo "<td>" .$row[discription] . "</td>";
+  echo "<td>" .$row[price] . "</td>";
+
+
+  echo "</tr>";
+  
+echo "</table>";
+
+
+
 
 mysql_close($con)
 ?>

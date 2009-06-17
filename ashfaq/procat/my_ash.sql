@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: May 28, 2009 at 02:06 PM
+-- Generation Time: Jun 17, 2009 at 11:05 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -29,14 +29,14 @@ CREATE TABLE `catagoery` (
   `cid` int(15) NOT NULL auto_increment,
   `cname` varchar(50) NOT NULL,
   PRIMARY KEY  (`cid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `catagoery`
 --
 
 INSERT INTO `catagoery` (`cid`, `cname`) VALUES
-(3, 'mp3');
+(10, '');
 
 -- --------------------------------------------------------
 
@@ -58,14 +58,5 @@ CREATE TABLE `catalogue` (
 --
 
 INSERT INTO `catalogue` (`id`, `name`, `discription`, `price`, `catagoeryId`) VALUES
-(0, '$_POST[name]', '$_POST[discription]', 0, 0),
-(12, 'fdsfer', 'dfdferew', 3, 0),
-(45, 'fgfdgsds', 'fdgfdgkoko', 45, 0),
-(123, 'sdads', 'dsffdass', 3434, 0),
-(343, 'dfsddf', 'fdfdyu', 434345, 0),
-(455, 'fdgdf', 'sfg', 0, 0),
-(888, 'oighgfh', 'l;ghhgf', 0, 0),
-(3432, 'dsfh', 'dsfsddfdfy', 2334324, 0),
-(54435, 'fgfdgashfaq', 'fdgfgfdfsd', 45, 0),
-(66577, 'sdf', 'ghhg', 675, 0),
-(1298987, 'sadsert', ' adsdsafrt', 34, 0);
+(12, 'first', 'this is first entry', 34, 10),
+(45, 'secon', 'thanks for test', 676, 10);

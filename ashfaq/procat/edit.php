@@ -24,14 +24,15 @@
           mysql_select_db("my_ash", $con);
 
           
-          $result = mysql_query("SELECT * FROM catalogue WHERE id =' $_POST[id]'");
+          $result = mysql_query("SELECT * FROM catalogue WHERE id ='$_POST[id]'");
           echo "<table border='1'>
           <tr>
           <th>id</th>
           <th>name</th>
           <th>discription</th>
           <th>price</th>
-          <th>cname</th>
+          
+         
 
           </tr>";
 
@@ -43,7 +44,7 @@
             echo "<td><input type='text' name='name' value='$row[name]' /></td>";
             echo "<td><input type='text' name='discription' value='$row[discription]' /> </td>";
             echo "<td><input type='text' name='price' value='$row[price]' /></td>";
-            echo "<td><input type='hidden' name='catagoeryid' value='$row[catagoeryid]' /></td>";
+            
 
             echo "</tr>";
             

@@ -19,33 +19,35 @@ if (!$con)
   die('Could not connect: ' . mysql_error());
   }
 mysql_select_db("my_ash", $con);
-mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]' WHERE id = '$_POST[id]' AND catagoeryid='$_POST[catagoeryid]'");
+
+mysql_query("UPDATE catalogue SET name='$_POST[name]', discription ='$_POST[discription]', price='$_POST[price]' WHERE id = '$_POST[id]'");
 
 
-
-$result=mysql_query("SELECT * FROM catalogue WHERE id=$_POST[id]" );
+$result = mysql_query("SELECT * FROM catalogue WHERE id=$_POST[id]" );
 echo "<table border='1' bgcolor=#ffffff>
 <tr>
 <th>id</th>
 <th>name</th>
 <th>discription</th>
 <th>price</th>
-<th>cname</th>
+
 </tr>";
 
 
 $row = mysql_fetch_array($result);
   
   echo "<tr>";
-  echo "<td>" .$row[id] . "</td>";
-  echo "<td>" .$row[name] . "</td>";
-  echo "<td>" .$row[discription] . "</td>";
-  echo "<td>" .$row[price] . "</td>";
- echo "<td>" .$row[catagoeryid] . "</td>";
+  echo "<td>" .$row['id'] . "</td>";
+  echo "<td>" .$row['name'] . "</td>";
+  echo "<td>" .$row['discription'] . "</td>";
+  echo "<td>" .$row['price'] . "</td>";
+
+
 
   echo "</tr>";
   
 echo "</table>";
+ echo $row['name'];
 
 
 

@@ -25,18 +25,7 @@ if (!$con)
 
 mysql_select_db("my_ash", $con);
 
-
 $result = mysql_query("SELECT * FROM catagoery");
-
-
-
-
-mysql_select_db("my_ash", $con);
-
-
- 
-
-
 $sql="INSERT INTO catagoery (cid,cname)
 VALUES
 ('$_POST[cid]','$_POST[cname]')";
@@ -46,6 +35,27 @@ if (!mysql_query($sql,$con))
   die('Error: ' . mysql_error());
   }
 echo "";
+
+
+
+
+$result = mysql_query("SELECT * FROM catagoery");
+echo "<table border='1' bgcolor=#ffffff>
+<tr>
+<th>id</th>
+<th>cname</th>
+</tr>";
+$row = mysql_fetch_array($result);
+  
+  echo "<tr>";
+  echo "<td>" .$row[id] . "</td>";
+  echo "<td>" .$row[cname] . "</td>";
+   echo "</tr>";
+  
+echo "</table>";
+
+
+
 
 mysql_close($con)
 ?> 

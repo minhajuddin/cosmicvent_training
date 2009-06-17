@@ -1,0 +1,30 @@
+<h1>Listing tickets</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Seat#</th>
+    <th>Address</th>
+    <th>Price paid</th>
+    <th>Phone</th>
+    <th>Email address</th>
+  </tr>
+
+<% for ticket in @tickets %>
+  <tr>
+    <td><%=h ticket.name %></td>
+    <td><%=h ticket.seat_id_seq %></td>
+    <td><%=h ticket.address %></td>
+    <td><%=h ticket.price_paid %></td>
+    <td><%=h ticket.phone %></td>
+    <td><%=h ticket.email_address %></td>
+    <td><%= link_to 'Show', ticket %></td>
+    <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+    <td><%= link_to 'Destroy', ticket, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New ticket', new_ticket_path %>

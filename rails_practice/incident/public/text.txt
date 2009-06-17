@@ -1,0 +1,6 @@
+<data>
+  <description>This is an example description</description>
+  <latitude> 63.0434805555556</latitude>
+  <longitude> -150.993963888889</longitude>
+  <title>Test Data</title>
+</data>

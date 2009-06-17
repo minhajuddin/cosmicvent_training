@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  seat_id_seq: MyString
+  address: MyText
+  price_paid: 9.99
+  email_address: MyString
+
+two:
+  name: MyString
+  seat_id_seq: MyString
+  address: MyText
+  price_paid: 9.99
+  email_address: MyString

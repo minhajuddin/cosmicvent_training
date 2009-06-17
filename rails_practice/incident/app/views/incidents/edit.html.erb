@@ -1,0 +1,42 @@
+<h1>Editing incident</h1>
+
+<%= error_messages_for :incident %>
+
+<% form_for(@incident) do |f| %>
+  <p>
+    <b>Mountain</b><br />
+    <%= f.text_field :mountain %>
+  </p>
+
+  <p>
+    <b>Latitude</b><br />
+    <%= f.text_field :latitude %>
+  </p>
+
+  <p>
+    <b>Longitude</b><br />
+    <%= f.text_field :longitude %>
+  </p>
+
+  <p>
+    <b>When</b><br />
+    <%= f.datetime_select :when %>
+  </p>
+
+  <p>
+    <b>Title</b><br />
+    <%= f.text_field :title %>
+  </p>
+
+  <p>
+    <b>Description</b><br />
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @incident %> |
+<%= link_to 'Back', incidents_path %>

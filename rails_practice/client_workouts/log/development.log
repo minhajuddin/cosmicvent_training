@@ -1,0 +1,808 @@
+  [4;36;1mSQL (0.000000)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.109000)[0m   [0mCREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mINSERT INTO schema_info (version) VALUES(0)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+/!\ FAILSAFE /!\  Mon Jun 15 18:37:25 +0530 2009
+  Status: 500 Internal Server Error
+  No route matches "/client_workouts/1" with {:method=>:get}
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-06-15 18:37:31) [GET]
+  Session ID: 1bd1d324d5473c8a2ec710c5ea208b2a
+  Parameters: {}
+
+
+ActionController::RoutingError (No route matches "/client_workouts" with {:method=>:get}):
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1441:in `recognize_path'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/routing.rb:1424:in `recognize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:170:in `handle_request'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+  [4;36;1mSQL (0.016000)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSQLite3::SQLException: table schema_info already exists: CREATE TABLE schema_info (version integer)[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_info[0m
+Migrating to CreateClientWorkouts (1)
+  [4;36;1mSQL (0.172000)[0m   [0;1mCREATE TABLE client_workouts ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "client_name" varchar(255) DEFAULT NULL, "trainer" varchar(255) DEFAULT NULL, "duration_mins" integer DEFAULT NULL, "date_of_workout" date DEFAULT NULL, "paid_amount" decimal DEFAULT NULL, "created_at" datetime DEFAULT NULL, "updated_at" datetime DEFAULT NULL) [0m
+  [4;35;1mSQL (0.109000)[0m   [0mUPDATE schema_info SET version = 1[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT * FROM schema_info[0m
+  [4;35;1mSQL (0.000000)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mPRAGMA index_list(client_workouts)[0m
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:39:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--ba20feba7ca763232089a0fd83543e6be204c070
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.015000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03200 (34%) | DB: 0.01500 (15%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:40:17) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--ba20feba7ca763232089a0fd83543e6be204c070
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:42:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.015000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.06300 (50%) | DB: 0.01500 (12%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:42:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.015000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.23500 (4 reqs/sec) | Rendering: 0.14100 (60%) | DB: 0.01500 (6%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:42:12) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.42200 (2 reqs/sec) | Rendering: 0.07800 (18%) | DB: 0.01600 (3%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:43:05) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:43:08) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.06300 (50%) | DB: 0.01600 (12%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:44:26) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-15 18:44:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.04700 (43%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:44:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.43700 (2 reqs/sec) | Rendering: 0.35900 (82%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:44:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:45:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.09300 (59%) | DB: 0.01600 (10%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-15 18:46:06) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.04700 (42%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:46:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.07800 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-15 18:46:11) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 1) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.07800 (62%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/1]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:46:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.06200 (43%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 18:50:56) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Lenny", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+
+
+ActionController::MissingTemplate (Missing template client_workouts/find.html.erb in view path D:/work/cosmicvent_training/rails_practice/client_workouts/app/views):
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1269:in `assert_existence_of_template_file'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1098:in `render_for_file'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:159:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:158:in `process_client'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:285:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `initialize'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `new'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel.rb:268:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:128:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/lib/mongrel/command.rb:212:in `run'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-x86-mswin32/bin/mongrel_rails:281
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    D:/InstantRails-2.0-win/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering D:/InstantRails-2.0-win/ruby/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 18:58:40) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Lenny", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."client_name" = 'Lenny') [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03200 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 18:59:01) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Lenny Goldberg", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."client_name" = 'Lenny Goldberg') [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.06200 (44%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-15 18:59:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 2) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/2]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 18:59:31) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.56300 (1 reqs/sec) | Rendering: 0.50000 (88%) | DB: 0.01600 (2%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 19:19:20) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"clint", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_name = 'clint' OR trainer = 'clint' ) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.07800 (12 reqs/sec) | Rendering: 0.01500 (19%) | DB: 0.01600 (20%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 19:19:35) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Clint", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.015000)[0m   [0mSELECT * FROM client_workouts WHERE (client_name = 'Clint' OR trainer = 'Clint' ) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.04700 (50%) | DB: 0.01500 (16%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-15 19:19:43) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 1) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.03100 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/1]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-15 19:19:45) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.031000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.06300 (50%) | DB: 0.03100 (24%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 19:20:00) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Lenny Goldberg", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.015000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_name = 'Lenny Goldberg' OR trainer = 'Lenny Goldberg' ) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.07800 (62%) | DB: 0.01500 (11%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#find (for 127.0.0.1 at 2009-06-15 19:20:16) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Search", "search_string"=>"Clint", "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"find", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts WHERE (client_name = 'Clint' OR trainer = 'Clint' ) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/find
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.06200 (49%) | DB: 0.01600 (12%) | 200 OK [http://localhost/client_workouts/find]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:07:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.20300 (4 reqs/sec) | Rendering: 0.14000 (68%) | DB: 0.01600 (7%) | 200 OK [http://localhost/client_workouts/]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-16 12:07:41) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.06200 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:08:29) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"$459", "duration_mins"=>"30", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Create (0.016000)[0m   [0mINSERT INTO client_workouts ("updated_at", "client_name", "trainer", "paid_amount", "duration_mins", "date_of_workout", "created_at") VALUES('2009-06-16 12:08:29', 'ashfaq', 'rafi', 0.0, 30, '2009-06-16', '2009-06-16 12:08:29')[0m
+Redirected to http://localhost:8000/client_workouts/8
+Completed in 0.23400 (4 reqs/sec) | DB: 0.01600 (6%) | 302 Found [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:08:29) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AY3JlYXRlZC4GOgpAdXNlZHsGOwdU--df0cd52d47a001a910e2592db616e27945ad2477
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.09400 (60%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:08:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.031000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.79700 (1 reqs/sec) | Rendering: 0.48400 (60%) | DB: 0.03100 (3%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#edit (for 127.0.0.1 at 2009-06-16 12:10:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.14100 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts/8/edit]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:10:16) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"0", "duration_mins"=>"30", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"8", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+  [4;36;1mClientWorkout Update (0.000000)[0m   [0;1mUPDATE client_workouts SET "created_at" = '2009-06-16 12:08:29', "date_of_workout" = '2009-06-16', "paid_amount" = 0.0, "duration_mins" = 30, "trainer" = 'rafi', "client_name" = 'ashfaq', "updated_at" = '2009-06-16 12:10:16' WHERE "id" = 8[0m
+Redirected to http://localhost:8000/client_workouts/8
+Completed in 0.20300 (4 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:10:16) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AdXBkYXRlZC4GOgpAdXNlZHsGOwdU--fc6aa2e65d364a659dc122c642ea72dccc7bbee7
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03100 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:10:19) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.18800 (5 reqs/sec) | Rendering: 0.11000 (58%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-16 12:10:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04700 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:10:34) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"sad", "trainer"=>"na", "paid_amount"=>"$5", "duration_mins"=>"34", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04600 (36%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:10:45) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"sad", "trainer"=>"na", "paid_amount"=>"#23", "duration_mins"=>"34", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04700 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:10:49) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"sad", "trainer"=>"na", "paid_amount"=>"23", "duration_mins"=>"34", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Create (0.015000)[0m   [0mINSERT INTO client_workouts ("updated_at", "client_name", "trainer", "paid_amount", "duration_mins", "date_of_workout", "created_at") VALUES('2009-06-16 12:10:49', 'sad', 'na', 23.0, 34, '2009-06-16', '2009-06-16 12:10:49')[0m
+Redirected to http://localhost:8000/client_workouts/9
+Completed in 0.25000 (4 reqs/sec) | DB: 0.01500 (6%) | 302 Found [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:10:49) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AY3JlYXRlZC4GOgpAdXNlZHsGOwdU--df0cd52d47a001a910e2592db616e27945ad2477
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 9) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03200 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/9]
+
+
+Processing ClientWorkoutsController#edit (for 127.0.0.1 at 2009-06-16 12:11:24) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"edit", "id"=>"9", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 9) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.04700 (42%) | DB: 0.01600 (14%) | 200 OK [http://localhost/client_workouts/9/edit]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:11:29) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"sad", "trainer"=>"na", "paid_amount"=>"$23", "duration_mins"=>"34", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"9", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 9) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.06200 (44%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/9]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:11:34) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"sad", "trainer"=>"na", "paid_amount"=>"23", "duration_mins"=>"34", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"9", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 9) [0m
+  [4;36;1mClientWorkout Update (0.000000)[0m   [0;1mUPDATE client_workouts SET "created_at" = '2009-06-16 12:10:49', "date_of_workout" = '2009-06-16', "paid_amount" = 23.0, "duration_mins" = 34, "trainer" = 'na', "client_name" = 'sad', "updated_at" = '2009-06-16 12:11:34' WHERE "id" = 9[0m
+Redirected to http://localhost:8000/client_workouts/9
+Completed in 0.20300 (4 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/client_workouts/9]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:11:34) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AdXBkYXRlZC4GOgpAdXNlZHsGOwdU--fc6aa2e65d364a659dc122c642ea72dccc7bbee7
+  Parameters: {"action"=>"show", "id"=>"9", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 9) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.04700 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/9]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:11:36) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.20400 (4 reqs/sec) | Rendering: 0.11000 (53%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#edit (for 127.0.0.1 at 2009-06-16 12:11:40) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"edit", "id"=>"8", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.06200 (56%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/8/edit]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:11:49) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"$230", "duration_mins"=>"30", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"8", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.01600 (14%) | 200 OK [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:11:52) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"230", "duration_mins"=>"30", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"8", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+  [4;36;1mClientWorkout Update (0.000000)[0m   [0;1mUPDATE client_workouts SET "created_at" = '2009-06-16 12:08:29', "date_of_workout" = '2009-06-16', "paid_amount" = 230.0, "duration_mins" = 30, "trainer" = 'rafi', "client_name" = 'ashfaq', "updated_at" = '2009-06-16 12:11:53' WHERE "id" = 8[0m
+Redirected to http://localhost:8000/client_workouts/8
+Completed in 0.62500 (1 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:11:53) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AdXBkYXRlZC4GOgpAdXNlZHsGOwdU--fc6aa2e65d364a659dc122c642ea72dccc7bbee7
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03200 (34%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:12:56) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"show", "id"=>"8", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 8) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.03100 (19%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/8]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:13:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.07800 (55%) | DB: 0.01600 (11%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-16 12:13:02) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.04700 (49%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:13:10) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"", "trainer"=>"dsf", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:13:18) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"asd", "trainer"=>"", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:13:22) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"", "trainer"=>"", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:13:37) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Create (0.000000)[0m   [0;1mINSERT INTO client_workouts ("updated_at", "client_name", "trainer", "paid_amount", "duration_mins", "date_of_workout", "created_at") VALUES('2009-06-16 12:13:37', 'ashfaq', 'rafi', 23.0, 23, '2009-06-16', '2009-06-16 12:13:37')[0m
+Redirected to http://localhost:8000/client_workouts/10
+Completed in 0.20300 (4 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:13:37) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AY3JlYXRlZC4GOgpAdXNlZHsGOwdU--df0cd52d47a001a910e2592db616e27945ad2477
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03100 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:14:28) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"show", "id"=>"10", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04600 (36%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#edit (for 127.0.0.1 at 2009-06-16 12:14:30) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"edit", "id"=>"10", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.11000 (9 reqs/sec) | Rendering: 0.04700 (42%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10/edit]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:14:33) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.14000 (7 reqs/sec) | Rendering: 0.03100 (22%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:14:43) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"", "trainer"=>"", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04600 (36%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:15:01) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq\r\n", "trainer"=>"rafi", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.10900 (9 reqs/sec) | Rendering: 0.03100 (28%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:15:14) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.000000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03200 (25%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:15:21) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#update (for 127.0.0.1 at 2009-06-16 12:15:29) [PUT]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Update", "client_workout"=>{"client_name"=>"ashfaq", "trainer"=>"rafi", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "_method"=>"put", "action"=>"update", "id"=>"10", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.015000)[0m   [0mSELECT * FROM client_workouts WHERE (client_workouts."id" = 10) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/edit
+Completed in 0.39000 (2 reqs/sec) | Rendering: 0.03100 (7%) | DB: 0.01500 (3%) | 200 OK [http://localhost/client_workouts/10]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:15:44) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.016000)[0m   [0;1mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.09300 (59%) | DB: 0.01600 (10%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#new (for 127.0.0.1 at 2009-06-16 12:15:47) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"new", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.04700 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/new]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:15:57) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"asd", "trainer"=>"dsf", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+Rendering template within layouts/client_workouts
+Rendering client_workouts/new
+Completed in 0.09300 (10 reqs/sec) | Rendering: 0.03100 (33%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#create (for 127.0.0.1 at 2009-06-16 12:17:00) [POST]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"commit"=>"Create", "client_workout"=>{"client_name"=>"asd", "trainer"=>"dsf", "paid_amount"=>"23", "duration_mins"=>"23", "date_of_workout(1i)"=>"2009", "date_of_workout(2i)"=>"6", "date_of_workout(3i)"=>"16"}, "authenticity_token"=>"39c4bd90248654961a25c7654ec3ea5ca7e4c4a2", "action"=>"create", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Create (0.000000)[0m   [0mINSERT INTO client_workouts ("updated_at", "client_name", "trainer", "paid_amount", "duration_mins", "date_of_workout", "created_at") VALUES('2009-06-16 12:17:00', 'asd', 'dsf', 23.0, 23, '2009-06-16', '2009-06-16 12:17:00')[0m
+Redirected to http://localhost:8000/client_workouts/11
+Completed in 0.20400 (4 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/client_workouts]
+
+
+Processing ClientWorkoutsController#show (for 127.0.0.1 at 2009-06-16 12:17:01) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7BjoLbm90aWNlIixDbGllbnRXb3Jrb3V0IHdhcyBzdWNjZXNzZnVsbHkg%0AY3JlYXRlZC4GOgpAdXNlZHsGOwdU--df0cd52d47a001a910e2592db616e27945ad2477
+  Parameters: {"action"=>"show", "id"=>"11", "controller"=>"client_workouts"}
+  [4;36;1mClientWorkout Load (0.000000)[0m   [0;1mSELECT * FROM client_workouts WHERE (client_workouts."id" = 11) [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/show
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03100 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/client_workouts/11]
+
+
+Processing ClientWorkoutsController#index (for 127.0.0.1 at 2009-06-16 12:17:03) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlZGUxNDg3YTdlZDVjMjU2NGY2NjBlZTkwN2VlYjRh%0AMjUiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--6e159f7ef74cd0c0aa00db47010432494daad0b4
+  Parameters: {"action"=>"index", "controller"=>"client_workouts"}
+  [4;35;1mClientWorkout Load (0.016000)[0m   [0mSELECT * FROM client_workouts [0m
+Rendering template within layouts/client_workouts
+Rendering client_workouts/index
+Completed in 0.15600 (6 reqs/sec) | Rendering: 0.09300 (59%) | DB: 0.01600 (10%) | 200 OK [http://localhost/client_workouts]

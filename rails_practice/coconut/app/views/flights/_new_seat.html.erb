@@ -1,0 +1,27 @@
+<h1>New seat</h1>
+
+<%= error_messages_for :seat %>
+
+<% remote_form_for(seat) do |f| %>
+ 
+  <p>
+    
+    <%= f.hidden_field :flight_id %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Baggage</b><br />
+    <%= f.text_field :baggage %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+

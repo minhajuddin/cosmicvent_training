@@ -1,0 +1,34 @@
+<p>
+  <b>Mountain:</b>
+  <%=h @incident.mountain %>
+</p>
+
+<p>
+  <b>Latitude:</b>
+  <%=h @incident.latitude %>
+</p>
+
+<p>
+  <b>Longitude:</b>
+  <%=h @incident.longitude %>
+</p>
+
+<p>
+  <b>When:</b>
+  <%=h @incident.when %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @incident.title %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @incident.description %>
+</p>
+
+<%= render (:partial=>'map', :locals=>{:data=>"#{@incident.id}.xml"}) %>
+
+<%= link_to 'Edit', edit_incident_path(@incident) %> |
+<%= link_to 'Back', incidents_path %>

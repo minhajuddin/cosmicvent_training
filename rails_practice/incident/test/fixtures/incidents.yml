@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  mountain: MyString
+  latitude: 9.99
+  longitude: 9.99
+  when: 2009-06-16 17:50:43
+  title: MyString
+  description: MyText
+
+two:
+  mountain: MyString
+  latitude: 9.99
+  longitude: 9.99
+  when: 2009-06-16 17:50:43
+  title: MyString
+  description: MyText

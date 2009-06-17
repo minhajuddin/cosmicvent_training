@@ -1,0 +1,28 @@
+<h1>Listing client_workouts</h1>
+
+<table>
+  <tr>
+    <th>Client name</th>
+    <th>Trainer</th>
+    <th>Duration mins</th>
+    <th>Date of workout</th>
+    <th>Paid amount</th>
+  </tr>
+
+<% for client_workout in @client_workouts %>
+  <tr>
+    <td><%=h client_workout.client_name %></td>
+    <td><%=h client_workout.trainer %></td>
+    <td><%=h client_workout.duration_mins %></td>
+    <td><%=h client_workout.date_of_workout %></td>
+    <td><%=h client_workout.paid_amount %></td>
+    <td><%= link_to 'Show', client_workout %></td>
+    <td><%= link_to 'Edit', edit_client_workout_path(client_workout) %></td>
+    <td><%= link_to 'Destroy', client_workout, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New client_workout', new_client_workout_path %>

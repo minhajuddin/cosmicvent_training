@@ -1,0 +1,186 @@
+<%
+  google_key='ABQIAAAAnfs7bKE82qgb3Zc2YyS-oBT2yXp_' + 
+    'ZAY8_ufC3CFXhHIE1NvwkxSySz_REpPq-4WZA27OwgbtyR3VcA'
+  full_page ||= false
+  show_action ||= nil
+  new_action ||= nil
+  data ||= nil
+%>
+<div id="map"
+  align="right"
+  style="border: 1px solid #979797;
+		 min-width: 400px;
+<%		 if full_page -%>
+		 min-height: 800px;
+		 height: 800px;
+<%		 else -%>
+		 min-height: 400px;
+		 height: 400px;
+<%		 end -%>
+		 background-color: #FFFFFF;
+		 border: 1px solid #999999;
+		 padding: 10px;"></div>
+<script
+  src="http://maps.google.com/maps?file=api&v=2&key=<%= google_key %>"
+  type="text/javascript"></script>
+<script type="text/javascript">
+  var map_location = new GLatLng(0, 0);
+  var map;
+
+  function show_path(id) {
+    var show_path = "<%= url_for(:controller=>controller.controller_name, :action=>show_action, :id=>'REPLACEME') %>";
+    return show_path.replace("REPLACEME", id);
+  }
+
+  function new_path() {
+    return "<%= url_for(:controller=>controller.controller_name, :action=>new_action) %>";
+  }
+
+  function createMarker(point, label, html, id) {
+    var mark1 = new GMarker(point);
+    mark1.enableDragging();
+    mark1.bouncy = true;
+    GEvent.addListener(mark1, "click",
+      function() {
+        map_location = mark1.getPoint();
+        map.panTo(map_location);
+        var link = "";
+        if (id != "") {
+       <% if show_action != nil %>
+            link = show_path(id);
+            new Ajax.Request(link, {
+              method: 'get',
+              onSuccess: function(transport) {
+                var html = "<div align='left' id='map_info' style='min-width: 400px; min-height: 300px; width: 400px; height: 300px;'>" +
+                  transport.responseText + "</div>";
+                mark1.openInfoWindowHtml(html);
+              }
+            });      
+       <% else %>
+            link = "<br/><a href='/incidents/" + id + "'>More...</a>";
+            mark1.openInfoWindowHtml("<div align='left'><strong>" + label + "</strong><br/>"
+              + html + link + "</div>");
+       <% end %>
+        } else {
+          mark1.openInfoWindowHtml("<div align='left'><strong>" + label + "</strong><br/>"
+            + html + link + "</div>");
+        }
+      }
+    );
+    return mark1;
+  }
+  
+ function initialize() {
+   if (GBrowserIsCompatible()) {
+     map = new GMap2(document.getElementById("map"));
+     map.setCenter(map_location, 16);
+     map.setZoom(2);
+     map.addControl(new GLargeMapControl());
+     map.addControl(new GHierarchicalMapTypeControl());
+     map.enableScrollWheelZoom();
+     map.enableDoubleClickZoom();
+     map.setMapType(G_HYBRID_MAP);
+   }
+ }  
+  
+ function textFor(element, tag) {
+   return element.getElementsByTagName(tag)[0].firstChild.nodeValue;
+ }
+
+ function addPoints(points) {
+   var totlat = 0.0;
+   var totlon = 0.0;
+   var avcount = 0;
+   for (var i = 0; i < points.length; i++) {
+     m = points[i];
+     // obtain the attribues of each marker
+     var lat = parseFloat(textFor(m, "latitude"));
+     var lng = parseFloat(textFor(m, "longitude"));
+     totlat = totlat + lat;
+     totlon = totlon + lng;
+     avcount = avcount + 1;
+     var point = new GLatLng(lat,lng);
+     var html = textFor(m, "description");
+     var label = textFor(m, "title");
+     // create the marker
+     var id ="";
+     if (points.length > 1) {
+       id = textFor(m, "id");
+     }
+     var marker = createMarker(point,label,html, id);
+     map.addOverlay(marker);
+   }
+   return new GLatLng(totlat / avcount, totlon / avcount);
+ }
+
+ function loadXml(url) {
+   var request = GXmlHttp.create();
+   request.open("GET", url, true);
+   request.onreadystatechange = function() {
+     if (request.readyState == 4) {
+       var xmlDoc = GXml.parse(request.responseText);
+       var points = new Array();
+       points[0] = xmlDoc.documentElement;
+       var multi = (points[0].getElementsByTagName("datum").length > 0);
+       if (multi) {
+         points=points[0].getElementsByTagName("datum");
+       }
+       center = addPoints(points);
+       map.setCenter(center);
+       if (multi) {
+         map.setZoom(2);
+       } else {
+         map.setZoom(8);
+       }
+     }
+   }
+   request.send(null);
+ }
+ initialize();
+<% if new_action != nil -%>
+   GEvent.addListener(map, 'click',
+     function(overlay, point) {
+       if (point) {
+         var marker = new GMarker(point);
+         marker.enableDragging();
+         marker.bouncy = true;
+         var info = null;
+         GEvent.addListener(marker, "infowindowbeforeclose",
+           function() {
+             info = document.getElementById("map_info");
+           }
+         );
+         GEvent.addListener(marker, "infowindowclose",
+           function() {
+             if (info != null) {
+               GEvent.addListener(marker, "click",
+                 function() {
+                 map_location = marker.getPoint();
+                 map.panTo(map_location);
+                 marker.openInfoWindowHtml(info);
+               });
+             }
+           }
+         );
+         map.addOverlay(marker);
+         var params = new Hash();
+         params.set("latitude", point.y);
+         params.set("longitude", point.x);
+         new Ajax.Request(new_path(), {
+           method: 'get',
+           parameters: params,
+           onSuccess: function(transport) {
+             var html = "<div align='left' id='map_info' style='min-width: 400px; min-height: 300px; width: 400px; height: 300px;'>" +
+               transport.responseText + "</div>";
+             marker.openInfoWindowHtml(html);
+           }
+         });
+       }
+     }
+   );
+<% 
+  end
+  if (data != nil) -%>
+	loadXml('<%= data -%>');
+<%  end %>
+</script>

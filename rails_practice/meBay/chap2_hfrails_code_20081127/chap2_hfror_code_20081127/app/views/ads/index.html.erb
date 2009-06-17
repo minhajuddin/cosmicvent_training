@@ -1,0 +1,6 @@
+<h1>All Ads</h1>
+<ul>
+<% for ad in @ads %>
+  <li><a href="/ads/<%= ad.id %>"><%= ad.name %></a></li>
+<% end %>
+</ul>

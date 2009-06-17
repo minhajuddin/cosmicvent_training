@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  client_name: MyString
+  trainer: MyString
+  duration_mins: 1
+  date_of_workout: 2009-06-15
+  paid_amount: 9.99
+
+two:
+  client_name: MyString
+  trainer: MyString
+  duration_mins: 1
+  date_of_workout: 2009-06-15
+  paid_amount: 9.99

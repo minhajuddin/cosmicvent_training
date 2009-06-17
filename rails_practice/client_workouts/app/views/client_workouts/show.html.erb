@@ -1,0 +1,28 @@
+<p>
+  <b>Client name:</b>
+  <%=h @client_workout.client_name %>
+</p>
+
+<p>
+  <b>Trainer:</b>
+  <%=h @client_workout.trainer %>
+</p>
+
+<p>
+  <b>Duration mins:</b>
+  <%=h @client_workout.duration_mins %>
+</p>
+
+<p>
+  <b>Date of workout:</b>
+  <%=h @client_workout.date_of_workout %>
+</p>
+
+<p>
+  <b>Paid amount:</b>
+  <%=h @client_workout.paid_amount %>
+</p>
+
+
+<%= link_to 'Edit', edit_client_workout_path(@client_workout) %> |
+<%= link_to 'Back', client_workouts_path %>

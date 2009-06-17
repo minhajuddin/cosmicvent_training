@@ -1,0 +1,24 @@
+<h1>Listing seats</h1>
+
+<table>
+  <tr>
+    <th>Flight</th>
+    <th>Name</th>
+    <th>Baggage</th>
+  </tr>
+
+<% for seat in @seats %>
+  <tr>
+    <td><%=h seat.flight_id %></td>
+    <td><%=h seat.name %></td>
+    <td><%=h seat.baggage %></td>
+    <td><%= link_to 'Show', seat %></td>
+    <td><%= link_to 'Edit', edit_seat_path(seat) %></td>
+    <td><%= link_to 'Destroy', seat, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New seat', new_seat_path %>

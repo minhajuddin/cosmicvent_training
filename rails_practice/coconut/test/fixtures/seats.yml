@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  flight_id: 1
+  name: MyString
+  baggage: 9.99
+
+two:
+  flight_id: 1
+  name: MyString
+  baggage: 9.99

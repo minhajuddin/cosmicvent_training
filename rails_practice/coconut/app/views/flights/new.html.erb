@@ -1,0 +1,36 @@
+<h1>New flight</h1>
+
+<%= error_messages_for :flight %>
+
+<% form_for(@flight) do |f| %>
+  <p>
+    <b>Departure</b><br />
+    <%= f.datetime_select :departure %>
+  </p>
+
+  <p>
+    <b>Arrival</b><br />
+    <%= f.datetime_select :arrival %>
+  </p>
+
+  <p>
+    <b>Destination</b><br />
+    <%= f.text_field :destination %>
+  </p>
+
+  <p>
+    <b>Baggage allowance</b><br />
+    <%= f.text_field :baggage_allowance %>
+  </p>
+
+  <p>
+    <b>Capacity</b><br />
+    <%= f.text_field :capacity %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', flights_path %>

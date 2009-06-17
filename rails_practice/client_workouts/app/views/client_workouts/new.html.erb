@@ -1,0 +1,36 @@
+<h1>New client_workout</h1>
+
+<%= error_messages_for :client_workout %>
+
+<% form_for(@client_workout) do |f| %>
+  <p>
+    <b>Client name</b><br />
+    <%= f.text_field :client_name %>
+  </p>
+
+  <p>
+    <b>Trainer</b><br />
+    <%= f.text_field :trainer %>
+  </p>
+
+  <p>
+    <b>Duration mins</b><br />
+    <%= f.text_field :duration_mins %>
+  </p>
+
+  <p>
+    <b>Date of workout</b><br />
+    <%= f.date_select :date_of_workout %>
+  </p>
+
+  <p>
+    <b>Paid amount</b><br />
+    <%= f.text_field :paid_amount %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', client_workouts_path %>

@@ -1,0 +1,26 @@
+<h1>New seat</h1>
+
+<%= error_messages_for :seat %>
+
+<% form_for(@seat) do |f| %>
+  <p>
+    <b>Flight</b><br />
+    <%= f.text_field :flight_id %>
+  </p>
+
+  <p>
+    <b>Name</b><br />
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <b>Baggage</b><br />
+    <%= f.text_field :baggage %>
+  </p>
+
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', seats_path %>

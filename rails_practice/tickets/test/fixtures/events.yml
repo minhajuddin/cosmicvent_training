@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  artist: MyString
+  description: MyText
+  price_low: 9.99
+  price_high: 9.99
+  event_date: 2009-06-15
+
+two:
+  artist: MyString
+  description: MyText
+  price_low: 9.99
+  price_high: 9.99
+  event_date: 2009-06-15

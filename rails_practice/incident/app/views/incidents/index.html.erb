@@ -1,0 +1,31 @@
+<h1>Listing incidents</h1>
+
+<table>
+  <tr>
+    <th>Mountain</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th>When</th>
+    <th>Title</th>
+    <th>Description</th>
+  </tr>
+
+<% for incident in @incidents %>
+  <tr>
+    <td><%=h incident.mountain %></td>
+    <td><%=h incident.latitude %></td>
+    <td><%=h incident.longitude %></td>
+    <td><%=h incident.when %></td>
+    <td><%=h incident.title %></td>
+    <td><%=h incident.description %></td>
+    <td><%= link_to 'Show', incident %></td>
+    <td><%= link_to 'Edit', edit_incident_path(incident) %></td>
+    <td><%= link_to 'Destroy', incident, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= render (:partial=>'map', :locals=>{:data=>"/incidents.xml"}) %>
+<br />
+
+<%= link_to 'New incident', new_incident_path %>

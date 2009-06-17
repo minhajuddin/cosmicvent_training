@@ -1,0 +1,24 @@
+<h1> Listing client_workouts for <%= params[:search_string] %></h1>
+<table>
+  <tr>
+   
+    <th>Trainer</th>
+    <th>Duration mins</th>
+    <th>Date of workout</th>
+    <th>Paid amount</th>
+  </tr>
+
+<% for client_workout in @client_workouts %>
+  <tr>
+    
+    <td><%=h client_workout.trainer %></td>
+    <td><%=h client_workout.duration_mins %></td>
+    <td><%=h client_workout.date_of_workout %></td>
+    <td><%=h client_workout.paid_amount %></td>
+    <td><%= link_to 'Show', client_workout %></td>
+    <td><%= link_to 'Edit', edit_client_workout_path(client_workout) %></td>
+    <td><%= link_to 'Destroy', client_workout, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+

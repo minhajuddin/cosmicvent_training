@@ -42,7 +42,7 @@
     
       $query_string = " SELECT id, title, description, price, status, image, categoryId, artistId FROM paintings";
       $query = $this->db->prepare($query_string);
-      $query->bind_result($id, $title, $price, $status, $image, $description, $categoryId, $artistId);
+      $query->bind_result($id, $title, $description, $price, $status, $image,  $categoryId, $artistId);
       $query->execute();
       
       $paints = array();
@@ -50,7 +50,7 @@
       
       while($query->fetch())
       {
-        $paints["$i"] = new Painting($id, $title, $price, $status, $image, $description, $categoryId, $artistId);
+        $paints["$i"] = new Painting($id, $title, $description, $price, $status, $image,  $categoryId, $artistId);
         $i++;
       }
       

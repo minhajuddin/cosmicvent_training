@@ -47,48 +47,35 @@
 		</div>
 		<!-- start content -->
 		<div id="content">
+          <?php
+             $con = mysql_connect("localhost","root","");
+             if (!$con){
+               die('Could not connect: ' . mysql_error());
+             }
+             mysql_select_db("my_ash", $con);
+            $result = mysql_query("SELECT * FROM catagoery");
+            echo "
+            <table border='1' width='70%' bgcolor=#00ff7f>
+              <tr>
+                <th>catageryName</th>
+                <th>Delete</th>
+              </tr>";
+              while($row = mysql_fetch_array($result)){
+                echo "<tr>";
+                  echo "<td>" .$row[cname] . "</td>";
+                  echo "<td>
+                       <form action='delete_catagoery.php' method='post'>
+                           <input type='hidden' name='cname' value='$row[cname] '/>
+                           <input type='submit' value='delete'  />
+                       </form></td>";
+                echo "</tr>";
+               }
+              echo "</table>";
 
+             mysql_close($con)
+          ?> 
 
-      <?php
-          $con = mysql_connect("localhost","root","");
-              if (!$con){
-                die('Could not connect: ' . mysql_error());
-                }
-
-          mysql_select_db("my_ash", $con);
-
-          
-          $result = mysql_query("SELECT * FROM catalogue WHERE id ='$_POST[id]'");
-          echo "<table border='1'>
-          <tr>
-          <th>id</th>
-          <th>name</th>
-          <th>discription</th>
-          <th>price</th>
-          
-         
-
-          </tr>";
-
-          $row = mysql_fetch_array($result);
-            
-          echo "<form action='modify1.php' method='post'>";
-            echo "<tr>";
-            echo "<td><input type='hidden' name='id' value='$row[id] '/></td>";
-            echo "<td><input type='text' name='name' value='$row[name]' /></td>";
-            echo "<td><input type='text' name='discription' value='$row[discription]' /> </td>";
-            echo "<td><input type='text' name='price' value='$row[price]' /></td>";
-            
-
-            echo "</tr>";
-            
-          echo "</table>";
-
-          echo "<input type='submit' value='update'  />";
-          echo "</form>";
-          mysql_close($con);
-      ?>
-</div>
+      </div>
 		<!-- end content -->
 		<!-- start sidebars -->
 		<div id="sidebar2" class="sidebar">
@@ -129,3 +116,4 @@
 </div>
 </body>
 </html>
+

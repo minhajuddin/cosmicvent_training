@@ -10,7 +10,7 @@
                  {
                                   
                   echo "catagoery deleted is: ".$_POST['cname'] ;
-                  
+                  header("location: list_of_catagoery.php");
                   }
                   else{
                   

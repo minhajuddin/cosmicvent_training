@@ -15,22 +15,23 @@
 
 <body>
 
-<?php
-$con = mysql_connect("localhost","root","");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
+    <?php
+    $con = mysql_connect("localhost","root","");
+    if (!$con)
+      {
+      die('Could not connect: ' . mysql_error());
+      }
 
-mysql_select_db("my_ash", $con);
+    mysql_select_db("my_ash", $con);
 
 
-mysql_query("DELETE FROM catalogue WHERE name='$_POST[name]'");
+    mysql_query("DELETE FROM catalogue WHERE id='$_POST[id]'");
 
-mysql_close($con);
-?> 
+    mysql_close($con);
+     header("location: list.php");
+    ?> 
 
-<h1> Product deleted successfully </h1>
+
 
 <a href="home.php"><b>Go back to main menu</b></a>
 </body>

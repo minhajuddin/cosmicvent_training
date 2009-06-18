@@ -75,31 +75,6 @@ mysql_close($con)
 ?> 
 
 
-<table border=1 align="left">
-
-<tr><td>
-<a href="product.php"><b> ADD PRODUCT</b> </a>
-</td></tr>
-
-
-
-<tr><td>
-<a href="catagoery_enter.php"><b>ADD A PRODUCT CATAGOERY<b></a></td>
-</tr>
-
-
-<tr><td>
-<a href="list.php"><b>LIST ALL PRODUCTS AVAILABLE</b></a></td>
-</tr>
-</b>
-</table>
-&nbsp&nbsp&nbsp
-
-<form action="search.php" method="post">&nbsp&nbsp&nbsp
-<input type="text" name="name" value=""  align="left">
-&nbsp <input type="submit" name="search" value="SEARCH"  >
-</form>
-
 </body>
 </html>
 

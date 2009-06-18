@@ -16,13 +16,11 @@
 	</div>
 	<div id="menu">
 		<ul id="main">
-			<li class="current_page_item"><a href="product.php">Homepage</a></li>
-			<li><a href="list.php">Products</a></li>
+			<li class="current_page_item"><a href="index.">Homepage</a></li>
+			<li><a href="list_user.php">Products</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li><a href="index.html">logout</a></li>
-			&nbsp &nbsp &nbsp &nbsp <font color=#ffff00><b>Hi,Administrator<b></font>
 		</ul>
 		
 	</div>
@@ -36,34 +34,47 @@
 			<ul>
 				
 				<li>
-          <h2>Admins use</h2>
+          <h2>Admins Use</h2>
 					<ul>
-						<li><a href="product.php">Add new product</a></li>
-						<li><a href="catagoery_enter.php">Add new products categoery</a></li>
-						<li><a href="list_of_catagoery">List of all categoris</a></li>
-						
+						<li><a href="#">Mp3 players</a></li>
+						<li><a href="#">Books</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">Sports</a></li>
+						<li><a href="#">Games</a></li>
+						<li><a href="#">Softwares</a></li>
 					</ul>
 				</li>
       </ul>
 		</div>
 		<!-- start content -->
 		<div id="content">
-          <form action="catagoery_repository.php" method="post">
-            <table>
-                <tr>&nbsp &nbsp &nbsp 
-                  <th>&nbsp &nbsp &nbsp CategoryName:</th>
-                  <td><input type="text" name="cname" value="" size="30"></td>
-                </tr>
-                <tr>
-                  <td></td><td>
-                  <input type="submit" value="submit"> &nbsp
-                  <input type="reset" value="reset" >
-                  </td> 
-                </tr>
-            </table>
-          </form>
-           
-     </div>
+        <?php
+            $con = mysql_connect("localhost","root","");
+            if (!$con){
+              die('Could not connect: ' . mysql_error());
+            }
+            mysql_select_db("my_ash", $con);
+            $result = mysql_query("SELECT * FROM catalogue WHERE name like '$_POST[name]%'");
+            echo "
+            <table border='1' bgcolor=#00ff7f width='70%'>
+              <tr>
+                <th>id</th>
+                <th>name</th>
+                <th>discription</th>
+                <th>price</th>
+              </tr>";
+              while($row = mysql_fetch_array($result)){
+              echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['name'] . "</td>";
+                echo "<td>" . $row['discription'] . "</td>";
+                echo "<td>" . $row['price'] . "</td>";
+              echo "</tr>";
+              }
+            echo "</table>";
+            mysql_close($con);
+        ?> 
+    </div>
 		<!-- end content -->
 		<!-- start sidebars -->
 		<div id="sidebar2" class="sidebar">
@@ -72,26 +83,13 @@
 			<h2>search</h2>
 			</li>
 				<li>
-					<form action="search.php" method="post">&nbsp&nbsp&nbsp
+					<form action="search_user.php" method="post">&nbsp&nbsp&nbsp
             <input type="text" name="name" value=""  align="left">
           </form>
 				</li>
 				
 				
-				<li>
-					<h2>Categories</h2>
-					<ul>
-						
-						
-						<li><a href="#">Mp3 players</a></li>
-						<li><a href="#">Books</a></li>
-						<li><a href="#">Movies</a></li>
-						<li><a href="#">Sports</a></li>
-						<li><a href="#">Games</a></li>
-						<li><a href="#">Softwares</a></li>
-					
-					</ul>
-				</li>
+				
 			</ul>
 		</div>
 		<!-- end sidebars -->
@@ -104,4 +102,5 @@
 </div>
 </body>
 </html>
+
 

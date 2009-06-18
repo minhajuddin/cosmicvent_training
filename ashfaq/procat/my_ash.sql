@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 17, 2009 at 11:05 AM
+-- Generation Time: Jun 18, 2009 at 10:15 AM
 -- Server version: 5.0.51
 -- PHP Version: 5.2.6
 
@@ -28,15 +28,22 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE `catagoery` (
   `cid` int(15) NOT NULL auto_increment,
   `cname` varchar(50) NOT NULL,
-  PRIMARY KEY  (`cid`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+  PRIMARY KEY  (`cid`),
+  UNIQUE KEY `cname` (`cname`),
+  UNIQUE KEY `cname_2` (`cname`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `catagoery`
 --
 
 INSERT INTO `catagoery` (`cid`, `cname`) VALUES
-(10, '');
+(11, 'books'),
+(28, 'Games'),
+(26, 'movies'),
+(12, 'mp3players'),
+(13, 'softwares'),
+(30, 'sports');
 
 -- --------------------------------------------------------
 
@@ -58,5 +65,4 @@ CREATE TABLE `catalogue` (
 --
 
 INSERT INTO `catalogue` (`id`, `name`, `discription`, `price`, `catagoeryId`) VALUES
-(12, 'first', 'this is first entry', 34, 10),
-(45, 'secon', 'thanks for test', 676, 10);
+(1, 'head first PHP', 'php', 300, 28);

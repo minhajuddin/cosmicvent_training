@@ -16,13 +16,11 @@
 	</div>
 	<div id="menu">
 		<ul id="main">
-			<li class="current_page_item"><a href="product.php">Homepage</a></li>
-			<li><a href="list.php">Products</a></li>
+			<li class="current_page_item"><a href="index.">Homepage</a></li>
+			<li><a href="list_user.php">Products</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact Us</a></li>
-			<li><a href="index.html">logout</a></li>
-			&nbsp &nbsp &nbsp &nbsp <font color=#ffff00><b>Hi,Administrator<b></font>
 		</ul>
 		
 	</div>
@@ -36,11 +34,14 @@
 			<ul>
 				
 				<li>
-          <h2>Admins use</h2>
+          <h2>Categories</h2>
 					<ul>
-						<li><a href="product.php">Add new product</a></li>
-						<li><a href="catagoery_enter.php">Add new products categoery</a></li>
-						
+						<li><a href="#">Mp3 players</a></li>
+						<li><a href="#">Books</a></li>
+						<li><a href="#">Movies</a></li>
+						<li><a href="#">Sports</a></li>
+						<li><a href="#">Games</a></li>
+						<li><a href="#">Softwares</a></li>
 					</ul>
 				</li>
       </ul>
@@ -49,46 +50,47 @@
 		<div id="content">
 
 
+
       <?php
           $con = mysql_connect("localhost","root","");
-              if (!$con){
-                die('Could not connect: ' . mysql_error());
-                }
+          if (!$con){
+              die('Could not connect: ' . mysql_error());
+           }
 
           mysql_select_db("my_ash", $con);
 
-          
-          $result = mysql_query("SELECT * FROM catalogue WHERE id ='$_POST[id]'");
-          echo "<table border='1'>
+          //$result = mysql_query("SELECT a.*,b.* FROM catalogue a inner join catagoery b on a.catagoeryid=b.cid");
+          $result = mysql_query("SELECT * FROM catalogue");
+          echo "<table border='1' bgcolor=#00ff7f width='70%'>
           <tr>
           <th>id</th>
           <th>name</th>
           <th>discription</th>
           <th>price</th>
-          
+         
+
+
          
 
           </tr>";
 
-          $row = mysql_fetch_array($result);
-            
-          echo "<form action='modify1.php' method='post'>";
-            echo "<tr>";
-            echo "<td><input type='hidden' name='id' value='$row[id] '/></td>";
-            echo "<td><input type='text' name='name' value='$row[name]' /></td>";
-            echo "<td><input type='text' name='discription' value='$row[discription]' /> </td>";
-            echo "<td><input type='text' name='price' value='$row[price]' /></td>";
-            
 
-            echo "</tr>";
+          while($row = mysql_fetch_array($result)){
             
+              echo "<tr>";
+              echo "<td>" . $row['id'] . "</td>";
+              echo "<td>" . $row['name'] . "</td>";
+              echo "<td>" . $row['discription'] . "</td>";
+              echo "<td>" . $row['price'] . "</td> </tr>";
+             
+              
+             
+           }
           echo "</table>";
 
-          echo "<input type='submit' value='update'  />";
-          echo "</form>";
           mysql_close($con);
-      ?>
-</div>
+      ?> 
+     </div>
 		<!-- end content -->
 		<!-- start sidebars -->
 		<div id="sidebar2" class="sidebar">
@@ -97,27 +99,11 @@
 			<h2>search</h2>
 			</li>
 				<li>
-					<form action="search.php" method="post">&nbsp&nbsp&nbsp
+					<form action="search_user.php" method="post">&nbsp&nbsp&nbsp
             <input type="text" name="name" value=""  align="left">
           </form>
 				</li>
-				
-				
-				<li>
-					<h2>Categories</h2>
-					<ul>
-						
-						
-						<li><a href="#">Mp3 players</a></li>
-						<li><a href="#">Books</a></li>
-						<li><a href="#">Movies</a></li>
-						<li><a href="#">Sports</a></li>
-						<li><a href="#">Games</a></li>
-						<li><a href="#">Softwares</a></li>
-					
-					</ul>
-				</li>
-			</ul>
+		</ul>
 		</div>
 		<!-- end sidebars -->
 		<div style="clear: both;">&nbsp;</div>
@@ -129,3 +115,7 @@
 </div>
 </body>
 </html>
+
+
+
+

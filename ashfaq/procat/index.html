@@ -16,8 +16,8 @@
 	</div>
 	<div id="menu">
 		<ul id="main">
-			<li class="current_page_item"><a href="#">Homepage</a></li>
-			<li><a href="#">Products</a></li>
+			<li class="current_page_item"></li>
+			<li><a href="list_user.php">Products</a></li>
 			<li><a href="#">Services</a></li>
 			<li><a href="#">About Us</a></li>
 			<li><a href="#">Contact Us</a></li>
@@ -35,10 +35,12 @@
 				<li>
 					<h2>LOGIN</h2>
 					<ul>
-						<li><b>ADMIN_NAME:</b><input type ='text' name='user_name' id='user_name' value='' /><br>
-						<b>PASSWORD:</b><input type ='password' name='password' id='password' value='' /><br>
-						<input type ='submit'  id='submit' value='submit' />&nbsp &nbsp
-						<input type ='reset' id='reset' value='reset' /></li>
+            <form action="login.php" method="post">
+                <li><b>ADMIN_NAME:</b><input type ='text' name='user_name' id='user_name' value='' /><br>
+                <b>PASSWORD:</b><input type ='password' name='password' id='password' value='' /><br>
+                <input type ='submit'  id='submit' value='submit' />&nbsp &nbsp
+                <input type ='reset' id='reset' value='reset' /></li>
+						</form>
 					</ul>
 				</li>
 				<li>
@@ -76,18 +78,9 @@ As a company, and as individuals, we value integrity, honesty, openness, persona
 			<h2>search</h2>
 			</li>
 				<li>
-					<form action="search.php" method="post">&nbsp&nbsp&nbsp
+					<form action="search_user.php" method="post">&nbsp&nbsp&nbsp
             <input type="text" name="name" value=""  align="left">
           </form>
-				</li>
-				
-				
-				<li>
-					<h2>Categories</h2>
-					<ul>
-						
-						<li><a href="#">Metus aliquam pellentesque</a></li>
-					</ul>
 				</li>
 			</ul>
 		</div>
